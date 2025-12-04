@@ -1,0 +1,439 @@
+{% extends "base.html" %}
+
+{% block title %}Dự đoán Hàng loạt - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas fa-users me-3"></i>Dự đoán Hàng loạt
+            </h1>
+            <p class="lead text-white-50">
+                Xử lý và đánh giá hàng trăm ứng viên cùng lúc từ file CSV
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Main Upload Section -->
+    <div class="col-lg-8" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-cloud-upload-alt me-2"></i>Tải lên và Xử lý File
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <!-- Upload Area -->
+                <form method="POST" enctype="multipart/form-data" id="batchForm">
+                    <div class="upload-area mb-4" id="uploadArea">
+                        <div class="text-center p-5 border-2 border-dashed rounded-3">
+                            <div class="feature-icon mx-auto mb-3" style="width: 100px; height: 100px;">
+                                <i class="fas fa-file-csv fa-3x"></i>
+                            </div>
+                            <h5 class="mb-3">Chọn file CSV để bắt đầu</h5>
+                            <p class="text-muted mb-4">Kéo thả file vào đây hoặc nhấn để chọn</p>
+
+                            <div class="mb-3">
+                                <input type="file" class="form-control" name="file" accept=".csv" required id="fileInput">
+                            </div>
+
+                            <button type="submit" class="btn btn-info-custom btn-lg" id="uploadBtn">
+                                <i class="fas fa-rocket me-2"></i>
+                                <span class="btn-text">Tải lên và Dự đoán</span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Progress Section -->
+                    <div id="processing-progress" style="display: none;">
+                        <div class="text-center mb-4">
+                            <h6>Đang xử lý file...</h6>
+                            <div class="progress progress-custom mb-3">
+                                <div class="progress-bar progress-bar-custom progress-bar-striped progress-bar-animated"
+                                     id="processing-bar" style="width: 0%"></div>
+                            </div>
+                            <p class="text-muted small" id="processing-status">Đang tải file...</p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- CSV Format Guide -->
+                <div class="card bg-light mt-4">
+                    <div class="card-body">
+                        <h6 class="mb-3">
+                            <i class="fas fa-info-circle text-info me-2"></i>
+                            Định dạng file CSV yêu cầu
+                        </h6>
+
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Tên cột</th>
+                                        <th>Bắt buộc</th>
+                                        <th>Mô tả</th>
+                                        <th>Ví dụ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>candidate_id</code></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td>Mã định danh ứng viên</td>
+                                        <td><code>UV_001</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>years_experience</code></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td>Số năm kinh nghiệm</td>
+                                        <td><code>5</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>education_level</code></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td>Trình độ học vấn</td>
+                                        <td><code>bachelor</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>skills</code></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td>Danh sách kỹ năng</td>
+                                        <td><code>python, sql, ml</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>experience_description</code></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td>Mô tả kinh nghiệm</td>
+                                        <td>5 years in data science</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>position_applied</code></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td>Vị trí ứng tuyển</td>
+                                        <td><code>Data Scientist</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-lg-4" data-aos="fade-left">
+        <!-- Quick Actions -->
+        <div class="card custom-card mb-4">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-bolt me-2"></i>Thao tác nhanh
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                <div class="d-grid gap-2">
+                    <a href="/api/sample-data" class="btn btn-outline-primary">
+                        <i class="fas fa-download me-2"></i>Tải file mẫu
+                    </a>
+                    <button onclick="generateSampleCSV()" class="btn btn-outline-success">
+                        <i class="fas fa-file-plus me-2"></i>Tạo CSV mẫu
+                    </button>
+                    <button onclick="showTemplates()" class="btn btn-outline-info">
+                        <i class="fas fa-copy me-2"></i>Sao chép mẫu
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Processing Info -->
+        <div class="card custom-card mb-4">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-cogs text-primary me-2"></i>Quy trình xử lý
+                </h6>
+
+                <div class="process-steps">
+                    <div class="step-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="step-number">1</span>
+                            <div>
+                                <h6 class="mb-0">Tải file</h6>
+                                <small class="text-muted">Xác thực định dạng CSV</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="step-number">2</span>
+                            <div>
+                                <h6 class="mb-0">Xử lý dữ liệu</h6>
+                                <small class="text-muted">Validate & Clean data</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="step-number">3</span>
+                            <div>
+                                <h6 class="mb-0">Dự đoán AI</h6>
+                                <small class="text-muted">Phân tích từng ứng viên</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="d-flex align-items-center">
+                            <span class="step-number">4</span>
+                            <div>
+                                <h6 class="mb-0">Kết quả</h6>
+                                <small class="text-muted">Báo cáo & Thống kê</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="card custom-card mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-lightbulb text-warning me-2"></i>Mẹo xử lý hiệu quả
+                </h6>
+                <ul class="small mb-0">
+                    <li class="mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <strong>Giới hạn kích thước</strong>
+                        <br><span class="text-muted">Tối đa 1000 ứng viên/file</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <strong>Kỹ năng chuẩn hóa</strong>
+                        <br><span class="text-muted">Sử dụng tiếng Anh cho kỹ năng</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <strong>Định dạng nhất quán</strong>
+                        <br><span class="text-muted">UTF-8 encoding</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="card custom-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-chart-line text-info me-2"></i>Hiệu suất xử lý
+                </h6>
+
+                <div class="text-center">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <i class="fas fa-tachometer-alt fa-2x text-primary mb-2"></i>
+                                <h5 class="mb-0">~500+</h5>
+                                <small class="text-muted">Ứng viên/phút</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <i class="fas fa-clock fa-2x text-success mb-2"></i>
+                                <h5 class="mb-0">2-5</h5>
+                                <small class="text-muted">Phút/file</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <i class="fas fa-memory fa-2x text-info mb-2"></i>
+                                <h5 class="mb-0">95%+</h5>
+                                <small class="text-muted">Độ chính xác</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <i class="fas fa-shield-alt fa-2x text-warning mb-2"></i>
+                                <h5 class="mb-0">Auto</h5>
+                                <small class="text-muted">Backup kết quả</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.upload-area {
+    transition: var(--transition);
+}
+
+.upload-area:hover {
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.process-steps .step-item {
+    position: relative;
+    padding-left: 15px;
+}
+
+.process-steps .step-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 30px;
+    width: 2px;
+    height: 100%;
+    background: #e5e7eb;
+}
+
+.stat-box {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #f8fafc;
+    transition: var(--transition);
+}
+
+.stat-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Drag and drop styles */
+#uploadArea.dragover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: var(--primary-color) !important;
+}
+
+#uploadArea .feature-icon {
+    transition: var(--transition);
+}
+
+#uploadArea:hover .feature-icon {
+    transform: scale(1.1);
+}
+</style>
+
+<script>
+// Drag and drop functionality
+const uploadArea = document.getElementById('uploadArea');
+const fileInput = document.getElementById('fileInput');
+
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    uploadArea.addEventListener(eventName, preventDefaults, false);
+});
+
+function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+['dragenter', 'dragover'].forEach(eventName => {
+    uploadArea.addEventListener(eventName, () => {
+        uploadArea.classList.add('dragover');
+    }, false);
+});
+
+['dragleave', 'drop'].forEach(eventName => {
+    uploadArea.addEventListener(eventName, () => {
+        uploadArea.classList.remove('dragover');
+    }, false);
+});
+
+uploadArea.addEventListener('drop', (e) => {
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+        fileInput.files = files;
+    }
+}, false);
+
+// Form submission
+document.getElementById('batchForm').addEventListener('submit', function(e) {
+    const submitBtn = document.getElementById('uploadBtn');
+    const progressDiv = document.getElementById('processing-progress');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const spinner = submitBtn.querySelector('.loading-spinner');
+
+    // Show loading state
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline-block';
+    progressDiv.style.display = 'block';
+
+    // Simulate progress
+    simulateProcessing();
+});
+
+function simulateProcessing() {
+    const bar = document.getElementById('processing-bar');
+    const status = document.getElementById('processing-status');
+    const steps = [
+        { percent: 20, message: 'Đang tải file...' },
+        { percent: 40, message: 'Đang phân tích dữ liệu...' },
+        { percent: 60, message: 'Đang dự đoán với AI...' },
+        { percent: 80, message: 'Đang tạo báo cáo...' },
+        { percent: 100, message: 'Hoàn thành!' }
+    ];
+
+    let stepIndex = 0;
+    const interval = setInterval(() => {
+        if (stepIndex < steps.length) {
+            const step = steps[stepIndex];
+            bar.style.width = step.percent + '%';
+            status.textContent = step.message;
+            stepIndex++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 1000);
+}
+
+// Sample CSV generation
+function generateSampleCSV() {
+    const csvContent = `candidate_id,years_experience,education_level,skills,experience_description,position_applied
+UV001,5,bachelor,"python, sql, machine learning, data analysis","5 years experience in data science and ML",Data Scientist
+UV002,3,master,"javascript, react, nodejs, mongodb","Full-stack developer with React experience",Web Developer
+UV003,7,bachelor,"project management, agile, leadership, communication","Senior PM with Agile certification",Project Manager
+UV004,2,associate,"excel, powerpoint, communication","Recent graduate with strong presentation skills",Business Analyst
+UV005,4,phd,"python, tensorflow, pytorch, deep learning","PhD in ML with research experience",Senior Data Scientist`;
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'sample_candidates.csv';
+    link.click();
+}
+
+// Copy template to clipboard
+function showTemplates() {
+    const template = `candidate_id,years_experience,education_level,skills,experience_description,position_applied
+UV_001,5,bachelor,"python, sql, ml","5 years experience",Data Scientist`;
+
+    navigator.clipboard.writeText(template).then(() => {
+        alert('Mẫu CSV đã được sao chép vào clipboard!');
+    });
+}
+</script>
+{% endblock %}

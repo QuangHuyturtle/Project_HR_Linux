@@ -1,0 +1,285 @@
+{
+  "data_science": {
+    "required_skills": [
+      "python",
+      "sql",
+      "statistics"
+    ],
+    "advanced_skills": [
+      "machine learning",
+      "deep learning",
+      "nlp"
+    ],
+    "tool_skills": [
+      "tensorflow",
+      "pytorch",
+      "scikit-learn",
+      "pandas",
+      "numpy"
+    ],
+    "business_skills": [
+      "data storytelling",
+      "business acumen",
+      "problem solving"
+    ],
+    "career_progression": {
+      "junior": [
+        "python",
+        "sql",
+        "statistics",
+        "excel"
+      ],
+      "mid": [
+        "python",
+        "sql",
+        "machine learning",
+        "data visualization"
+      ],
+      "senior": [
+        "python",
+        "sql",
+        "machine learning",
+        "deep learning",
+        "mlops",
+        "leadership"
+      ],
+      "lead": [
+        "python",
+        "sql",
+        "machine learning",
+        "deep learning",
+        "mlops",
+        "leadership",
+        "strategic thinking"
+      ]
+    }
+  },
+  "web_development": {
+    "required_skills": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "advanced_skills": [
+      "react",
+      "nodejs",
+      "typescript",
+      "graphql"
+    ],
+    "tool_skills": [
+      "webpack",
+      "docker",
+      "git",
+      "ci/cd"
+    ],
+    "business_skills": [
+      "ux design",
+      "communication",
+      "problem solving"
+    ],
+    "career_progression": {
+      "junior": [
+        "html",
+        "css",
+        "javascript",
+        "git"
+      ],
+      "mid": [
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "nodejs",
+        "typescript"
+      ],
+      "senior": [
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "nodejs",
+        "typescript",
+        "architecture",
+        "performance"
+      ],
+      "lead": [
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "nodejs",
+        "typescript",
+        "architecture",
+        "leadership",
+        "mentoring"
+      ]
+    }
+  },
+  "devops": {
+    "required_skills": [
+      "linux",
+      "docker",
+      "cloud"
+    ],
+    "advanced_skills": [
+      "kubernetes",
+      "terraform",
+      "ansible",
+      "ci/cd"
+    ],
+    "tool_skills": [
+      "jenkins",
+      "gitlab",
+      "monitoring",
+      "security"
+    ],
+    "business_skills": [
+      "cost optimization",
+      "scalability",
+      "reliability"
+    ],
+    "career_progression": {
+      "junior": [
+        "linux",
+        "docker",
+        "git"
+      ],
+      "mid": [
+        "linux",
+        "docker",
+        "kubernetes",
+        "aws",
+        "ci/cd"
+      ],
+      "senior": [
+        "linux",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "ansible",
+        "security",
+        "performance"
+      ],
+      "lead": [
+        "linux",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "ansible",
+        "security",
+        "architecture",
+        "leadership"
+      ]
+    }
+  },
+  "mobile_development": {
+    "required_skills": [
+      "mobile_development",
+      "programming"
+    ],
+    "advanced_skills": [
+      "react native",
+      "flutter",
+      "swift",
+      "kotlin"
+    ],
+    "tool_skills": [
+      "xcode",
+      "android studio",
+      "firebase"
+    ],
+    "business_skills": [
+      "app store optimization",
+      "ui/ux",
+      "testing"
+    ],
+    "career_progression": {
+      "junior": [
+        "javascript",
+        "react native",
+        "mobile_development"
+      ],
+      "mid": [
+        "javascript",
+        "react native",
+        "flutter",
+        "native_development"
+      ],
+      "senior": [
+        "javascript",
+        "react native",
+        "flutter",
+        "swift",
+        "kotlin",
+        "architecture",
+        "performance"
+      ],
+      "lead": [
+        "javascript",
+        "react native",
+        "flutter",
+        "swift",
+        "kotlin",
+        "architecture",
+        "leadership",
+        "strategy"
+      ]
+    }
+  },
+  "ui_ux_design": {
+    "required_skills": [
+      "design",
+      "ui/ux"
+    ],
+    "advanced_skills": [
+      "figma",
+      "sketch",
+      "adobe creative suite",
+      "prototyping"
+    ],
+    "tool_skills": [
+      "figma",
+      "sketch",
+      "adobe xd",
+      "invision"
+    ],
+    "business_skills": [
+      "user research",
+      "design thinking",
+      "communication"
+    ],
+    "career_progression": {
+      "junior": [
+        "design",
+        "figma",
+        "ui/ux"
+      ],
+      "mid": [
+        "design",
+        "figma",
+        "sketch",
+        "prototyping",
+        "user research"
+      ],
+      "senior": [
+        "design",
+        "figma",
+        "sketch",
+        "prototyping",
+        "user research",
+        "design systems",
+        "leadership"
+      ],
+      "lead": [
+        "design",
+        "figma",
+        "sketch",
+        "prototyping",
+        "user research",
+        "design systems",
+        "strategy",
+        "mentoring"
+      ]
+    }
+  }
+}

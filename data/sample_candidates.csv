@@ -1,0 +1,1001 @@
+candidate_id,years_experience,education_level,skills,experience_description,position_applied,suitable
+CAND_0001,2,bachelor,"communication, adaptability, problem solving, microservices, aws","Experienced fullstack developer with 2 years working with communication, adaptability, problem solving",fullstack_developer,0
+CAND_0002,9,phd,"communication, prototyping, teamwork, critical thinking, design, html","Experienced designer with 9 years working with communication, prototyping, teamwork",designer,1
+CAND_0003,0,phd,"communication, business intelligence, adaptability, process modeling, sql, excel","Experienced business analyst with 0 years working with communication, business intelligence, adaptability",business_analyst,1
+CAND_0004,2,master,"docker, communication, programming, python, problem solving, javascript, c#","Experienced software developer with 2 years working with docker, communication, programming",software_developer,1
+CAND_0005,8,master,"stakeholder management, risk management, teamwork, pmp, project management, scrum, agile","Experienced project manager with 8 years working with stakeholder management, risk management, teamwork",project_manager,1
+CAND_0006,9,bachelor,"machine learning, statistics, python, critical thinking, problem solving, creativity, sql, numpy","Experienced data scientist with 9 years working with machine learning, statistics, python",data_scientist,1
+CAND_0007,1,bachelor,"teamwork, responsive design, vue, critical thinking, javascript, figma, html, time management, webpack, css","Experienced frontend developer with 1 years working with teamwork, responsive design, vue",frontend_developer,1
+CAND_0008,5,high_school,"jenkins, docker, communication, linux, kubernetes, azure, monitoring, ansible","Experienced devops engineer with 5 years working with jenkins, docker, communication",devops_engineer,1
+CAND_0009,5,master,"photoshop, indesign, web design, typography, time management, illustrator","Experienced graphic designer with 5 years working with photoshop, indesign, web design",graphic_designer,0
+CAND_0010,3,bachelor,"agile, git, problem solving, programming","Experienced developer with 3 years working with agile, git, problem solving",developer,1
+CAND_0011,0,high_school,"tableau, time management, data visualization, statistics","Experienced data analyst with 0 years working with tableau, time management, data visualization",data_analyst,0
+CAND_0012,4,bachelor,"communication, docker, teamwork, leadership, api, sql","Experienced backend developer with 4 years working with communication, docker, teamwork",backend_developer,1
+CAND_0013,0,bachelor,"tableau, statistics, leadership, excel, reporting, data analysis, powerbi","Experienced analyst with 0 years working with tableau, statistics, leadership",analyst,1
+CAND_0014,0,master,"leadership, communication, project management","Experienced project manager with 0 years working with leadership, communication, project management",project_manager,1
+CAND_0015,2,master,"machine learning, pytorch, statistics, spark, adaptability, critical thinking, scipy","Experienced data scientist with 2 years working with machine learning, pytorch, statistics",data_scientist,0
+CAND_0016,0,phd,"mongodb, communication, nodejs, vue, javascript, css, html, time management, typescript, php","Experienced web developer with 0 years working with mongodb, communication, nodejs",web_developer,1
+CAND_0017,1,master,"machine learning, data visualization, problem solving","Experienced data analyst with 1 years working with machine learning, data visualization, problem solving",data_analyst,0
+CAND_0018,0,master,"design, teamwork","Experienced designer with 0 years working with design, teamwork",designer,1
+CAND_0019,9,associate,"communication, python, creativity, time management, powerbi","Experienced business analyst with 9 years working with communication, python, creativity",business_analyst,0
+CAND_0020,7,phd,"teamwork, c++, programming","Experienced software developer with 7 years working with teamwork, c++, programming",software_developer,1
+CAND_0021,7,bachelor,"tableau, pandas, teamwork, python, critical thinking, sql, excel","Experienced data analyst with 7 years working with tableau, pandas, teamwork",data_analyst,1
+CAND_0022,0,master,"testing, python, critical thinking, leadership, javascript, c++, agile","Experienced software developer with 0 years working with testing, python, critical thinking",software_developer,0
+CAND_0023,7,high_school,"teamwork, typescript, webpack","Experienced frontend developer with 7 years working with teamwork, typescript, webpack",frontend_developer,0
+CAND_0024,7,bachelor,"responsive design, vue, critical thinking, react, javascript, html, css","Experienced frontend developer with 7 years working with responsive design, vue, critical thinking",frontend_developer,1
+CAND_0025,0,phd,"adaptability, jira, risk management, teamwork, project management, agile","Experienced project manager with 0 years working with adaptability, jira, risk management",project_manager,1
+CAND_0026,3,bachelor,"adaptability, teamwork, creativity, agile, analytics, roadmap planning","Experienced product manager with 3 years working with adaptability, teamwork, creativity",product_manager,0
+CAND_0027,2,phd,"ui/ux, prototyping, adaptability, critical thinking, design, sketch","Experienced ui ux designer with 2 years working with ui/ux, prototyping, adaptability",ui_ux_designer,1
+CAND_0028,1,master,"adaptability, critical thinking, design, adobe creative suite, creativity","Experienced graphic designer with 1 years working with adaptability, critical thinking, design",graphic_designer,1
+CAND_0029,7,phd,"teamwork, responsive design, angular","Experienced frontend developer with 7 years working with teamwork, responsive design, angular",frontend_developer,0
+CAND_0030,7,master,"reporting, sql, creativity","Experienced analyst with 7 years working with reporting, sql, creativity",analyst,0
+CAND_0031,12,associate,"mongodb, adaptability, critical thinking, problem solving, javascript, postgresql, sql, html, css","Experienced fullstack developer with 12 years working with mongodb, adaptability, critical thinking",fullstack_developer,1
+CAND_0032,8,associate,"docker, problem solving, java, api, sql, creativity, c#","Experienced backend developer with 8 years working with docker, problem solving, java",backend_developer,1
+CAND_0033,1,bachelor,"tableau, statistics, r, leadership, creativity, sql, excel, data analysis","Experienced analyst with 1 years working with tableau, statistics, r",analyst,1
+CAND_0034,10,master,"pandas, tensorflow, communication, adaptability, teamwork, python, sql, numpy, scipy","Experienced data scientist with 10 years working with pandas, tensorflow, communication",data_scientist,1
+CAND_0035,9,associate,"teamwork, critical thinking, creativity, sql, excel","Experienced business analyst with 9 years working with teamwork, critical thinking, creativity",business_analyst,1
+CAND_0036,0,associate,"teamwork, problem solving, creativity, project management, agile","Experienced project manager with 0 years working with teamwork, problem solving, creativity",project_manager,1
+CAND_0037,4,phd,"adaptability, jira, problem solving, leadership, scrum, time management","Experienced project manager with 4 years working with adaptability, jira, problem solving",project_manager,0
+CAND_0038,9,bachelor,"hyper-v, adaptability, teamwork, leadership, monitoring","Experienced system administrator with 9 years working with hyper-v, adaptability, teamwork",system_administrator,0
+CAND_0039,5,phd,"tableau, teamwork, problem solving, process modeling, creativity","Experienced business analyst with 5 years working with tableau, teamwork, problem solving",business_analyst,0
+CAND_0040,11,associate,"communication, programming, problem solving, c++, time management, c#","Experienced software developer with 11 years working with communication, programming, problem solving",software_developer,1
+CAND_0041,1,master,"r, critical thinking, problem solving, leadership, sql","Experienced analyst with 1 years working with r, critical thinking, problem solving",analyst,0
+CAND_0042,0,phd,"docker, linux, terraform, teamwork, azure, ansible","Experienced devops engineer with 0 years working with docker, linux, terraform",devops_engineer,1
+CAND_0043,7,master,"communication, adaptability, leadership, project management, scrum","Experienced project manager with 7 years working with communication, adaptability, leadership",project_manager,1
+CAND_0044,4,high_school,"ui/ux, prototyping, critical thinking, problem solving, design, time management","Experienced designer with 4 years working with ui/ux, prototyping, critical thinking",designer,1
+CAND_0045,0,high_school,"communication, linux, critical thinking, problem solving, windows","Experienced system administrator with 0 years working with communication, linux, critical thinking",system_administrator,1
+CAND_0046,1,bachelor,"machine learning, communication, r, python, sql, excel, data visualization","Experienced data analyst with 1 years working with machine learning, communication, r",data_analyst,1
+CAND_0047,7,high_school,"adaptability, creativity, react","Experienced frontend developer with 7 years working with adaptability, creativity, react",frontend_developer,0
+CAND_0048,8,high_school,"pandas, teamwork, problem solving, sql, excel, time management, powerbi","Experienced data analyst with 8 years working with pandas, teamwork, problem solving",data_analyst,1
+CAND_0049,6,master,"communication, adaptability, teamwork, adobe creative suite, css, html","Experienced designer with 6 years working with communication, adaptability, teamwork",designer,0
+CAND_0050,4,high_school,"machine learning, communication, statistics, leadership, sql, data visualization, excel","Experienced data analyst with 4 years working with machine learning, communication, statistics",data_analyst,1
+CAND_0051,2,master,"mongodb, angular, adaptability, javascript, css, html, php","Experienced web developer with 2 years working with mongodb, angular, adaptability",web_developer,1
+CAND_0052,0,associate,"docker, prometheus, linux, problem solving, azure, aws, monitoring","Experienced devops engineer with 0 years working with docker, prometheus, linux",devops_engineer,1
+CAND_0053,1,bachelor,"security, bash, linux, teamwork, networking, windows","Experienced system administrator with 1 years working with security, bash, linux",system_administrator,1
+CAND_0054,10,master,"tableau, teamwork, python, problem solving, excel, time management, reporting, data analysis","Experienced analyst with 10 years working with tableau, teamwork, python",analyst,1
+CAND_0055,5,bachelor,"communication, problem solving, leadership, content writing, content strategy, creativity, video editing, analytics","Experienced content creator with 5 years working with communication, problem solving, leadership",content_creator,1
+CAND_0056,0,high_school,"mongodb, communication, angular, teamwork, php","Experienced web developer with 0 years working with mongodb, communication, angular",web_developer,0
+CAND_0057,5,master,"communication, python, git, time management, c#, agile","Experienced software developer with 5 years working with communication, python, git",software_developer,0
+CAND_0058,2,high_school,"photoshop, indesign, problem solving, critical thinking, design, adobe creative suite, creativity, illustrator","Experienced graphic designer with 2 years working with photoshop, indesign, problem solving",graphic_designer,1
+CAND_0059,1,bachelor,"digital marketing, communication, email marketing, teamwork, sem, time management","Experienced digital marketer with 1 years working with digital marketing, communication, email marketing",digital_marketer,1
+CAND_0060,9,phd,"swift, leadership, firebase, java, creativity, time management","Experienced mobile developer with 9 years working with swift, leadership, firebase",mobile_developer,0
+CAND_0061,7,high_school,"aws, react, javascript, postgresql, creativity, sql, html, css","Experienced fullstack developer with 7 years working with aws, react, javascript",fullstack_developer,1
+CAND_0062,2,phd,"programming, python, critical thinking, java, time management, agile","Experienced software developer with 2 years working with programming, python, critical thinking",software_developer,1
+CAND_0063,1,associate,"testing, adaptability, critical thinking, bug tracking, quality assurance, selenium","Experienced qa engineer with 1 years working with testing, adaptability, critical thinking",qa_engineer,1
+CAND_0064,1,high_school,"automation testing, testing, security testing, ci/cd, teamwork, leadership, creativity, quality assurance, selenium","Experienced qa engineer with 1 years working with automation testing, testing, security testing",qa_engineer,1
+CAND_0065,1,bachelor,"tableau, machine learning, python, leadership, data visualization, time management, powerbi","Experienced data analyst with 1 years working with tableau, machine learning, python",data_analyst,0
+CAND_0066,3,associate,"typescript, problem solving","Experienced web developer with 3 years working with typescript, problem solving",web_developer,0
+CAND_0067,1,master,"r, critical thinking, problem solving, process modeling, sql, excel, time management, powerbi","Experienced business analyst with 1 years working with r, critical thinking, problem solving",business_analyst,1
+CAND_0068,4,associate,"time management, app store, mobile","Experienced mobile developer with 4 years working with time management, app store, mobile",mobile_developer,1
+CAND_0069,10,phd,"ui/ux, prototyping, problem solving, wireframing, design, figma","Experienced ui ux designer with 10 years working with ui/ux, prototyping, problem solving",ui_ux_designer,1
+CAND_0070,6,bachelor,"communication, digital marketing","Experienced digital marketer with 6 years working with communication, digital marketing",digital_marketer,1
+CAND_0071,10,master,"adaptability, vue, react, javascript, figma, html, css","Experienced frontend developer with 10 years working with adaptability, vue, react",frontend_developer,1
+CAND_0072,9,bachelor,"time management, monitoring, leadership, creativity","Experienced system administrator with 9 years working with time management, monitoring, leadership",system_administrator,0
+CAND_0073,10,bachelor,"creativity, technical skills","Experienced product manager with 10 years working with creativity, technical skills",product_manager,0
+CAND_0074,7,high_school,"content writing, communication, graphic design","Experienced content creator with 7 years working with content writing, communication, graphic design",content_creator,1
+CAND_0075,1,bachelor,"testing, communication, leadership, creativity, agile","Experienced developer with 1 years working with testing, communication, leadership",developer,0
+CAND_0076,8,high_school,"time management, a/b testing, adaptability","Experienced product manager with 8 years working with time management, a/b testing, adaptability",product_manager,0
+CAND_0077,4,phd,"problem solving, leadership","Experienced business analyst with 4 years working with problem solving, leadership",business_analyst,0
+CAND_0078,8,associate,"sql, business intelligence, excel, creativity","Experienced business analyst with 8 years working with sql, business intelligence, excel",business_analyst,1
+CAND_0079,0,master,"communication, adaptability, teamwork, responsive design, vue, react, javascript, figma, html, webpack, css","Experienced frontend developer with 0 years working with communication, adaptability, teamwork",frontend_developer,1
+CAND_0080,11,associate,"docker, linux, leadership, time management, ansible","Experienced devops engineer with 11 years working with docker, linux, leadership",devops_engineer,1
+CAND_0081,5,phd,"communication, teamwork, wireframing, product management, analytics, user research","Experienced product manager with 5 years working with communication, teamwork, wireframing",product_manager,1
+CAND_0082,0,high_school,"pandas, statistics, python, problem solving, leadership, sql, excel, data visualization","Experienced data analyst with 0 years working with pandas, statistics, python",data_analyst,1
+CAND_0083,1,phd,"sass, teamwork, critical thinking, javascript, html, css","Experienced frontend developer with 1 years working with sass, teamwork, critical thinking",frontend_developer,1
+CAND_0084,9,phd,"kotlin, communication, google play, react native, app store, critical thinking, problem solving","Experienced mobile developer with 9 years working with kotlin, communication, google play",mobile_developer,0
+CAND_0085,6,associate,creativity,Experienced fullstack developer with 6 years working with creativity,fullstack_developer,0
+CAND_0086,8,associate,"adaptability, critical thinking, project management, agile","Experienced project manager with 8 years working with adaptability, critical thinking, project management",project_manager,1
+CAND_0087,9,bachelor,"communication, statistics","Experienced data scientist with 9 years working with communication, statistics",data_scientist,0
+CAND_0088,4,high_school,"machine learning, creativity, sql, excel, time management","Experienced data analyst with 4 years working with machine learning, creativity, sql",data_analyst,1
+CAND_0089,4,bachelor,"communication, wordpress, critical thinking, problem solving, content writing, content strategy, creativity, social media","Experienced content creator with 4 years working with communication, wordpress, critical thinking",content_creator,1
+CAND_0090,10,high_school,"stakeholder management, communication, critical thinking, leadership, confluence, project management, agile","Experienced project manager with 10 years working with stakeholder management, communication, critical thinking",project_manager,1
+CAND_0091,4,master,"digital marketing, problem solving, creativity, facebook ads, seo, analytics, time management, social media","Experienced digital marketer with 4 years working with digital marketing, problem solving, creativity",digital_marketer,1
+CAND_0092,6,bachelor,"api testing, problem solving, ci/cd","Experienced qa engineer with 6 years working with api testing, problem solving, ci/cd",qa_engineer,0
+CAND_0093,2,associate,"time management, git, critical thinking, programming","Experienced software developer with 2 years working with time management, git, critical thinking",software_developer,1
+CAND_0094,6,high_school,"vmware, communication, security, creativity, powershell","Experienced system administrator with 6 years working with vmware, communication, security",system_administrator,0
+CAND_0095,10,bachelor,"tableau, communication, adaptability, teamwork, requirements analysis, powerbi","Experienced business analyst with 10 years working with tableau, communication, adaptability",business_analyst,0
+CAND_0096,6,associate,"tableau, adaptability, teamwork, python, time management","Experienced analyst with 6 years working with tableau, adaptability, teamwork",analyst,0
+CAND_0097,0,phd,"problem solving, css","Experienced designer with 0 years working with problem solving, css",designer,0
+CAND_0098,0,associate,"r, communication, data visualization","Experienced data analyst with 0 years working with r, communication, data visualization",data_analyst,0
+CAND_0099,5,phd,"pandas, statistics, teamwork, critical thinking, data visualization, sql, excel","Experienced data analyst with 5 years working with pandas, statistics, teamwork",data_analyst,1
+CAND_0100,0,high_school,"tableau, machine learning, communication, statistics, r, problem solving, data visualization, time management","Experienced data analyst with 0 years working with tableau, machine learning, communication",data_analyst,0
+CAND_0101,9,bachelor,critical thinking,Experienced data scientist with 9 years working with critical thinking,data_scientist,0
+CAND_0102,0,phd,"creativity, performance testing","Experienced qa engineer with 0 years working with creativity, performance testing",qa_engineer,0
+CAND_0103,9,associate,"vmware, communication, security, teamwork, problem solving, networking","Experienced system administrator with 9 years working with vmware, communication, security",system_administrator,0
+CAND_0104,0,phd,"adaptability, git, critical thinking, programming","Experienced software developer with 0 years working with adaptability, git, critical thinking",software_developer,1
+CAND_0105,4,phd,"time management, webpack","Experienced web developer with 4 years working with time management, webpack",web_developer,0
+CAND_0106,6,bachelor,"adaptability, python, kubernetes, problem solving, azure, creativity","Experienced backend developer with 6 years working with adaptability, python, kubernetes",backend_developer,0
+CAND_0107,8,high_school,"communication, prototyping, problem solving, design, time management","Experienced designer with 8 years working with communication, prototyping, problem solving",designer,1
+CAND_0108,8,associate,"communication, critical thinking, leadership, sql, excel","Experienced business analyst with 8 years working with communication, critical thinking, leadership",business_analyst,1
+CAND_0109,0,phd,"typography, print design, leadership, adaptability","Experienced graphic designer with 0 years working with typography, print design, leadership",graphic_designer,0
+CAND_0110,3,associate,"communication, leadership, creativity, seo, social media","Experienced digital marketer with 3 years working with communication, leadership, creativity",digital_marketer,0
+CAND_0111,12,master,"communication, problem solving, product management, roadmap planning","Experienced product manager with 12 years working with communication, problem solving, product management",product_manager,1
+CAND_0112,8,associate,"kotlin, adaptability, critical thinking, mobile, firebase, creativity","Experienced mobile developer with 8 years working with kotlin, adaptability, critical thinking",mobile_developer,1
+CAND_0113,1,bachelor,"creativity, critical thinking, leadership, performance testing","Experienced qa engineer with 1 years working with creativity, critical thinking, leadership",qa_engineer,0
+CAND_0114,7,phd,"machine learning, communication, r, critical thinking, data visualization","Experienced data analyst with 7 years working with machine learning, communication, r",data_analyst,0
+CAND_0115,5,high_school,"digital marketing, adaptability, email marketing, teamwork, social media","Experienced digital marketer with 5 years working with digital marketing, adaptability, email marketing",digital_marketer,1
+CAND_0116,3,master,"nodejs, adaptability, problem solving, api, sql, php","Experienced backend developer with 3 years working with nodejs, adaptability, problem solving",backend_developer,1
+CAND_0117,10,high_school,"communication, wordpress, teamwork, problem solving, content strategy, social media, copywriting","Experienced content creator with 10 years working with communication, wordpress, teamwork",content_creator,0
+CAND_0118,5,associate,"leadership, problem solving, prototyping","Experienced designer with 5 years working with leadership, problem solving, prototyping",designer,0
+CAND_0119,0,high_school,"tableau, machine learning, communication, statistics, teamwork, python, problem solving, sql, excel","Experienced data analyst with 0 years working with tableau, machine learning, communication",data_analyst,1
+CAND_0120,6,associate,"adaptability, teamwork, leadership, video editing, seo","Experienced content creator with 6 years working with adaptability, teamwork, leadership",content_creator,0
+CAND_0121,4,associate,teamwork,Experienced data analyst with 4 years working with teamwork,data_analyst,0
+CAND_0122,0,phd,"communication, mobile, creativity","Experienced mobile developer with 0 years working with communication, mobile, creativity",mobile_developer,1
+CAND_0123,7,bachelor,"linux, time management, teamwork, windows","Experienced system administrator with 7 years working with linux, time management, teamwork",system_administrator,1
+CAND_0124,1,bachelor,"swift, mobile, java, creativity, flutter","Experienced mobile developer with 1 years working with swift, mobile, java",mobile_developer,1
+CAND_0125,6,phd,"communication, leadership, sql, excel, agile","Experienced business analyst with 6 years working with communication, leadership, sql",business_analyst,1
+CAND_0126,11,associate,communication,Experienced data scientist with 11 years working with communication,data_scientist,0
+CAND_0127,2,high_school,creativity,Experienced project manager with 2 years working with creativity,project_manager,0
+CAND_0128,3,master,"jenkins, communication, prometheus, teamwork, kubernetes, creativity, aws, terraform","Experienced devops engineer with 3 years working with jenkins, communication, prometheus",devops_engineer,0
+CAND_0129,8,high_school,"teamwork, communication, sass, webpack","Experienced frontend developer with 8 years working with teamwork, communication, sass",frontend_developer,0
+CAND_0130,2,bachelor,"critical thinking, javascript, creativity, sql, html, css","Experienced fullstack developer with 2 years working with critical thinking, javascript, creativity",fullstack_developer,1
+CAND_0131,9,associate,"digital marketing, content marketing, creativity, sem, seo, social media","Experienced digital marketer with 9 years working with digital marketing, content marketing, creativity",digital_marketer,1
+CAND_0132,2,high_school,"communication, teamwork, technical skills, product management, analytics, agile","Experienced product manager with 2 years working with communication, teamwork, technical skills",product_manager,1
+CAND_0133,0,associate,"docker, teamwork, critical thinking, react, time management","Experienced fullstack developer with 0 years working with docker, teamwork, critical thinking",fullstack_developer,0
+CAND_0134,5,master,"time management, photoshop, illustrator","Experienced graphic designer with 5 years working with time management, photoshop, illustrator",graphic_designer,0
+CAND_0135,11,phd,"python, critical thinking, javascript, creativity, sql, html, time management, css","Experienced fullstack developer with 11 years working with python, critical thinking, javascript",fullstack_developer,1
+CAND_0136,2,high_school,"content marketing, digital marketing, problem solving","Experienced digital marketer with 2 years working with content marketing, digital marketing, problem solving",digital_marketer,1
+CAND_0137,0,bachelor,"communication, security, active directory, problem solving, networking, powershell","Experienced system administrator with 0 years working with communication, security, active directory",system_administrator,0
+CAND_0138,5,high_school,"communication, nodejs, angular, adaptability, react, javascript, html, css","Experienced web developer with 5 years working with communication, nodejs, angular",web_developer,1
+CAND_0139,8,phd,"critical thinking, google ads","Experienced digital marketer with 8 years working with critical thinking, google ads",digital_marketer,0
+CAND_0140,1,phd,"communication, wordpress, problem solving, content writing, creativity, video editing, time management, social media","Experienced content creator with 1 years working with communication, wordpress, problem solving",content_creator,1
+CAND_0141,1,phd,"ci/cd, teamwork, bug tracking, leadership, api testing, selenium","Experienced qa engineer with 1 years working with ci/cd, teamwork, bug tracking",qa_engineer,0
+CAND_0142,3,associate,"docker, linux, terraform, teamwork, creativity, ansible","Experienced devops engineer with 3 years working with docker, linux, terraform",devops_engineer,1
+CAND_0143,9,master,"ui/ux, prototyping, teamwork, problem solving, design, adobe creative suite","Experienced designer with 9 years working with ui/ux, prototyping, teamwork",designer,1
+CAND_0144,10,bachelor,"vmware, communication, adaptability, bash, linux, networking, powershell, windows, monitoring","Experienced system administrator with 10 years working with vmware, communication, adaptability",system_administrator,1
+CAND_0145,1,phd,"digital marketing, email marketing, seo, analytics, time management, social media","Experienced digital marketer with 1 years working with digital marketing, email marketing, seo",digital_marketer,1
+CAND_0146,3,high_school,problem solving,Experienced fullstack developer with 3 years working with problem solving,fullstack_developer,0
+CAND_0147,1,high_school,"communication, sass, vue, creativity, typescript","Experienced frontend developer with 1 years working with communication, sass, vue",frontend_developer,0
+CAND_0148,9,phd,"communication, teamwork, critical thinking, sql, product management, analytics, agile","Experienced product manager with 9 years working with communication, teamwork, critical thinking",product_manager,1
+CAND_0149,11,bachelor,"communication, technical skills, leadership, sql, time management","Experienced product manager with 11 years working with communication, technical skills, leadership",product_manager,0
+CAND_0150,8,master,"communication, prototyping, problem solving, wireframing, adobe creative suite, sketch, css","Experienced ui ux designer with 8 years working with communication, prototyping, problem solving",ui_ux_designer,0
+CAND_0151,3,phd,"communication, statistics","Experienced data analyst with 3 years working with communication, statistics",data_analyst,0
+CAND_0152,9,master,"communication, critical thinking, facebook ads, sem","Experienced digital marketer with 9 years working with communication, critical thinking, facebook ads",digital_marketer,0
+CAND_0153,1,master,"adaptability, leadership, react","Experienced frontend developer with 1 years working with adaptability, leadership, react",frontend_developer,0
+CAND_0154,1,high_school,"python, sql, leadership, excel","Experienced data analyst with 1 years working with python, sql, leadership",data_analyst,1
+CAND_0155,0,high_school,"automation testing, security testing, adaptability, bug tracking, leadership, performance testing","Experienced qa engineer with 0 years working with automation testing, security testing, adaptability",qa_engineer,0
+CAND_0156,9,phd,"sql, excel, r, adaptability","Experienced business analyst with 9 years working with sql, excel, r",business_analyst,1
+CAND_0157,6,master,"machine learning, sql, excel, time management, powerbi","Experienced data analyst with 6 years working with machine learning, sql, excel",data_analyst,1
+CAND_0158,0,master,"r, teamwork, python, problem solving, leadership, sql, excel, requirements analysis, powerbi","Experienced business analyst with 0 years working with r, teamwork, python",business_analyst,1
+CAND_0159,8,master,"kotlin, adaptability, app store, problem solving, mobile, creativity, flutter","Experienced mobile developer with 8 years working with kotlin, adaptability, app store",mobile_developer,1
+CAND_0160,0,phd,"google play, react native, teamwork, java, flutter","Experienced mobile developer with 0 years working with google play, react native, teamwork",mobile_developer,0
+CAND_0161,1,bachelor,"app store, critical thinking, swift, firebase, java, time management, flutter","Experienced mobile developer with 1 years working with app store, critical thinking, swift",mobile_developer,0
+CAND_0162,1,master,"docker, adaptability, python, java, time management","Experienced software developer with 1 years working with docker, adaptability, python",software_developer,0
+CAND_0163,1,high_school,"docker, nodejs, teamwork, api, sql","Experienced backend developer with 1 years working with docker, nodejs, teamwork",backend_developer,1
+CAND_0164,0,bachelor,"teamwork, microservices","Experienced backend developer with 0 years working with teamwork, microservices",backend_developer,0
+CAND_0165,9,phd,"communication, nodejs, teamwork, problem solving, microservices","Experienced fullstack developer with 9 years working with communication, nodejs, teamwork",fullstack_developer,0
+CAND_0166,2,master,"tensorflow, communication, statistics, critical thinking, problem solving, numpy, scipy","Experienced data scientist with 2 years working with tensorflow, communication, statistics",data_scientist,0
+CAND_0167,4,master,"mongodb, javascript, postgresql, html, time management, css","Experienced web developer with 4 years working with mongodb, javascript, postgresql",web_developer,1
+CAND_0168,6,high_school,"adaptability, problem solving, facebook ads, analytics, time management, google ads","Experienced digital marketer with 6 years working with adaptability, problem solving, facebook ads",digital_marketer,0
+CAND_0169,7,phd,"adaptability, r, sql, excel, agile","Experienced business analyst with 7 years working with adaptability, r, sql",business_analyst,1
+CAND_0170,10,master,"kotlin, push notifications, react native, teamwork, mobile, firebase, leadership, flutter","Experienced mobile developer with 10 years working with kotlin, push notifications, react native",mobile_developer,1
+CAND_0171,7,master,"docker, teamwork, critical thinking, javascript, sql, html, time management, css","Experienced fullstack developer with 7 years working with docker, teamwork, critical thinking",fullstack_developer,1
+CAND_0172,4,master,"communication, angular, adaptability, vue, leadership, javascript, figma, html, css","Experienced frontend developer with 4 years working with communication, angular, adaptability",frontend_developer,1
+CAND_0173,8,bachelor,"docker, linux, critical thinking, problem solving, leadership","Experienced devops engineer with 8 years working with docker, linux, critical thinking",devops_engineer,1
+CAND_0174,4,high_school,"communication, photoshop, branding, indesign, design, adobe creative suite","Experienced graphic designer with 4 years working with communication, photoshop, branding",graphic_designer,1
+CAND_0175,1,phd,"color theory, branding, indesign, design, adobe creative suite, print design, creativity, illustrator","Experienced graphic designer with 1 years working with color theory, branding, indesign",graphic_designer,1
+CAND_0176,1,high_school,"time management, communication, user research, roadmap planning","Experienced product manager with 1 years working with time management, communication, user research",product_manager,0
+CAND_0177,6,phd,"leadership, creativity, indesign, illustrator","Experienced graphic designer with 6 years working with leadership, creativity, indesign",graphic_designer,0
+CAND_0178,2,bachelor,"communication, teamwork, javascript, creativity, html, css","Experienced web developer with 2 years working with communication, teamwork, javascript",web_developer,1
+CAND_0179,0,high_school,"ci/cd, python, java, time management, c#, agile","Experienced software developer with 0 years working with ci/cd, python, java",software_developer,0
+CAND_0180,7,master,"teamwork, critical thinking, kubernetes, aws, monitoring, ansible","Experienced devops engineer with 7 years working with teamwork, critical thinking, kubernetes",devops_engineer,0
+CAND_0181,9,phd,"communication, teamwork, hadoop, pytorch","Experienced data scientist with 9 years working with communication, teamwork, hadoop",data_scientist,0
+CAND_0182,1,phd,"critical thinking, leadership, photoshop, indesign","Experienced graphic designer with 1 years working with critical thinking, leadership, photoshop",graphic_designer,0
+CAND_0183,8,bachelor,"r, creativity, sql, excel, powerbi","Experienced data analyst with 8 years working with r, creativity, sql",data_analyst,1
+CAND_0184,3,associate,"communication, teamwork, technical skills, agile, product management, analytics, roadmap planning","Experienced product manager with 3 years working with communication, teamwork, technical skills",product_manager,1
+CAND_0185,8,associate,"java, time management, critical thinking, programming","Experienced software developer with 8 years working with java, time management, critical thinking",software_developer,1
+CAND_0186,9,phd,"teamwork, app store, leadership, firebase, creativity","Experienced mobile developer with 9 years working with teamwork, app store, leadership",mobile_developer,0
+CAND_0187,0,associate,"adaptability, teamwork, python, problem solving, sql","Experienced data scientist with 0 years working with adaptability, teamwork, python",data_scientist,1
+CAND_0188,0,phd,"ui/ux, teamwork, critical thinking, design, adobe creative suite, sketch, user research, html","Experienced ui ux designer with 0 years working with ui/ux, teamwork, critical thinking",ui_ux_designer,1
+CAND_0189,4,associate,"performance testing, testing, creativity, quality assurance","Experienced qa engineer with 4 years working with performance testing, testing, creativity",qa_engineer,1
+CAND_0190,5,master,"python, problem solving, adaptability","Experienced backend developer with 5 years working with python, problem solving, adaptability",backend_developer,0
+CAND_0191,6,high_school,"problem solving, api, sql, c#","Experienced backend developer with 6 years working with problem solving, api, sql",backend_developer,1
+CAND_0192,1,master,"teamwork, time management, project management, adaptability","Experienced project manager with 1 years working with teamwork, time management, project management",project_manager,1
+CAND_0193,5,master,"testing, programming, teamwork, python, java, sql, agile","Experienced developer with 5 years working with testing, programming, teamwork",developer,1
+CAND_0194,1,master,"react native, teamwork, swift, mobile, java, creativity","Experienced mobile developer with 1 years working with react native, teamwork, swift",mobile_developer,1
+CAND_0195,9,associate,"prototyping, critical thinking, leadership, creativity, sketch","Experienced ui ux designer with 9 years working with prototyping, critical thinking, leadership",ui_ux_designer,0
+CAND_0196,2,associate,"communication, problem solving, content writing, creativity, time management, wordpress","Experienced content creator with 2 years working with communication, problem solving, content writing",content_creator,1
+CAND_0197,6,associate,"communication, adaptability, go, api, sql, creativity","Experienced backend developer with 6 years working with communication, adaptability, go",backend_developer,1
+CAND_0198,9,bachelor,"confluence, communication, leadership","Experienced project manager with 9 years working with confluence, communication, leadership",project_manager,0
+CAND_0199,5,associate,"tableau, pandas, machine learning, teamwork, python, leadership, creativity, powerbi","Experienced data analyst with 5 years working with tableau, pandas, machine learning",data_analyst,0
+CAND_0200,10,master,"ui/ux, teamwork, design, figma, adobe creative suite, sketch, html, time management, css","Experienced ui ux designer with 10 years working with ui/ux, teamwork, design",ui_ux_designer,1
+CAND_0201,0,associate,"tableau, leadership, agile","Experienced business analyst with 0 years working with tableau, leadership, agile",business_analyst,0
+CAND_0202,7,bachelor,"sql, critical thinking, excel, problem solving","Experienced business analyst with 7 years working with sql, critical thinking, excel",business_analyst,1
+CAND_0203,10,bachelor,"leadership, programming","Experienced developer with 10 years working with leadership, programming",developer,1
+CAND_0204,10,bachelor,"tableau, communication, statistics, critical thinking, excel, sql, data analysis, powerbi","Experienced analyst with 10 years working with tableau, communication, statistics",analyst,1
+CAND_0205,9,bachelor,"adaptability, teamwork, indesign, leadership, design, adobe creative suite, web design, typography","Experienced graphic designer with 9 years working with adaptability, teamwork, indesign",graphic_designer,1
+CAND_0206,9,associate,"mongodb, time management, vue, webpack","Experienced web developer with 9 years working with mongodb, time management, vue",web_developer,0
+CAND_0207,1,phd,"teamwork, vue, problem solving, leadership, react, javascript, html, typescript, webpack, css","Experienced frontend developer with 1 years working with teamwork, vue, problem solving",frontend_developer,1
+CAND_0208,0,high_school,"testing, communication, manual testing, ci/cd, teamwork, problem solving, bug tracking, api testing, quality assurance","Experienced qa engineer with 0 years working with testing, communication, manual testing",qa_engineer,1
+CAND_0209,2,associate,"teamwork, time management, problem solving","Experienced devops engineer with 2 years working with teamwork, time management, problem solving",devops_engineer,0
+CAND_0210,9,associate,"statistics, problem solving, leadership, sql, time management","Experienced analyst with 9 years working with statistics, problem solving, leadership",analyst,0
+CAND_0211,6,master,"kotlin, push notifications, google play, adaptability, flutter","Experienced mobile developer with 6 years working with kotlin, push notifications, google play",mobile_developer,0
+CAND_0212,0,associate,"r, teamwork, statistics, powerbi","Experienced analyst with 0 years working with r, teamwork, statistics",analyst,0
+CAND_0213,0,bachelor,"adaptability, jira, leadership, confluence, scrum, time management, agile","Experienced project manager with 0 years working with adaptability, jira, leadership",project_manager,0
+CAND_0214,8,master,"statistics, creativity, excel, data analysis","Experienced analyst with 8 years working with statistics, creativity, excel",analyst,1
+CAND_0215,3,phd,"automation testing, testing, communication, teamwork, leadership, quality assurance","Experienced qa engineer with 3 years working with automation testing, testing, communication",qa_engineer,1
+CAND_0216,0,high_school,"testing, security testing, manual testing, adaptability, problem solving, quality assurance","Experienced qa engineer with 0 years working with testing, security testing, manual testing",qa_engineer,1
+CAND_0217,5,associate,"communication, teamwork, technical skills, product management, analytics, time management, agile","Experienced product manager with 5 years working with communication, teamwork, technical skills",product_manager,1
+CAND_0218,3,master,"adaptability, swift, mobile, firebase","Experienced mobile developer with 3 years working with adaptability, swift, mobile",mobile_developer,1
+CAND_0219,0,bachelor,"pandas, adaptability, python, problem solving, data visualization, sql, excel","Experienced data analyst with 0 years working with pandas, adaptability, python",data_analyst,1
+CAND_0220,1,high_school,"critical thinking, leadership, design, adobe creative suite, web design","Experienced graphic designer with 1 years working with critical thinking, leadership, design",graphic_designer,1
+CAND_0221,0,high_school,"programming, adaptability, teamwork, critical thinking, java, javascript","Experienced developer with 0 years working with programming, adaptability, teamwork",developer,1
+CAND_0222,1,high_school,"automation testing, security testing, communication, performance testing, selenium","Experienced qa engineer with 1 years working with automation testing, security testing, communication",qa_engineer,0
+CAND_0223,3,associate,"machine learning, communication, statistics, critical thinking, time management","Experienced data scientist with 3 years working with machine learning, communication, statistics",data_scientist,0
+CAND_0224,9,high_school,"communication, app store, google play, adaptability","Experienced mobile developer with 9 years working with communication, app store, google play",mobile_developer,0
+CAND_0225,1,associate,"networking, communication, teamwork, adaptability","Experienced system administrator with 1 years working with networking, communication, teamwork",system_administrator,0
+CAND_0226,2,high_school,"tableau, communication, teamwork, creativity, sql, excel","Experienced business analyst with 2 years working with tableau, communication, teamwork",business_analyst,1
+CAND_0227,2,associate,"adaptability, problem solving, javascript, creativity, html, css","Experienced web developer with 2 years working with adaptability, problem solving, javascript",web_developer,1
+CAND_0228,3,phd,"critical thinking, creativity, nodejs, microservices","Experienced fullstack developer with 3 years working with critical thinking, creativity, nodejs",fullstack_developer,0
+CAND_0229,5,phd,"kotlin, problem solving, swift, time management, flutter","Experienced mobile developer with 5 years working with kotlin, problem solving, swift",mobile_developer,0
+CAND_0230,0,associate,"vmware, communication, security, linux, critical thinking, networking, powershell, windows, time management","Experienced system administrator with 0 years working with vmware, communication, security",system_administrator,1
+CAND_0231,0,high_school,"python, c#, leadership, programming","Experienced software developer with 0 years working with python, c#, leadership",software_developer,1
+CAND_0232,8,associate,"teamwork, stakeholder management, project management, risk management","Experienced project manager with 8 years working with teamwork, stakeholder management, project management",project_manager,1
+CAND_0233,5,bachelor,"tableau, business intelligence, critical thinking, powerbi","Experienced business analyst with 5 years working with tableau, business intelligence, critical thinking",business_analyst,0
+CAND_0234,5,bachelor,"teamwork, critical thinking, microservices","Experienced fullstack developer with 5 years working with teamwork, critical thinking, microservices",fullstack_developer,0
+CAND_0235,0,high_school,"communication, angular, teamwork, javascript, html, time management, css","Experienced web developer with 0 years working with communication, angular, teamwork",web_developer,1
+CAND_0236,2,high_school,"testing, communication, programming, python, javascript, agile","Experienced developer with 2 years working with testing, communication, programming",developer,1
+CAND_0237,5,bachelor,"time management, leadership","Experienced developer with 5 years working with time management, leadership",developer,0
+CAND_0238,8,associate,"jenkins, docker, communication, linux, critical thinking, gitlab ci","Experienced devops engineer with 8 years working with jenkins, docker, communication",devops_engineer,1
+CAND_0239,3,associate,"stakeholder management, adaptability, teamwork, pmp, project management, time management","Experienced project manager with 3 years working with stakeholder management, adaptability, teamwork",project_manager,1
+CAND_0240,3,associate,"teamwork, problem solving, adobe creative suite, figma, html, css","Experienced designer with 3 years working with teamwork, problem solving, adobe creative suite",designer,0
+CAND_0241,3,phd,"docker, adaptability, java, creativity, aws","Experienced backend developer with 3 years working with docker, adaptability, java",backend_developer,0
+CAND_0242,0,bachelor,"java, teamwork, git, agile","Experienced developer with 0 years working with java, teamwork, git",developer,0
+CAND_0243,5,bachelor,"r, leadership, creativity, sql, excel, time management, reporting, data analysis","Experienced analyst with 5 years working with r, leadership, creativity",analyst,1
+CAND_0244,3,bachelor,"r, python, teamwork, leadership","Experienced analyst with 3 years working with r, python, teamwork",analyst,0
+CAND_0245,6,high_school,"communication, ui/ux, adaptability, leadership, design, adobe creative suite, css, html","Experienced ui ux designer with 6 years working with communication, ui/ux, adaptability",ui_ux_designer,1
+CAND_0246,9,high_school,"kotlin, leadership, problem solving, mobile","Experienced mobile developer with 9 years working with kotlin, leadership, problem solving",mobile_developer,1
+CAND_0247,9,master,"pandas, machine learning, communication, critical thinking","Experienced data scientist with 9 years working with pandas, machine learning, communication",data_scientist,0
+CAND_0248,8,associate,"testing, programming, adaptability, teamwork, python, java, javascript, time management","Experienced developer with 8 years working with testing, programming, adaptability",developer,1
+CAND_0249,1,phd,"teamwork, problem solving, java, creativity, flutter","Experienced mobile developer with 1 years working with teamwork, problem solving, java",mobile_developer,0
+CAND_0250,2,associate,"communication, adaptability, python, creativity, excel, reporting, data analysis","Experienced analyst with 2 years working with communication, adaptability, python",analyst,1
+CAND_0251,9,bachelor,"programming, python, problem solving, javascript, c#","Experienced software developer with 9 years working with programming, python, problem solving",software_developer,1
+CAND_0252,0,master,"time management, machine learning, python, critical thinking","Experienced data analyst with 0 years working with time management, machine learning, python",data_analyst,0
+CAND_0253,8,phd,"teamwork, problem solving, design, adobe creative suite, creativity","Experienced designer with 8 years working with teamwork, problem solving, design",designer,1
+CAND_0254,5,associate,"testing, programming, critical thinking, creativity, agile","Experienced developer with 5 years working with testing, programming, critical thinking",developer,1
+CAND_0255,0,phd,"color theory, adaptability, design, adobe creative suite, web design","Experienced graphic designer with 0 years working with color theory, adaptability, design",graphic_designer,1
+CAND_0256,2,phd,"business intelligence, teamwork, python, critical thinking, creativity, sql, excel, powerbi","Experienced business analyst with 2 years working with business intelligence, teamwork, python",business_analyst,1
+CAND_0257,9,high_school,"sass, problem solving, leadership, javascript, html, css","Experienced frontend developer with 9 years working with sass, problem solving, leadership",frontend_developer,1
+CAND_0258,2,associate,"nodejs, teamwork, problem solving, react, javascript, postgresql, creativity, html, typescript, css","Experienced web developer with 2 years working with nodejs, teamwork, problem solving",web_developer,1
+CAND_0259,7,phd,teamwork,Experienced qa engineer with 7 years working with teamwork,qa_engineer,0
+CAND_0260,5,master,"testing, adaptability, programming, critical thinking, leadership, agile","Experienced developer with 5 years working with testing, adaptability, programming",developer,1
+CAND_0261,2,bachelor,"java, testing, time management, ci/cd","Experienced software developer with 2 years working with java, testing, time management",software_developer,0
+CAND_0262,9,high_school,"statistics, python, critical thinking, leadership, creativity, excel, reporting, data analysis, powerbi","Experienced analyst with 9 years working with statistics, python, critical thinking",analyst,1
+CAND_0263,6,phd,"leadership, java, microservices, c#, php","Experienced backend developer with 6 years working with leadership, java, microservices",backend_developer,0
+CAND_0264,2,associate,"programming, teamwork, problem solving, java, c++, time management, c#, agile","Experienced software developer with 2 years working with programming, teamwork, problem solving",software_developer,1
+CAND_0265,6,associate,"tableau, business intelligence, r, teamwork, process modeling, creativity, powerbi","Experienced business analyst with 6 years working with tableau, business intelligence, r",business_analyst,0
+CAND_0266,2,master,"adaptability, leadership, content strategy, seo, social media","Experienced content creator with 2 years working with adaptability, leadership, content strategy",content_creator,0
+CAND_0267,0,high_school,"problem solving, leadership, design, time management, html","Experienced designer with 0 years working with problem solving, leadership, design",designer,1
+CAND_0268,9,master,"communication, critical thinking, technical skills, leadership, sql, product management","Experienced product manager with 9 years working with communication, critical thinking, technical skills",product_manager,1
+CAND_0269,5,phd,"communication, adaptability, teamwork, javascript, html, css","Experienced frontend developer with 5 years working with communication, adaptability, teamwork",frontend_developer,1
+CAND_0270,6,master,"teamwork, critical thinking, problem solving","Experienced graphic designer with 6 years working with teamwork, critical thinking, problem solving",graphic_designer,0
+CAND_0271,0,high_school,"docker, problem solving, c++, programming","Experienced software developer with 0 years working with docker, problem solving, c++",software_developer,1
+CAND_0272,7,bachelor,"risk management, adaptability, leadership, confluence, project management, agile","Experienced project manager with 7 years working with risk management, adaptability, leadership",project_manager,1
+CAND_0273,5,associate,"communication, teamwork, python, sql, excel","Experienced data analyst with 5 years working with communication, teamwork, python",data_analyst,1
+CAND_0274,3,bachelor,"ui/ux, critical thinking, leadership, design, figma, adobe creative suite, creativity","Experienced ui ux designer with 3 years working with ui/ux, critical thinking, leadership",ui_ux_designer,1
+CAND_0275,4,bachelor,"digital marketing, teamwork, facebook ads, seo, analytics, time management","Experienced digital marketer with 4 years working with digital marketing, teamwork, facebook ads",digital_marketer,1
+CAND_0276,4,associate,"docker, communication, programming, adaptability, python, leadership, c++, c#","Experienced software developer with 4 years working with docker, communication, programming",software_developer,1
+CAND_0277,0,master,"communication, nodejs, critical thinking, api, sql, aws, php","Experienced backend developer with 0 years working with communication, nodejs, critical thinking",backend_developer,1
+CAND_0278,2,high_school,"mongodb, nodejs, critical thinking, problem solving, react, javascript, creativity, css, html, php","Experienced web developer with 2 years working with mongodb, nodejs, critical thinking",web_developer,1
+CAND_0279,10,bachelor,"time management, critical thinking, problem solving","Experienced mobile developer with 10 years working with time management, critical thinking, problem solving",mobile_developer,0
+CAND_0280,3,master,"adaptability, critical thinking, problem solving, mobile, flutter","Experienced mobile developer with 3 years working with adaptability, critical thinking, problem solving",mobile_developer,1
+CAND_0281,3,associate,"vmware, hyper-v, communication, bash, networking, creativity","Experienced system administrator with 3 years working with vmware, hyper-v, communication",system_administrator,0
+CAND_0282,7,master,"content writing, communication, social media, creativity","Experienced content creator with 7 years working with content writing, communication, social media",content_creator,1
+CAND_0283,8,phd,"jira, teamwork, stakeholder management, creativity","Experienced project manager with 8 years working with jira, teamwork, stakeholder management",project_manager,0
+CAND_0284,3,phd,"teamwork, critical thinking, react","Experienced web developer with 3 years working with teamwork, critical thinking, react",web_developer,0
+CAND_0285,9,master,"kubernetes, problem solving, java, microservices, c#, php","Experienced backend developer with 9 years working with kubernetes, problem solving, java",backend_developer,0
+CAND_0286,12,bachelor,"docker, adaptability, teamwork, javascript, sql, html, css","Experienced fullstack developer with 12 years working with docker, adaptability, teamwork",fullstack_developer,1
+CAND_0287,6,master,"communication, machine learning, scipy","Experienced data scientist with 6 years working with communication, machine learning, scipy",data_scientist,0
+CAND_0288,0,bachelor,"security, critical thinking, problem solving, networking, powershell","Experienced system administrator with 0 years working with security, critical thinking, problem solving",system_administrator,0
+CAND_0289,10,high_school,"time management, critical thinking, problem solving","Experienced devops engineer with 10 years working with time management, critical thinking, problem solving",devops_engineer,0
+CAND_0290,9,associate,"java, google play, swift, adaptability","Experienced mobile developer with 9 years working with java, google play, swift",mobile_developer,0
+CAND_0291,4,associate,"design, adobe creative suite, problem solving, html","Experienced designer with 4 years working with design, adobe creative suite, problem solving",designer,1
+CAND_0292,1,bachelor,"python, sql, leadership, adaptability","Experienced data scientist with 1 years working with python, sql, leadership",data_scientist,1
+CAND_0293,3,high_school,"mongodb, docker, teamwork, python, aws, javascript, postgresql, creativity, sql, html, time management, css","Experienced fullstack developer with 3 years working with mongodb, docker, teamwork",fullstack_developer,1
+CAND_0294,2,phd,"programming, teamwork, leadership, creativity, c++","Experienced software developer with 2 years working with programming, teamwork, leadership",software_developer,1
+CAND_0295,10,bachelor,"security, teamwork, communication, powershell","Experienced system administrator with 10 years working with security, teamwork, communication",system_administrator,0
+CAND_0296,0,bachelor,"tableau, business intelligence, communication, adaptability, teamwork, python, sql, excel, requirements analysis, agile","Experienced business analyst with 0 years working with tableau, business intelligence, communication",business_analyst,1
+CAND_0297,6,bachelor,"testing, programming, teamwork, python, problem solving, javascript, java, git, creativity","Experienced developer with 6 years working with testing, programming, teamwork",developer,1
+CAND_0298,2,bachelor,"docker, adaptability, critical thinking, react, postgresql, microservices","Experienced fullstack developer with 2 years working with docker, adaptability, critical thinking",fullstack_developer,0
+CAND_0299,7,phd,"copywriting, graphic design, problem solving, content strategy, seo, time management, wordpress","Experienced content creator with 7 years working with copywriting, graphic design, problem solving",content_creator,0
+CAND_0300,1,associate,"testing, programming, critical thinking, problem solving, java, git, time management","Experienced developer with 1 years working with testing, programming, critical thinking",developer,1
+CAND_0301,4,master,"pandas, communication, statistics, problem solving, leadership, hadoop, scipy","Experienced data scientist with 4 years working with pandas, communication, statistics",data_scientist,0
+CAND_0302,0,associate,"linux, docker, problem solving, terraform","Experienced devops engineer with 0 years working with linux, docker, problem solving",devops_engineer,1
+CAND_0303,4,high_school,"communication, security, linux, critical thinking, windows","Experienced system administrator with 4 years working with communication, security, linux",system_administrator,1
+CAND_0304,3,bachelor,"testing, communication, manual testing, ci/cd, adaptability, bug tracking, quality assurance, selenium","Experienced qa engineer with 3 years working with testing, communication, manual testing",qa_engineer,1
+CAND_0305,7,phd,"automation testing, testing, leadership, quality assurance, time management","Experienced qa engineer with 7 years working with automation testing, testing, leadership",qa_engineer,1
+CAND_0306,7,bachelor,"communication, statistics, python, problem solving, sql","Experienced data scientist with 7 years working with communication, statistics, python",data_scientist,1
+CAND_0307,3,phd,"mongodb, communication, nodejs, react, microservices, devops","Experienced fullstack developer with 3 years working with mongodb, communication, nodejs",fullstack_developer,0
+CAND_0308,6,master,"design, figma, adobe creative suite, creativity, time management","Experienced designer with 6 years working with design, figma, adobe creative suite",designer,1
+CAND_0309,9,phd,"mongodb, docker, communication, javascript, postgresql, sql, html, css, devops","Experienced fullstack developer with 9 years working with mongodb, docker, communication",fullstack_developer,1
+CAND_0310,8,phd,"time management, problem solving, adaptability","Experienced analyst with 8 years working with time management, problem solving, adaptability",analyst,0
+CAND_0311,8,high_school,"security, bash, linux, active directory, powershell, windows, time management","Experienced system administrator with 8 years working with security, bash, linux",system_administrator,1
+CAND_0312,2,bachelor,"adaptability, design, print design, adobe creative suite, web design","Experienced graphic designer with 2 years working with adaptability, design, print design",graphic_designer,1
+CAND_0313,9,phd,"communication, creativity, ci/cd, programming","Experienced software developer with 9 years working with communication, creativity, ci/cd",software_developer,1
+CAND_0314,0,phd,"bash, time management, communication, critical thinking","Experienced system administrator with 0 years working with bash, time management, communication",system_administrator,0
+CAND_0315,2,master,"teamwork, hadoop, communication, deep learning","Experienced data scientist with 2 years working with teamwork, hadoop, communication",data_scientist,0
+CAND_0316,7,phd,"communication, teamwork, design, adobe creative suite, web design, time management","Experienced graphic designer with 7 years working with communication, teamwork, design",graphic_designer,1
+CAND_0317,9,bachelor,"communication, wordpress, adaptability, teamwork, content writing, video editing, time management, social media","Experienced content creator with 9 years working with communication, wordpress, adaptability",content_creator,1
+CAND_0318,0,phd,"design, figma, ui/ux, problem solving","Experienced designer with 0 years working with design, figma, ui/ux",designer,1
+CAND_0319,2,bachelor,"leadership, api, sql, c#, php","Experienced backend developer with 2 years working with leadership, api, sql",backend_developer,1
+CAND_0320,7,bachelor,"pandas, statistics, adaptability, problem solving, data visualization, time management","Experienced data analyst with 7 years working with pandas, statistics, adaptability",data_analyst,0
+CAND_0321,7,associate,"docker, leadership, azure","Experienced backend developer with 7 years working with docker, leadership, azure",backend_developer,0
+CAND_0322,2,associate,"angular, adaptability, teamwork, responsive design, react, time management","Experienced frontend developer with 2 years working with angular, adaptability, teamwork",frontend_developer,0
+CAND_0323,3,phd,"communication, prometheus, azure, creativity, time management, monitoring","Experienced devops engineer with 3 years working with communication, prometheus, azure",devops_engineer,0
+CAND_0324,7,high_school,"testing, ci/cd, adaptability, creativity, quality assurance","Experienced qa engineer with 7 years working with testing, ci/cd, adaptability",qa_engineer,1
+CAND_0325,8,high_school,"tableau, teamwork, critical thinking, excel, data analysis, powerbi","Experienced analyst with 8 years working with tableau, teamwork, critical thinking",analyst,1
+CAND_0326,3,associate,"communication, graphic design, problem solving, critical thinking, content writing, content strategy, creativity, seo, social media, analytics","Experienced content creator with 3 years working with communication, graphic design, problem solving",content_creator,1
+CAND_0327,9,high_school,"communication, nodejs, adaptability, leadership, azure, aws, c#","Experienced backend developer with 9 years working with communication, nodejs, adaptability",backend_developer,0
+CAND_0328,8,high_school,"confluence, critical thinking","Experienced project manager with 8 years working with confluence, critical thinking",project_manager,0
+CAND_0329,3,phd,"ui/ux, adaptability, teamwork, leadership, design, figma","Experienced designer with 3 years working with ui/ux, adaptability, teamwork",designer,1
+CAND_0330,6,associate,"communication, teamwork, technical skills, creativity, product management, time management, roadmap planning","Experienced product manager with 6 years working with communication, teamwork, technical skills",product_manager,1
+CAND_0331,5,high_school,"ci/cd, programming, leadership, creativity, c++, time management","Experienced software developer with 5 years working with ci/cd, programming, leadership",software_developer,1
+CAND_0332,8,phd,"javascript, critical thinking, css, html","Experienced frontend developer with 8 years working with javascript, critical thinking, css",frontend_developer,1
+CAND_0333,9,phd,"python, go, critical thinking, api, sql, aws, time management, php","Experienced backend developer with 9 years working with python, go, critical thinking",backend_developer,1
+CAND_0334,0,high_school,"email marketing, content marketing, digital marketing, creativity","Experienced digital marketer with 0 years working with email marketing, content marketing, digital marketing",digital_marketer,1
+CAND_0335,3,associate,"leadership, time management, project management, creativity","Experienced project manager with 3 years working with leadership, time management, project management",project_manager,1
+CAND_0336,3,associate,"tableau, statistics, data visualization, time management, powerbi","Experienced data analyst with 3 years working with tableau, statistics, data visualization",data_analyst,0
+CAND_0337,4,bachelor,"teamwork, critical thinking, leadership, excel, data analysis","Experienced analyst with 4 years working with teamwork, critical thinking, leadership",analyst,1
+CAND_0338,0,bachelor,"linux, teamwork, leadership, powershell, windows, monitoring","Experienced system administrator with 0 years working with linux, teamwork, leadership",system_administrator,1
+CAND_0339,2,phd,"design, communication, ui/ux","Experienced ui ux designer with 2 years working with design, communication, ui/ux",ui_ux_designer,1
+CAND_0340,2,high_school,"pytorch, communication, statistics, spark, leadership, scipy","Experienced data scientist with 2 years working with pytorch, communication, statistics",data_scientist,0
+CAND_0341,8,high_school,"technical skills, leadership, roadmap planning","Experienced product manager with 8 years working with technical skills, leadership, roadmap planning",product_manager,0
+CAND_0342,8,bachelor,"spark, problem solving, creativity, deep learning, time management","Experienced data scientist with 8 years working with spark, problem solving, creativity",data_scientist,0
+CAND_0343,3,associate,"adaptability, problem solving, devops","Experienced fullstack developer with 3 years working with adaptability, problem solving, devops",fullstack_developer,0
+CAND_0344,2,associate,"grafana, docker, linux, critical thinking, azure, creativity, aws, ansible, gitlab ci","Experienced devops engineer with 2 years working with grafana, docker, linux",devops_engineer,1
+CAND_0345,0,phd,"teamwork, python, sql, problem solving","Experienced data scientist with 0 years working with teamwork, python, sql",data_scientist,1
+CAND_0346,7,associate,problem solving,Experienced designer with 7 years working with problem solving,designer,0
+CAND_0347,0,master,"push notifications, react native, leadership, firebase, java, flutter","Experienced mobile developer with 0 years working with push notifications, react native, leadership",mobile_developer,0
+CAND_0348,1,phd,"time management, digital marketing, critical thinking, creativity","Experienced digital marketer with 1 years working with time management, digital marketing, critical thinking",digital_marketer,1
+CAND_0349,6,phd,"aws, creativity, critical thinking","Experienced fullstack developer with 6 years working with aws, creativity, critical thinking",fullstack_developer,0
+CAND_0350,11,phd,"docker, nodejs, python, problem solving, javascript, creativity, sql, microservices, html, css","Experienced fullstack developer with 11 years working with docker, nodejs, python",fullstack_developer,1
+CAND_0351,5,master,"tableau, pandas, communication, python, sql, excel, data visualization, powerbi","Experienced data analyst with 5 years working with tableau, pandas, communication",data_analyst,1
+CAND_0352,8,associate,"communication, critical thinking, powerbi","Experienced business analyst with 8 years working with communication, critical thinking, powerbi",business_analyst,0
+CAND_0353,3,master,"communication, statistics, r, creativity, time management, reporting, powerbi","Experienced analyst with 3 years working with communication, statistics, r",analyst,0
+CAND_0354,6,high_school,"kotlin, communication, push notifications, critical thinking, swift, mobile, problem solving, flutter","Experienced mobile developer with 6 years working with kotlin, communication, push notifications",mobile_developer,1
+CAND_0355,10,associate,"digital marketing, leadership, conversion optimization, facebook ads, sem","Experienced digital marketer with 10 years working with digital marketing, leadership, conversion optimization",digital_marketer,1
+CAND_0356,1,phd,"problem solving, sketch, prototyping","Experienced ui ux designer with 1 years working with problem solving, sketch, prototyping",ui_ux_designer,0
+CAND_0357,6,associate,"ui/ux, leadership, wireframing, design, user research","Experienced ui ux designer with 6 years working with ui/ux, leadership, wireframing",ui_ux_designer,1
+CAND_0358,1,high_school,"ansible, leadership, gitlab ci","Experienced devops engineer with 1 years working with ansible, leadership, gitlab ci",devops_engineer,0
+CAND_0359,6,associate,"linux, docker, problem solving, ansible","Experienced devops engineer with 6 years working with linux, docker, problem solving",devops_engineer,1
+CAND_0360,5,bachelor,critical thinking,Experienced data scientist with 5 years working with critical thinking,data_scientist,0
+CAND_0361,1,associate,"web design, problem solving, color theory","Experienced graphic designer with 1 years working with web design, problem solving, color theory",graphic_designer,0
+CAND_0362,7,phd,"stakeholder management, communication, adaptability, project management, agile","Experienced project manager with 7 years working with stakeholder management, communication, adaptability",project_manager,1
+CAND_0363,3,master,"nodejs, python, leadership, javascript, postgresql, sql, html, css","Experienced fullstack developer with 3 years working with nodejs, python, leadership",fullstack_developer,1
+CAND_0364,3,bachelor,"docker, nodejs, teamwork, python, javascript, postgresql, sql, microservices, html, css","Experienced fullstack developer with 3 years working with docker, nodejs, teamwork",fullstack_developer,1
+CAND_0365,9,bachelor,"adaptability, javascript, sql, microservices, html, css","Experienced fullstack developer with 9 years working with adaptability, javascript, sql",fullstack_developer,1
+CAND_0366,2,phd,"python, process modeling, creativity, sql, excel","Experienced business analyst with 2 years working with python, process modeling, creativity",business_analyst,1
+CAND_0367,1,phd,"vmware, linux, networking, creativity, windows","Experienced system administrator with 1 years working with vmware, linux, networking",system_administrator,1
+CAND_0368,2,high_school,"design, problem solving","Experienced designer with 2 years working with design, problem solving",designer,1
+CAND_0369,12,high_school,"docker, prometheus, adaptability, linux, teamwork, critical thinking, kubernetes, ansible, gitlab ci","Experienced devops engineer with 12 years working with docker, prometheus, adaptability",devops_engineer,1
+CAND_0370,1,bachelor,"tableau, communication, statistics, critical thinking, leadership, sql, excel","Experienced data analyst with 1 years working with tableau, communication, statistics",data_analyst,1
+CAND_0371,11,associate,"communication, teamwork, technical skills, problem solving, sql, product management","Experienced product manager with 11 years working with communication, teamwork, technical skills",product_manager,1
+CAND_0372,5,phd,"graphic design, leadership, wordpress","Experienced content creator with 5 years working with graphic design, leadership, wordpress",content_creator,0
+CAND_0373,9,phd,"linux, aws, docker, problem solving","Experienced devops engineer with 9 years working with linux, aws, docker",devops_engineer,1
+CAND_0374,6,bachelor,"testing, programming, python, leadership, javascript, sql","Experienced developer with 6 years working with testing, programming, python",developer,1
+CAND_0375,0,associate,"nodejs, adaptability, teamwork, python, leadership, java, api, sql","Experienced backend developer with 0 years working with nodejs, adaptability, teamwork",backend_developer,1
+CAND_0376,5,bachelor,"color theory, branding, leadership, design, adobe creative suite, illustrator","Experienced graphic designer with 5 years working with color theory, branding, leadership",graphic_designer,1
+CAND_0377,2,bachelor,"kotlin, critical thinking, teamwork, react native","Experienced mobile developer with 2 years working with kotlin, critical thinking, teamwork",mobile_developer,0
+CAND_0378,7,high_school,"communication, manual testing, problem solving, bug tracking, selenium, time management","Experienced qa engineer with 7 years working with communication, manual testing, problem solving",qa_engineer,0
+CAND_0379,8,bachelor,"design, teamwork, ui/ux, adaptability","Experienced ui ux designer with 8 years working with design, teamwork, ui/ux",ui_ux_designer,1
+CAND_0380,1,bachelor,"communication, technical skills, leadership, creativity, product management, agile","Experienced product manager with 1 years working with communication, technical skills, leadership",product_manager,1
+CAND_0381,2,master,"machine learning, r, teamwork, leadership, data visualization, sql, excel, powerbi","Experienced data analyst with 2 years working with machine learning, r, teamwork",data_analyst,1
+CAND_0382,6,master,"communication, ui/ux, problem solving, design, figma, creativity, sketch","Experienced ui ux designer with 6 years working with communication, ui/ux, problem solving",ui_ux_designer,1
+CAND_0383,2,associate,"communication, ui/ux, prototyping, adaptability, leadership, design, figma, adobe creative suite, html, css","Experienced ui ux designer with 2 years working with communication, ui/ux, prototyping",ui_ux_designer,1
+CAND_0384,6,associate,"statistics, creativity, sql, excel, data analysis, powerbi","Experienced analyst with 6 years working with statistics, creativity, sql",analyst,1
+CAND_0385,3,master,"docker, adaptability, linux, teamwork, creativity, monitoring, gitlab ci","Experienced devops engineer with 3 years working with docker, adaptability, linux",devops_engineer,1
+CAND_0386,4,phd,"design, communication, ui/ux","Experienced ui ux designer with 4 years working with design, communication, ui/ux",ui_ux_designer,1
+CAND_0387,3,bachelor,"copywriting, graphic design, problem solving, social media, seo, wordpress","Experienced content creator with 3 years working with copywriting, graphic design, problem solving",content_creator,0
+CAND_0388,4,bachelor,"testing, communication, programming, leadership, time management, c#","Experienced software developer with 4 years working with testing, communication, programming",software_developer,1
+CAND_0389,2,high_school,"communication, programming, critical thinking, problem solving, java, javascript, agile","Experienced developer with 2 years working with communication, programming, critical thinking",developer,1
+CAND_0390,8,phd,"communication, time management","Experienced content creator with 8 years working with communication, time management",content_creator,0
+CAND_0391,4,high_school,"docker, communication, linux, teamwork, problem solving, kubernetes","Experienced devops engineer with 4 years working with docker, communication, linux",devops_engineer,1
+CAND_0392,7,associate,"color theory, branding, teamwork, indesign, creativity","Experienced graphic designer with 7 years working with color theory, branding, teamwork",graphic_designer,0
+CAND_0393,3,phd,"communication, r, critical thinking, time management, powerbi","Experienced analyst with 3 years working with communication, r, critical thinking",analyst,0
+CAND_0394,0,bachelor,"automation testing, testing, ci/cd, adaptability, critical thinking, problem solving, bug tracking, api testing, quality assurance, selenium","Experienced qa engineer with 0 years working with automation testing, testing, ci/cd",qa_engineer,1
+CAND_0395,6,phd,"creativity, swift","Experienced mobile developer with 6 years working with creativity, swift",mobile_developer,0
+CAND_0396,10,phd,"communication, python, critical thinking, go, api, sql, time management","Experienced backend developer with 10 years working with communication, python, critical thinking",backend_developer,1
+CAND_0397,1,phd,"active directory, leadership, creativity, powershell, time management, monitoring","Experienced system administrator with 1 years working with active directory, leadership, creativity",system_administrator,0
+CAND_0398,6,master,"docker, linux, teamwork, time management, gitlab ci","Experienced devops engineer with 6 years working with docker, linux, teamwork",devops_engineer,1
+CAND_0399,3,high_school,"critical thinking, photoshop, illustrator, indesign","Experienced graphic designer with 3 years working with critical thinking, photoshop, illustrator",graphic_designer,0
+CAND_0400,11,master,"communication, python, leadership, sql, deep learning","Experienced data scientist with 11 years working with communication, python, leadership",data_scientist,1
+CAND_0401,2,high_school,"stakeholder management, communication, adaptability, jira, problem solving, project management","Experienced project manager with 2 years working with stakeholder management, communication, adaptability",project_manager,1
+CAND_0402,3,master,"grafana, prometheus, terraform, critical thinking, leadership, creativity, aws, ansible","Experienced devops engineer with 3 years working with grafana, prometheus, terraform",devops_engineer,0
+CAND_0403,4,high_school,"docker, prometheus, adaptability, linux, critical thinking, kubernetes, problem solving, aws, gitlab ci","Experienced devops engineer with 4 years working with docker, prometheus, adaptability",devops_engineer,1
+CAND_0404,8,bachelor,"design, adobe creative suite, teamwork, illustrator","Experienced graphic designer with 8 years working with design, adobe creative suite, teamwork",graphic_designer,1
+CAND_0405,5,master,"time management, problem solving, php, adaptability","Experienced web developer with 5 years working with time management, problem solving, php",web_developer,0
+CAND_0406,1,phd,"kotlin, google play, critical thinking, mobile, firebase, java, time management, flutter","Experienced mobile developer with 1 years working with kotlin, google play, critical thinking",mobile_developer,1
+CAND_0407,8,master,"javascript, css, problem solving, html","Experienced web developer with 8 years working with javascript, css, problem solving",web_developer,1
+CAND_0408,0,associate,"testing, communication, leadership, quality assurance, time management","Experienced qa engineer with 0 years working with testing, communication, leadership",qa_engineer,1
+CAND_0409,2,associate,"docker, teamwork, kubernetes, leadership, java, api, sql","Experienced backend developer with 2 years working with docker, teamwork, kubernetes",backend_developer,1
+CAND_0410,5,associate,"docker, adaptability, linux, teamwork, azure, ansible","Experienced devops engineer with 5 years working with docker, adaptability, linux",devops_engineer,1
+CAND_0411,6,high_school,"adaptability, react native, app store, java, creativity","Experienced mobile developer with 6 years working with adaptability, react native, app store",mobile_developer,0
+CAND_0412,6,bachelor,"critical thinking, responsive design, adaptability","Experienced frontend developer with 6 years working with critical thinking, responsive design, adaptability",frontend_developer,0
+CAND_0413,8,master,"testing, quality assurance, adaptability, bug tracking, performance testing, time management","Experienced qa engineer with 8 years working with testing, quality assurance, adaptability",qa_engineer,1
+CAND_0414,8,bachelor,"angular, teamwork, vue, react, javascript, html, typescript, css","Experienced frontend developer with 8 years working with angular, teamwork, vue",frontend_developer,1
+CAND_0415,8,associate,"pandas, machine learning, python, critical thinking, sql, numpy","Experienced data scientist with 8 years working with pandas, machine learning, python",data_scientist,1
+CAND_0416,6,high_school,"design, time management, critical thinking, prototyping","Experienced designer with 6 years working with design, time management, critical thinking",designer,1
+CAND_0417,12,associate,"jenkins, docker, linux, kubernetes, leadership, aws, time management","Experienced devops engineer with 12 years working with jenkins, docker, linux",devops_engineer,1
+CAND_0418,1,associate,"photoshop, color theory, branding, design, adobe creative suite, creativity, web design","Experienced graphic designer with 1 years working with photoshop, color theory, branding",graphic_designer,1
+CAND_0419,4,phd,"security, networking, communication, powershell","Experienced system administrator with 4 years working with security, networking, communication",system_administrator,0
+CAND_0420,1,master,"digital marketing, communication, content marketing, conversion optimization, time management","Experienced digital marketer with 1 years working with digital marketing, communication, content marketing",digital_marketer,1
+CAND_0421,4,associate,"stakeholder management, jira, teamwork, critical thinking, problem solving, scrum","Experienced project manager with 4 years working with stakeholder management, jira, teamwork",project_manager,0
+CAND_0422,4,master,"java, teamwork, time management, leadership","Experienced software developer with 4 years working with java, teamwork, time management",software_developer,0
+CAND_0423,0,bachelor,"adaptability, problem solving, leadership, sql, excel","Experienced data analyst with 0 years working with adaptability, problem solving, leadership",data_analyst,1
+CAND_0424,3,high_school,"leadership, azure, api, sql, microservices, time management","Experienced backend developer with 3 years working with leadership, azure, api",backend_developer,1
+CAND_0425,0,phd,"design, ui/ux, problem solving, html","Experienced designer with 0 years working with design, ui/ux, problem solving",designer,1
+CAND_0426,2,master,"testing, security testing, adaptability, creativity, quality assurance","Experienced qa engineer with 2 years working with testing, security testing, adaptability",qa_engineer,1
+CAND_0427,0,high_school,"teamwork, css, prototyping, adaptability","Experienced designer with 0 years working with teamwork, css, prototyping",designer,0
+CAND_0428,1,high_school,"communication, indesign, leadership, adaptability","Experienced graphic designer with 1 years working with communication, indesign, leadership",graphic_designer,0
+CAND_0429,7,bachelor,"docker, adaptability, linux, leadership, azure, creativity","Experienced devops engineer with 7 years working with docker, adaptability, linux",devops_engineer,1
+CAND_0430,4,high_school,"kotlin, push notifications, adaptability, swift, mobile, flutter","Experienced mobile developer with 4 years working with kotlin, push notifications, adaptability",mobile_developer,1
+CAND_0431,7,associate,"digital marketing, adaptability, email marketing, creativity, sem, seo","Experienced digital marketer with 7 years working with digital marketing, adaptability, email marketing",digital_marketer,1
+CAND_0432,1,bachelor,"sass, angular, responsive design, critical thinking, leadership, react, creativity, typescript","Experienced frontend developer with 1 years working with sass, angular, responsive design",frontend_developer,0
+CAND_0433,5,phd,"figma, communication, critical thinking, user research","Experienced ui ux designer with 5 years working with figma, communication, critical thinking",ui_ux_designer,0
+CAND_0434,5,associate,"machine learning, communication, statistics, teamwork, leadership, sql, data visualization, excel","Experienced data analyst with 5 years working with machine learning, communication, statistics",data_analyst,1
+CAND_0435,0,bachelor,"teamwork, time management","Experienced designer with 0 years working with teamwork, time management",designer,0
+CAND_0436,3,high_school,"automation testing, testing, bug tracking, creativity, api testing, quality assurance","Experienced qa engineer with 3 years working with automation testing, testing, bug tracking",qa_engineer,1
+CAND_0437,1,bachelor,"digital marketing, adaptability, critical thinking, problem solving, conversion optimization, seo, analytics","Experienced digital marketer with 1 years working with digital marketing, adaptability, critical thinking",digital_marketer,1
+CAND_0438,2,phd,"testing, teamwork, leadership, git, c#","Experienced software developer with 2 years working with testing, teamwork, leadership",software_developer,0
+CAND_0439,10,associate,"communication, adaptability, a/b testing, technical skills, problem solving, product management, agile","Experienced product manager with 10 years working with communication, adaptability, a/b testing",product_manager,1
+CAND_0440,7,master,"communication, jira, problem solving, leadership, confluence, pmp, project management, time management, agile","Experienced project manager with 7 years working with communication, jira, problem solving",project_manager,1
+CAND_0441,1,high_school,"communication, critical thinking, mobile, java, creativity","Experienced mobile developer with 1 years working with communication, critical thinking, mobile",mobile_developer,1
+CAND_0442,0,associate,"design, figma, teamwork, leadership","Experienced designer with 0 years working with design, figma, teamwork",designer,1
+CAND_0443,1,phd,"statistics, adaptability, teamwork, sql, excel, time management","Experienced data analyst with 1 years working with statistics, adaptability, teamwork",data_analyst,1
+CAND_0444,6,high_school,"adaptability, spark, python, sql, deep learning","Experienced data scientist with 6 years working with adaptability, spark, python",data_scientist,1
+CAND_0445,1,bachelor,"adaptability, problem solving, creativity, facebook ads, sem, social media","Experienced digital marketer with 1 years working with adaptability, problem solving, creativity",digital_marketer,0
+CAND_0446,0,high_school,"teamwork, agile, adaptability, programming","Experienced developer with 0 years working with teamwork, agile, adaptability",developer,1
+CAND_0447,9,high_school,"communication, digital marketing, leadership, seo, analytics","Experienced digital marketer with 9 years working with communication, digital marketing, leadership",digital_marketer,1
+CAND_0448,7,master,"java, git, creativity, c++, c#, agile","Experienced software developer with 7 years working with java, git, creativity",software_developer,0
+CAND_0449,7,associate,"ui/ux, critical thinking, problem solving, wireframing, design, creativity, sketch","Experienced ui ux designer with 7 years working with ui/ux, critical thinking, problem solving",ui_ux_designer,1
+CAND_0450,8,high_school,"communication, manual testing, bug tracking, creativity, performance testing, selenium, time management","Experienced qa engineer with 8 years working with communication, manual testing, bug tracking",qa_engineer,0
+CAND_0451,9,bachelor,"photoshop, color theory, branding, leadership, design, adobe creative suite, typography","Experienced graphic designer with 9 years working with photoshop, color theory, branding",graphic_designer,1
+CAND_0452,8,master,"problem solving, leadership","Experienced digital marketer with 8 years working with problem solving, leadership",digital_marketer,0
+CAND_0453,7,high_school,"ui/ux, prototyping, adaptability, critical thinking, leadership, design, adobe creative suite, user research","Experienced ui ux designer with 7 years working with ui/ux, prototyping, adaptability",ui_ux_designer,1
+CAND_0454,1,associate,"time management, leadership, communication, project management","Experienced project manager with 1 years working with time management, leadership, communication",project_manager,1
+CAND_0455,2,phd,"ci/cd, programming, teamwork, java, c++, time management","Experienced software developer with 2 years working with ci/cd, programming, teamwork",software_developer,1
+CAND_0456,1,master,"adaptability, go, creativity, docker","Experienced backend developer with 1 years working with adaptability, go, creativity",backend_developer,0
+CAND_0457,1,master,"communication, google play, swift, mobile, leadership, java, problem solving, flutter","Experienced mobile developer with 1 years working with communication, google play, swift",mobile_developer,1
+CAND_0458,12,high_school,"communication, critical thinking, a/b testing, technical skills, product management","Experienced product manager with 12 years working with communication, critical thinking, a/b testing",product_manager,1
+CAND_0459,4,master,"communication, design, time management, ui/ux","Experienced ui ux designer with 4 years working with communication, design, time management",ui_ux_designer,1
+CAND_0460,2,master,"communication, problem solving, content writing, time management, social media","Experienced content creator with 2 years working with communication, problem solving, content writing",content_creator,1
+CAND_0461,0,associate,"adaptability, linux, problem solving, leadership, networking, powershell, windows","Experienced system administrator with 0 years working with adaptability, linux, problem solving",system_administrator,1
+CAND_0462,0,high_school,"leadership, javascript, postgresql, sql, html, css","Experienced fullstack developer with 0 years working with leadership, javascript, postgresql",fullstack_developer,1
+CAND_0463,6,phd,"teamwork, a/b testing, leadership","Experienced product manager with 6 years working with teamwork, a/b testing, leadership",product_manager,0
+CAND_0464,10,master,"nodejs, leadership, creativity, microservices, devops","Experienced fullstack developer with 10 years working with nodejs, leadership, creativity",fullstack_developer,0
+CAND_0465,9,bachelor,"sass, angular, teamwork, responsive design, javascript, html, webpack, css","Experienced frontend developer with 9 years working with sass, angular, teamwork",frontend_developer,1
+CAND_0466,6,master,"leadership, time management, statistics, powerbi","Experienced data analyst with 6 years working with leadership, time management, statistics",data_analyst,0
+CAND_0467,1,phd,"communication, leadership, javascript, git, c#","Experienced software developer with 1 years working with communication, leadership, javascript",software_developer,0
+CAND_0468,10,high_school,"communication, color theory, teamwork, indesign, time management, illustrator","Experienced graphic designer with 10 years working with communication, color theory, teamwork",graphic_designer,0
+CAND_0469,11,associate,"docker, communication, adaptability, linux, azure, time management, monitoring, terraform","Experienced devops engineer with 11 years working with docker, communication, adaptability",devops_engineer,1
+CAND_0470,0,master,"communication, teamwork, pytorch","Experienced data scientist with 0 years working with communication, teamwork, pytorch",data_scientist,0
+CAND_0471,9,associate,"stakeholder management, adaptability, confluence, project management, scrum","Experienced project manager with 9 years working with stakeholder management, adaptability, confluence",project_manager,1
+CAND_0472,1,master,"time management, python, agile","Experienced developer with 1 years working with time management, python, agile",developer,0
+CAND_0473,6,associate,"creativity, adaptability","Experienced developer with 6 years working with creativity, adaptability",developer,0
+CAND_0474,0,phd,"tableau, statistics, problem solving, excel, reporting, data analysis, powerbi","Experienced analyst with 0 years working with tableau, statistics, problem solving",analyst,1
+CAND_0475,2,bachelor,"seo, time management, copywriting, social media","Experienced content creator with 2 years working with seo, time management, copywriting",content_creator,0
+CAND_0476,0,associate,"r, leadership, teamwork, process modeling","Experienced business analyst with 0 years working with r, leadership, teamwork",business_analyst,0
+CAND_0477,1,phd,"tableau, pandas, statistics, critical thinking, sql, excel","Experienced data analyst with 1 years working with tableau, pandas, statistics",data_analyst,1
+CAND_0478,5,master,"nodejs, angular, problem solving, javascript, css, html, typescript, php","Experienced web developer with 5 years working with nodejs, angular, problem solving",web_developer,1
+CAND_0479,1,master,"jenkins, creativity","Experienced devops engineer with 1 years working with jenkins, creativity",devops_engineer,0
+CAND_0480,1,associate,"photoshop, color theory, indesign, critical thinking, problem solving, design, adobe creative suite, print design, creativity","Experienced graphic designer with 1 years working with photoshop, color theory, indesign",graphic_designer,1
+CAND_0481,1,high_school,"selenium, leadership, manual testing, bug tracking","Experienced qa engineer with 1 years working with selenium, leadership, manual testing",qa_engineer,0
+CAND_0482,1,associate,"communication, time management, ansible, prometheus","Experienced devops engineer with 1 years working with communication, time management, ansible",devops_engineer,0
+CAND_0483,4,master,"active directory, creativity, problem solving, leadership","Experienced system administrator with 4 years working with active directory, creativity, problem solving",system_administrator,0
+CAND_0484,8,high_school,"nodejs, adaptability, leadership, postgresql, time management, webpack, php","Experienced web developer with 8 years working with nodejs, adaptability, leadership",web_developer,0
+CAND_0485,9,associate,"creativity, mobile, adaptability","Experienced mobile developer with 9 years working with creativity, mobile, adaptability",mobile_developer,1
+CAND_0486,0,associate,"sass, angular, leadership, react, javascript, creativity, html, time management, webpack, css","Experienced frontend developer with 0 years working with sass, angular, leadership",frontend_developer,1
+CAND_0487,2,high_school,"testing, communication, teamwork, python, creativity","Experienced developer with 2 years working with testing, communication, teamwork",developer,0
+CAND_0488,5,high_school,"communication, teamwork, critical thinking, technical skills, sql, product management","Experienced product manager with 5 years working with communication, teamwork, critical thinking",product_manager,1
+CAND_0489,0,phd,"communication, leadership, adobe creative suite, figma, sketch","Experienced ui ux designer with 0 years working with communication, leadership, adobe creative suite",ui_ux_designer,0
+CAND_0490,10,master,"sql, problem solving, leadership","Experienced analyst with 10 years working with sql, problem solving, leadership",analyst,0
+CAND_0491,0,associate,"photoshop, design, print design, adobe creative suite, time management, illustrator","Experienced graphic designer with 0 years working with photoshop, design, print design",graphic_designer,1
+CAND_0492,7,high_school,"figma, user research, sketch, adaptability","Experienced ui ux designer with 7 years working with figma, user research, sketch",ui_ux_designer,0
+CAND_0493,0,bachelor,"programming, teamwork, problem solving, javascript, java, creativity, sql","Experienced developer with 0 years working with programming, teamwork, problem solving",developer,1
+CAND_0494,0,high_school,"photoshop, color theory, critical thinking, leadership, design, adobe creative suite, time management","Experienced graphic designer with 0 years working with photoshop, color theory, critical thinking",graphic_designer,1
+CAND_0495,5,high_school,"communication, critical thinking, technical skills, wireframing, product management, user research, agile","Experienced product manager with 5 years working with communication, critical thinking, technical skills",product_manager,1
+CAND_0496,2,master,"communication, prototyping, leadership, design, creativity, css","Experienced designer with 2 years working with communication, prototyping, leadership",designer,1
+CAND_0497,10,associate,"mongodb, nodejs, adaptability, javascript, html, css","Experienced web developer with 10 years working with mongodb, nodejs, adaptability",web_developer,1
+CAND_0498,0,bachelor,adaptability,Experienced qa engineer with 0 years working with adaptability,qa_engineer,0
+CAND_0499,10,associate,"digital marketing, email marketing, content marketing, creativity, sem, time management, google ads","Experienced digital marketer with 10 years working with digital marketing, email marketing, content marketing",digital_marketer,1
+CAND_0500,0,associate,"communication, nodejs, angular, vue, leadership, postgresql, webpack","Experienced web developer with 0 years working with communication, nodejs, angular",web_developer,0
+CAND_0501,11,master,"problem solving, leadership, adaptability","Experienced devops engineer with 11 years working with problem solving, leadership, adaptability",devops_engineer,0
+CAND_0502,7,associate,"adaptability, leadership, java, creativity, agile","Experienced developer with 7 years working with adaptability, leadership, java",developer,0
+CAND_0503,9,phd,"mongodb, communication, react, javascript, postgresql, sql, html, css","Experienced fullstack developer with 9 years working with mongodb, communication, react",fullstack_developer,1
+CAND_0504,8,associate,critical thinking,Experienced software developer with 8 years working with critical thinking,software_developer,0
+CAND_0505,1,phd,"communication, copywriting, wordpress, teamwork, critical thinking, leadership, content writing, seo, social media, analytics","Experienced content creator with 1 years working with communication, copywriting, wordpress",content_creator,1
+CAND_0506,2,master,"pandas, machine learning, communication, statistics, r, teamwork, sql, excel","Experienced data analyst with 2 years working with pandas, machine learning, communication",data_analyst,1
+CAND_0507,0,bachelor,"design, prototyping, adaptability","Experienced designer with 0 years working with design, prototyping, adaptability",designer,1
+CAND_0508,5,associate,"docker, linux, teamwork, leadership, creativity","Experienced devops engineer with 5 years working with docker, linux, teamwork",devops_engineer,1
+CAND_0509,4,associate,"teamwork, creativity, c#","Experienced software developer with 4 years working with teamwork, creativity, c#",software_developer,0
+CAND_0510,1,bachelor,"angular, responsive design, critical thinking, leadership, javascript, html, css","Experienced frontend developer with 1 years working with angular, responsive design, critical thinking",frontend_developer,1
+CAND_0511,11,bachelor,"mongodb, communication, nodejs, critical thinking, javascript, postgresql, sql, html, css, devops","Experienced fullstack developer with 11 years working with mongodb, communication, nodejs",fullstack_developer,1
+CAND_0512,7,associate,"python, java, api, sql, microservices, creativity, php","Experienced backend developer with 7 years working with python, java, api",backend_developer,1
+CAND_0513,6,phd,"vmware, communication, bash, linux, active directory, problem solving, creativity, powershell, windows","Experienced system administrator with 6 years working with vmware, communication, bash",system_administrator,1
+CAND_0514,12,associate,"teamwork, creativity, microservices, devops","Experienced fullstack developer with 12 years working with teamwork, creativity, microservices",fullstack_developer,0
+CAND_0515,0,high_school,"communication, leadership, creativity, product management, analytics, user research, agile","Experienced product manager with 0 years working with communication, leadership, creativity",product_manager,1
+CAND_0516,8,high_school,"testing, manual testing, adaptability, problem solving, bug tracking, quality assurance, selenium, performance testing","Experienced qa engineer with 8 years working with testing, manual testing, adaptability",qa_engineer,1
+CAND_0517,8,master,"time management, python, sql, adaptability","Experienced data scientist with 8 years working with time management, python, sql",data_scientist,1
+CAND_0518,9,bachelor,"teamwork, creativity, critical thinking, user research","Experienced ui ux designer with 9 years working with teamwork, creativity, critical thinking",ui_ux_designer,0
+CAND_0519,5,high_school,creativity,Experienced product manager with 5 years working with creativity,product_manager,0
+CAND_0520,6,associate,"tensorflow, statistics, adaptability, python, critical thinking, sql, deep learning","Experienced data scientist with 6 years working with tensorflow, statistics, adaptability",data_scientist,1
+CAND_0521,6,phd,"critical thinking, javascript, sql, html, time management, css, devops","Experienced fullstack developer with 6 years working with critical thinking, javascript, sql",fullstack_developer,1
+CAND_0522,7,bachelor,"teamwork, communication, leadership","Experienced fullstack developer with 7 years working with teamwork, communication, leadership",fullstack_developer,0
+CAND_0523,0,high_school,"tableau, adaptability, creativity, sql, excel","Experienced business analyst with 0 years working with tableau, adaptability, creativity",business_analyst,1
+CAND_0524,5,associate,"ci/cd, adaptability, java, git, creativity, c++, time management, c#","Experienced software developer with 5 years working with ci/cd, adaptability, java",software_developer,0
+CAND_0525,0,phd,"teamwork, time management, html","Experienced ui ux designer with 0 years working with teamwork, time management, html",ui_ux_designer,0
+CAND_0526,6,associate,"adaptability, vue, javascript, postgresql, css, html, webpack, php","Experienced web developer with 6 years working with adaptability, vue, javascript",web_developer,1
+CAND_0527,0,phd,"teamwork, problem solving, sem, analytics, time management, google ads","Experienced digital marketer with 0 years working with teamwork, problem solving, sem",digital_marketer,0
+CAND_0528,5,bachelor,"communication, linux, aws, docker","Experienced devops engineer with 5 years working with communication, linux, aws",devops_engineer,1
+CAND_0529,2,phd,"problem solving, design, adobe creative suite, web design, typography","Experienced graphic designer with 2 years working with problem solving, design, adobe creative suite",graphic_designer,1
+CAND_0530,11,high_school,"mongodb, nodejs, angular, vue, problem solving, critical thinking, creativity, typescript","Experienced web developer with 11 years working with mongodb, nodejs, angular",web_developer,0
+CAND_0531,1,bachelor,"tableau, time management, reporting, powerbi","Experienced analyst with 1 years working with tableau, time management, reporting",analyst,0
+CAND_0532,5,master,"problem solving, adaptability","Experienced system administrator with 5 years working with problem solving, adaptability",system_administrator,0
+CAND_0533,2,bachelor,"angular, adaptability, vue, react, javascript, html, css","Experienced web developer with 2 years working with angular, adaptability, vue",web_developer,1
+CAND_0534,8,high_school,"teamwork, figma, communication, css","Experienced ui ux designer with 8 years working with teamwork, figma, communication",ui_ux_designer,0
+CAND_0535,6,high_school,"pandas, tensorflow, statistics, leadership, creativity","Experienced data scientist with 6 years working with pandas, tensorflow, statistics",data_scientist,0
+CAND_0536,1,phd,"testing, manual testing, quality assurance, problem solving, leadership, api testing, performance testing","Experienced qa engineer with 1 years working with testing, manual testing, quality assurance",qa_engineer,1
+CAND_0537,2,high_school,"jira, teamwork, leadership, project management, scrum","Experienced project manager with 2 years working with jira, teamwork, leadership",project_manager,1
+CAND_0538,0,master,"indesign, leadership, design, print design, adobe creative suite, creativity, illustrator","Experienced graphic designer with 0 years working with indesign, leadership, design",graphic_designer,1
+CAND_0539,0,bachelor,"pandas, machine learning, statistics, sql, excel, time management","Experienced data analyst with 0 years working with pandas, machine learning, statistics",data_analyst,1
+CAND_0540,6,high_school,"communication, teamwork, critical thinking, a/b testing, technical skills, problem solving, product management, analytics","Experienced product manager with 6 years working with communication, teamwork, critical thinking",product_manager,1
+CAND_0541,7,phd,"kotlin, communication, mobile","Experienced mobile developer with 7 years working with kotlin, communication, mobile",mobile_developer,1
+CAND_0542,1,associate,"communication, leadership, creativity","Experienced system administrator with 1 years working with communication, leadership, creativity",system_administrator,0
+CAND_0543,6,high_school,"hyper-v, vmware, security, bash, linux, creativity, powershell, windows","Experienced system administrator with 6 years working with hyper-v, vmware, security",system_administrator,1
+CAND_0544,0,bachelor,"photoshop, color theory, indesign, leadership, design, adobe creative suite, web design, time management, illustrator","Experienced graphic designer with 0 years working with photoshop, color theory, indesign",graphic_designer,1
+CAND_0545,5,bachelor,"email marketing, time management, creativity, facebook ads","Experienced digital marketer with 5 years working with email marketing, time management, creativity",digital_marketer,0
+CAND_0546,1,master,"active directory, monitoring, critical thinking, adaptability","Experienced system administrator with 1 years working with active directory, monitoring, critical thinking",system_administrator,0
+CAND_0547,9,associate,"excel, problem solving, data analysis","Experienced analyst with 9 years working with excel, problem solving, data analysis",analyst,1
+CAND_0548,1,phd,"testing, manual testing, problem solving, bug tracking, leadership, quality assurance, selenium, time management","Experienced qa engineer with 1 years working with testing, manual testing, problem solving",qa_engineer,1
+CAND_0549,2,associate,"communication, risk management, critical thinking, project management, scrum, time management","Experienced project manager with 2 years working with communication, risk management, critical thinking",project_manager,1
+CAND_0550,2,phd,"design, figma, critical thinking, leadership","Experienced designer with 2 years working with design, figma, critical thinking",designer,1
+CAND_0551,0,high_school,"stakeholder management, critical thinking, creativity, pmp, scrum","Experienced project manager with 0 years working with stakeholder management, critical thinking, creativity",project_manager,0
+CAND_0552,2,high_school,"communication, teamwork, vue, react, figma","Experienced frontend developer with 2 years working with communication, teamwork, vue",frontend_developer,0
+CAND_0553,9,master,"ui/ux, prototyping, critical thinking, wireframing, design, figma, adobe creative suite, css","Experienced ui ux designer with 9 years working with ui/ux, prototyping, critical thinking",ui_ux_designer,1
+CAND_0554,2,phd,"photoshop, teamwork, creativity, indesign","Experienced graphic designer with 2 years working with photoshop, teamwork, creativity",graphic_designer,0
+CAND_0555,10,high_school,"kubernetes, creativity, critical thinking, terraform","Experienced devops engineer with 10 years working with kubernetes, creativity, critical thinking",devops_engineer,0
+CAND_0556,1,associate,"creativity, adaptability","Experienced mobile developer with 1 years working with creativity, adaptability",mobile_developer,0
+CAND_0557,2,phd,"tableau, business intelligence, r, teamwork, problem solving, creativity, sql, excel, requirements analysis, agile","Experienced business analyst with 2 years working with tableau, business intelligence, r",business_analyst,1
+CAND_0558,1,bachelor,"java, critical thinking, sql","Experienced developer with 1 years working with java, critical thinking, sql",developer,0
+CAND_0559,7,high_school,"teamwork, leadership","Experienced business analyst with 7 years working with teamwork, leadership",business_analyst,0
+CAND_0560,3,bachelor,"leadership, vue, angular, php","Experienced web developer with 3 years working with leadership, vue, angular",web_developer,0
+CAND_0561,11,high_school,"communication, stakeholder management, project management","Experienced project manager with 11 years working with communication, stakeholder management, project management",project_manager,1
+CAND_0562,0,associate,"communication, nodejs, c#","Experienced backend developer with 0 years working with communication, nodejs, c#",backend_developer,0
+CAND_0563,0,phd,"responsive design, leadership, react, javascript, html, css","Experienced frontend developer with 0 years working with responsive design, leadership, react",frontend_developer,1
+CAND_0564,11,phd,"javascript, creativity, c#, leadership","Experienced software developer with 11 years working with javascript, creativity, c#",software_developer,0
+CAND_0565,2,associate,"adaptability, testing, teamwork, quality assurance","Experienced qa engineer with 2 years working with adaptability, testing, teamwork",qa_engineer,1
+CAND_0566,7,associate,"communication, teamwork, python, ci/cd","Experienced software developer with 7 years working with communication, teamwork, python",software_developer,0
+CAND_0567,2,bachelor,"vmware, communication, adaptability, linux, critical thinking, windows","Experienced system administrator with 2 years working with vmware, communication, adaptability",system_administrator,1
+CAND_0568,0,master,critical thinking,Experienced qa engineer with 0 years working with critical thinking,qa_engineer,0
+CAND_0569,9,master,"hadoop, machine learning, adaptability","Experienced data scientist with 9 years working with hadoop, machine learning, adaptability",data_scientist,0
+CAND_0570,1,associate,"tableau, pandas, machine learning, statistics, teamwork, creativity, sql, excel","Experienced data analyst with 1 years working with tableau, pandas, machine learning",data_analyst,1
+CAND_0571,2,high_school,"adaptability, react, javascript, creativity, html, css","Experienced web developer with 2 years working with adaptability, react, javascript",web_developer,1
+CAND_0572,11,associate,"hadoop, pytorch, critical thinking","Experienced data scientist with 11 years working with hadoop, pytorch, critical thinking",data_scientist,0
+CAND_0573,8,high_school,"angular, vue, javascript, css, html, time management, php","Experienced web developer with 8 years working with angular, vue, javascript",web_developer,1
+CAND_0574,10,master,"time management, sass, webpack, leadership","Experienced web developer with 10 years working with time management, sass, webpack",web_developer,0
+CAND_0575,3,phd,"jenkins, grafana, docker, communication, linux, kubernetes, aws","Experienced devops engineer with 3 years working with jenkins, grafana, docker",devops_engineer,1
+CAND_0576,6,bachelor,"mongodb, angular, vue, problem solving, leadership, javascript, creativity, html, css","Experienced web developer with 6 years working with mongodb, angular, vue",web_developer,1
+CAND_0577,0,bachelor,"python, problem solving, leadership, api, sql, creativity, c#, php","Experienced backend developer with 0 years working with python, problem solving, leadership",backend_developer,1
+CAND_0578,5,associate,"aws, api, sql, problem solving","Experienced backend developer with 5 years working with aws, api, sql",backend_developer,1
+CAND_0579,3,associate,"pandas, problem solving, deep learning, statistics","Experienced data scientist with 3 years working with pandas, problem solving, deep learning",data_scientist,0
+CAND_0580,0,associate,"teamwork, problem solving, design, adobe creative suite, web design, time management, illustrator","Experienced graphic designer with 0 years working with teamwork, problem solving, design",graphic_designer,1
+CAND_0581,0,phd,"design, teamwork, time management, ui/ux","Experienced designer with 0 years working with design, teamwork, time management",designer,1
+CAND_0582,3,master,"angular, vue, problem solving, react, creativity, webpack","Experienced frontend developer with 3 years working with angular, vue, problem solving",frontend_developer,0
+CAND_0583,3,associate,"prototyping, adaptability, problem solving, adobe creative suite, creativity, sketch, html","Experienced ui ux designer with 3 years working with prototyping, adaptability, problem solving",ui_ux_designer,0
+CAND_0584,3,associate,"a/b testing, communication, product management, adaptability","Experienced product manager with 3 years working with a/b testing, communication, product management",product_manager,1
+CAND_0585,6,master,"docker, adaptability, linux, problem solving, leadership","Experienced devops engineer with 6 years working with docker, adaptability, linux",devops_engineer,1
+CAND_0586,1,bachelor,"go, critical thinking, leadership, api, sql, creativity, aws","Experienced backend developer with 1 years working with go, critical thinking, leadership",backend_developer,1
+CAND_0587,10,high_school,"mongodb, problem solving, javascript, sql, html, time management, css","Experienced fullstack developer with 10 years working with mongodb, problem solving, javascript",fullstack_developer,1
+CAND_0588,2,high_school,"sass, critical thinking, problem solving, leadership, javascript, postgresql, html, css","Experienced web developer with 2 years working with sass, critical thinking, problem solving",web_developer,1
+CAND_0589,1,high_school,"linux, creativity, security, windows","Experienced system administrator with 1 years working with linux, creativity, security",system_administrator,1
+CAND_0590,0,bachelor,"python, leadership, api, sql, creativity, aws, time management, c#, php","Experienced backend developer with 0 years working with python, leadership, api",backend_developer,1
+CAND_0591,0,master,"teamwork, critical thinking, adobe creative suite, figma, sketch, user research, css","Experienced ui ux designer with 0 years working with teamwork, critical thinking, adobe creative suite",ui_ux_designer,0
+CAND_0592,9,phd,"sass, nodejs, javascript, creativity, html, typescript, css","Experienced web developer with 9 years working with sass, nodejs, javascript",web_developer,1
+CAND_0593,0,master,"seo, communication, social media, leadership","Experienced content creator with 0 years working with seo, communication, social media",content_creator,0
+CAND_0594,1,phd,"sass, angular, teamwork, vue, leadership, javascript, html, time management, css","Experienced frontend developer with 1 years working with sass, angular, teamwork",frontend_developer,1
+CAND_0595,3,high_school,"teamwork, aws, time management, ansible","Experienced devops engineer with 3 years working with teamwork, aws, time management",devops_engineer,0
+CAND_0596,1,phd,"digital marketing, problem solving, leadership, sem, time management, social media, google ads","Experienced digital marketer with 1 years working with digital marketing, problem solving, leadership",digital_marketer,1
+CAND_0597,9,master,"content strategy, copywriting, social media, time management","Experienced content creator with 9 years working with content strategy, copywriting, social media",content_creator,0
+CAND_0598,8,phd,"communication, adaptability, programming, git, agile","Experienced developer with 8 years working with communication, adaptability, programming",developer,1
+CAND_0599,8,phd,"a/b testing, technical skills, creativity, agile, roadmap planning","Experienced product manager with 8 years working with a/b testing, technical skills, creativity",product_manager,0
+CAND_0600,7,phd,"teamwork, photoshop, indesign","Experienced graphic designer with 7 years working with teamwork, photoshop, indesign",graphic_designer,0
+CAND_0601,4,phd,"angular, teamwork, vue, responsive design, critical thinking, javascript, html, typescript, css","Experienced frontend developer with 4 years working with angular, teamwork, vue",frontend_developer,1
+CAND_0602,1,phd,"photoshop, problem solving, design, print design, adobe creative suite, web design","Experienced graphic designer with 1 years working with photoshop, problem solving, design",graphic_designer,1
+CAND_0603,7,phd,"critical thinking, leadership","Experienced developer with 7 years working with critical thinking, leadership",developer,0
+CAND_0604,5,high_school,"linux, creativity, powershell, windows","Experienced system administrator with 5 years working with linux, creativity, powershell",system_administrator,1
+CAND_0605,3,master,"analytics, time management, graphic design","Experienced content creator with 3 years working with analytics, time management, graphic design",content_creator,0
+CAND_0606,0,bachelor,"jenkins, docker, communication, linux, critical thinking, gitlab ci","Experienced devops engineer with 0 years working with jenkins, docker, communication",devops_engineer,1
+CAND_0607,1,master,"communication, graphic design, leadership, content writing, time management","Experienced content creator with 1 years working with communication, graphic design, leadership",content_creator,1
+CAND_0608,3,bachelor,"nodejs, go, leadership, azure, api, sql","Experienced backend developer with 3 years working with nodejs, go, leadership",backend_developer,1
+CAND_0609,0,master,"communication, javascript, figma, creativity, html, time management, css","Experienced frontend developer with 0 years working with communication, javascript, figma",frontend_developer,1
+CAND_0610,4,bachelor,"communication, leadership, sql, excel, data analysis","Experienced analyst with 4 years working with communication, leadership, sql",analyst,1
+CAND_0611,7,associate,"critical thinking, problem solving, creativity, sql, excel","Experienced data analyst with 7 years working with critical thinking, problem solving, creativity",data_analyst,1
+CAND_0612,1,master,"adaptability, problem solving, javascript, figma, creativity, html, css","Experienced frontend developer with 1 years working with adaptability, problem solving, javascript",frontend_developer,1
+CAND_0613,6,phd,"statistics, teamwork, leadership, hadoop, scipy","Experienced data scientist with 6 years working with statistics, teamwork, leadership",data_scientist,0
+CAND_0614,6,associate,"communication, adaptability, javascript, creativity, html, css","Experienced web developer with 6 years working with communication, adaptability, javascript",web_developer,1
+CAND_0615,9,bachelor,"digital marketing, adaptability, teamwork, critical thinking, conversion optimization","Experienced digital marketer with 9 years working with digital marketing, adaptability, teamwork",digital_marketer,1
+CAND_0616,1,phd,"communication, problem solving, leadership, content writing, video editing, time management","Experienced content creator with 1 years working with communication, problem solving, leadership",content_creator,1
+CAND_0617,6,phd,"teamwork, communication, leadership","Experienced developer with 6 years working with teamwork, communication, leadership",developer,0
+CAND_0618,4,high_school,"design, adobe creative suite, prototyping, creativity","Experienced designer with 4 years working with design, adobe creative suite, prototyping",designer,1
+CAND_0619,5,high_school,"powerbi, communication, process modeling, sql, excel, agile","Experienced business analyst with 5 years working with powerbi, communication, process modeling",business_analyst,1
+CAND_0620,1,phd,"digital marketing, content marketing, leadership, conversion optimization, facebook ads","Experienced digital marketer with 1 years working with digital marketing, content marketing, leadership",digital_marketer,1
+CAND_0621,9,associate,"communication, adaptability, leadership, pmp, project management, scrum, time management","Experienced project manager with 9 years working with communication, adaptability, leadership",project_manager,1
+CAND_0622,0,phd,"design, communication, css, adaptability","Experienced designer with 0 years working with design, communication, css",designer,1
+CAND_0623,0,phd,"prototyping, adaptability, critical thinking, leadership, design, css","Experienced designer with 0 years working with prototyping, adaptability, critical thinking",designer,1
+CAND_0624,5,bachelor,"digital marketing, communication, leadership, conversion optimization, time management, social media","Experienced digital marketer with 5 years working with digital marketing, communication, leadership",digital_marketer,1
+CAND_0625,0,associate,"web design, communication","Experienced graphic designer with 0 years working with web design, communication",graphic_designer,0
+CAND_0626,9,high_school,"communication, ui/ux, critical thinking, design, creativity","Experienced ui ux designer with 9 years working with communication, ui/ux, critical thinking",ui_ux_designer,1
+CAND_0627,7,associate,"programming, teamwork, python, leadership, javascript, creativity","Experienced software developer with 7 years working with programming, teamwork, python",software_developer,1
+CAND_0628,7,high_school,"vmware, security, adaptability, active directory, linux, problem solving, networking, powershell, windows","Experienced system administrator with 7 years working with vmware, security, adaptability",system_administrator,1
+CAND_0629,5,master,"time management, python, programming","Experienced software developer with 5 years working with time management, python, programming",software_developer,1
+CAND_0630,7,phd,"vue, javascript, creativity, html, css","Experienced web developer with 7 years working with vue, javascript, creativity",web_developer,1
+CAND_0631,4,phd,"bash, teamwork, creativity, adaptability","Experienced system administrator with 4 years working with bash, teamwork, creativity",system_administrator,0
+CAND_0632,4,master,"risk management, teamwork, problem solving, confluence, creativity","Experienced project manager with 4 years working with risk management, teamwork, problem solving",project_manager,0
+CAND_0633,11,phd,"programming, teamwork, java, javascript, c#, agile","Experienced software developer with 11 years working with programming, teamwork, java",software_developer,1
+CAND_0634,7,bachelor,"tensorflow, adaptability, critical thinking, creativity, deep learning, numpy","Experienced data scientist with 7 years working with tensorflow, adaptability, critical thinking",data_scientist,0
+CAND_0635,9,associate,"adaptability, problem solving, javascript, postgresql, sql, html, css, devops","Experienced fullstack developer with 9 years working with adaptability, problem solving, javascript",fullstack_developer,1
+CAND_0636,3,associate,"communication, git, creativity, programming","Experienced software developer with 3 years working with communication, git, creativity",software_developer,1
+CAND_0637,1,bachelor,"video editing, analytics, leadership","Experienced content creator with 1 years working with video editing, analytics, leadership",content_creator,0
+CAND_0638,3,associate,"critical thinking, vue, react","Experienced frontend developer with 3 years working with critical thinking, vue, react",frontend_developer,0
+CAND_0639,1,bachelor,"photoshop, color theory, indesign, creativity, illustrator","Experienced graphic designer with 1 years working with photoshop, color theory, indesign",graphic_designer,0
+CAND_0640,1,master,"nodejs, sass, adaptability, react, javascript, html, css","Experienced web developer with 1 years working with nodejs, sass, adaptability",web_developer,1
+CAND_0641,8,master,"tableau, adaptability, teamwork, requirements analysis, time management, powerbi","Experienced business analyst with 8 years working with tableau, adaptability, teamwork",business_analyst,0
+CAND_0642,4,phd,"communication, adaptability, python, creativity","Experienced developer with 4 years working with communication, adaptability, python",developer,0
+CAND_0643,1,phd,"grafana, aws, adaptability, azure","Experienced devops engineer with 1 years working with grafana, aws, adaptability",devops_engineer,0
+CAND_0644,5,associate,"time management, react","Experienced frontend developer with 5 years working with time management, react",frontend_developer,0
+CAND_0645,1,phd,time management,Experienced frontend developer with 1 years working with time management,frontend_developer,0
+CAND_0646,9,phd,"tableau, communication, statistics, teamwork, sql","Experienced analyst with 9 years working with tableau, communication, statistics",analyst,0
+CAND_0647,8,master,"statistics, adaptability, python, problem solving, leadership, sql, hadoop, numpy, scipy","Experienced data scientist with 8 years working with statistics, adaptability, python",data_scientist,1
+CAND_0648,6,bachelor,"business intelligence, communication, python, requirements analysis, powerbi","Experienced business analyst with 6 years working with business intelligence, communication, python",business_analyst,0
+CAND_0649,1,bachelor,"vmware, hyper-v, communication, teamwork, critical thinking, networking","Experienced system administrator with 1 years working with vmware, hyper-v, communication",system_administrator,0
+CAND_0650,6,bachelor,"ui/ux, prototyping, teamwork, wireframing, design, adobe creative suite, sketch, html","Experienced ui ux designer with 6 years working with ui/ux, prototyping, teamwork",ui_ux_designer,1
+CAND_0651,3,associate,"communication, adaptability, graphic design, critical thinking, content writing, content strategy, creativity, social media","Experienced content creator with 3 years working with communication, adaptability, graphic design",content_creator,1
+CAND_0652,11,associate,"problem solving, project management","Experienced project manager with 11 years working with problem solving, project management",project_manager,1
+CAND_0653,5,master,"sass, angular, adaptability, problem solving, javascript, css, html, time management, php","Experienced web developer with 5 years working with sass, angular, adaptability",web_developer,1
+CAND_0654,2,master,"teamwork, creativity, adaptability, risk management","Experienced project manager with 2 years working with teamwork, creativity, adaptability",project_manager,0
+CAND_0655,8,high_school,"testing, critical thinking, adaptability","Experienced developer with 8 years working with testing, critical thinking, adaptability",developer,0
+CAND_0656,8,high_school,"teamwork, javascript, creativity, sql, html, css","Experienced fullstack developer with 8 years working with teamwork, javascript, creativity",fullstack_developer,1
+CAND_0657,4,high_school,"powerbi, adaptability, python, sql, excel, agile","Experienced business analyst with 4 years working with powerbi, adaptability, python",business_analyst,1
+CAND_0658,1,bachelor,"testing, communication, ci/cd, programming, creativity","Experienced software developer with 1 years working with testing, communication, ci/cd",software_developer,1
+CAND_0659,2,phd,"communication, ui/ux, wireframing, design, creativity, css","Experienced ui ux designer with 2 years working with communication, ui/ux, wireframing",ui_ux_designer,1
+CAND_0660,0,phd,"teamwork, css, adaptability","Experienced designer with 0 years working with teamwork, css, adaptability",designer,0
+CAND_0661,3,master,"tableau, problem solving, sql, excel, reporting, data analysis","Experienced analyst with 3 years working with tableau, problem solving, sql",analyst,1
+CAND_0662,1,phd,"git, problem solving","Experienced developer with 1 years working with git, problem solving",developer,0
+CAND_0663,0,phd,"ui/ux, css, adaptability","Experienced designer with 0 years working with ui/ux, css, adaptability",designer,0
+CAND_0664,6,associate,"vue, responsive design, leadership, react","Experienced frontend developer with 6 years working with vue, responsive design, leadership",frontend_developer,0
+CAND_0665,11,high_school,"scrum, problem solving, leadership, risk management","Experienced project manager with 11 years working with scrum, problem solving, leadership",project_manager,0
+CAND_0666,0,phd,"time management, reporting, creativity, powerbi","Experienced analyst with 0 years working with time management, reporting, creativity",analyst,0
+CAND_0667,10,high_school,"content strategy, seo, creativity","Experienced content creator with 10 years working with content strategy, seo, creativity",content_creator,0
+CAND_0668,6,associate,"vue, problem solving, javascript, html, time management, webpack, css","Experienced frontend developer with 6 years working with vue, problem solving, javascript",frontend_developer,1
+CAND_0669,2,high_school,"ui/ux, angular, adaptability, react, creativity","Experienced frontend developer with 2 years working with ui/ux, angular, adaptability",frontend_developer,0
+CAND_0670,5,high_school,"adobe creative suite, figma, teamwork","Experienced ui ux designer with 5 years working with adobe creative suite, figma, teamwork",ui_ux_designer,0
+CAND_0671,7,master,"statistics, python, leadership, creativity, excel, data analysis, powerbi","Experienced analyst with 7 years working with statistics, python, leadership",analyst,1
+CAND_0672,1,associate,"tableau, pandas, adaptability, data visualization, sql, excel","Experienced data analyst with 1 years working with tableau, pandas, adaptability",data_analyst,1
+CAND_0673,3,high_school,"mongodb, communication, leadership, javascript, css, html, php","Experienced web developer with 3 years working with mongodb, communication, leadership",web_developer,1
+CAND_0674,2,associate,"kotlin, react native, java, creativity, time management","Experienced mobile developer with 2 years working with kotlin, react native, java",mobile_developer,0
+CAND_0675,7,bachelor,"design, creativity, problem solving, adaptability","Experienced designer with 7 years working with design, creativity, problem solving",designer,1
+CAND_0676,0,phd,"mongodb, nodejs, adaptability, react, javascript, creativity, sql, html, css","Experienced fullstack developer with 0 years working with mongodb, nodejs, adaptability",fullstack_developer,1
+CAND_0677,0,bachelor,"communication, risk management, leadership, confluence, creativity, project management, scrum, time management","Experienced project manager with 0 years working with communication, risk management, leadership",project_manager,1
+CAND_0678,3,associate,"docker, go, java, time management, php","Experienced backend developer with 3 years working with docker, go, java",backend_developer,0
+CAND_0679,10,phd,"prototyping, adaptability, adobe creative suite, creativity, user research, css","Experienced ui ux designer with 10 years working with prototyping, adaptability, adobe creative suite",ui_ux_designer,0
+CAND_0680,0,master,"communication, a/b testing, leadership, wireframing, product management, roadmap planning, analytics, agile","Experienced product manager with 0 years working with communication, a/b testing, leadership",product_manager,1
+CAND_0681,7,master,"ui/ux, critical thinking, design, adobe creative suite, sketch, time management","Experienced ui ux designer with 7 years working with ui/ux, critical thinking, design",ui_ux_designer,1
+CAND_0682,5,phd,"communication, teamwork, technical skills, sql, product management, analytics","Experienced product manager with 5 years working with communication, teamwork, technical skills",product_manager,1
+CAND_0683,1,associate,"communication, digital marketing, teamwork, sem, social media","Experienced digital marketer with 1 years working with communication, digital marketing, teamwork",digital_marketer,1
+CAND_0684,0,phd,"communication, security, bash, linux, active directory, teamwork, powershell, windows","Experienced system administrator with 0 years working with communication, security, bash",system_administrator,1
+CAND_0685,5,bachelor,"prototyping, teamwork, creativity, sketch, user research, css","Experienced ui ux designer with 5 years working with prototyping, teamwork, creativity",ui_ux_designer,0
+CAND_0686,9,master,"digital marketing, content marketing, critical thinking, problem solving, leadership, sem, analytics, social media, google ads","Experienced digital marketer with 9 years working with digital marketing, content marketing, critical thinking",digital_marketer,1
+CAND_0687,0,high_school,"communication, adaptability, teamwork, html, css","Experienced designer with 0 years working with communication, adaptability, teamwork",designer,0
+CAND_0688,1,high_school,"automation testing, testing, security testing, adaptability, bug tracking, quality assurance, selenium","Experienced qa engineer with 1 years working with automation testing, testing, security testing",qa_engineer,1
+CAND_0689,1,associate,"java, javascript, sql, leadership","Experienced developer with 1 years working with java, javascript, sql",developer,0
+CAND_0690,1,high_school,"communication, go, kubernetes, problem solving, java, api, sql, creativity","Experienced backend developer with 1 years working with communication, go, kubernetes",backend_developer,1
+CAND_0691,3,bachelor,"communication, javascript, postgresql, html, css","Experienced web developer with 3 years working with communication, javascript, postgresql",web_developer,1
+CAND_0692,1,associate,"ui/ux, design, adobe creative suite, creativity, sketch, time management, html","Experienced ui ux designer with 1 years working with ui/ux, design, adobe creative suite",ui_ux_designer,1
+CAND_0693,0,master,"git, critical thinking, leadership, agile","Experienced developer with 0 years working with git, critical thinking, leadership",developer,0
+CAND_0694,0,associate,"content writing, communication, problem solving","Experienced content creator with 0 years working with content writing, communication, problem solving",content_creator,1
+CAND_0695,9,bachelor,"docker, critical thinking, c++, programming","Experienced software developer with 9 years working with docker, critical thinking, c++",software_developer,1
+CAND_0696,1,phd,"communication, adaptability, technical skills, creativity, sql, product management, analytics, user research","Experienced product manager with 1 years working with communication, adaptability, technical skills",product_manager,1
+CAND_0697,10,phd,"adaptability, problem solving, java, javascript, creativity, sql","Experienced developer with 10 years working with adaptability, problem solving, java",developer,0
+CAND_0698,4,high_school,"programming, adaptability, python, java, git, sql, creativity","Experienced developer with 4 years working with programming, adaptability, python",developer,1
+CAND_0699,1,high_school,"photoshop, adaptability, teamwork, critical thinking, print design","Experienced graphic designer with 1 years working with photoshop, adaptability, teamwork",graphic_designer,0
+CAND_0700,0,phd,"communication, adaptability, problem solving, content writing, content strategy, social media, copywriting","Experienced content creator with 0 years working with communication, adaptability, problem solving",content_creator,1
+CAND_0701,0,associate,"communication, copywriting, graphic design, leadership, content writing, seo, social media","Experienced content creator with 0 years working with communication, copywriting, graphic design",content_creator,1
+CAND_0702,8,master,"docker, adaptability, linux, creativity, time management, monitoring","Experienced devops engineer with 8 years working with docker, adaptability, linux",devops_engineer,1
+CAND_0703,0,bachelor,"tableau, pandas, machine learning, statistics, teamwork, python, critical thinking, sql, excel, time management","Experienced data analyst with 0 years working with tableau, pandas, machine learning",data_analyst,1
+CAND_0704,8,master,"time management, terraform, creativity","Experienced devops engineer with 8 years working with time management, terraform, creativity",devops_engineer,0
+CAND_0705,9,bachelor,"communication, problem solving, wireframing","Experienced ui ux designer with 9 years working with communication, problem solving, wireframing",ui_ux_designer,0
+CAND_0706,2,associate,"testing, programming, adaptability, java, javascript, creativity, c#, agile","Experienced software developer with 2 years working with testing, programming, adaptability",software_developer,1
+CAND_0707,0,phd,"adaptability, spark, teamwork, critical thinking, hadoop","Experienced data scientist with 0 years working with adaptability, spark, teamwork",data_scientist,0
+CAND_0708,0,master,"adaptability, python, problem solving, creativity, excel, reporting, data analysis","Experienced analyst with 0 years working with adaptability, python, problem solving",analyst,1
+CAND_0709,6,master,"security testing, communication, teamwork, performance testing, selenium","Experienced qa engineer with 6 years working with security testing, communication, teamwork",qa_engineer,0
+CAND_0710,3,high_school,"tableau, machine learning, statistics, r, critical thinking, data visualization, time management","Experienced data analyst with 3 years working with tableau, machine learning, statistics",data_analyst,0
+CAND_0711,9,master,"communication, critical thinking, product management, analytics, user research, roadmap planning","Experienced product manager with 9 years working with communication, critical thinking, product management",product_manager,1
+CAND_0712,0,master,"programming, critical thinking, java, creativity, c++, time management, c#","Experienced software developer with 0 years working with programming, critical thinking, java",software_developer,1
+CAND_0713,0,master,"critical thinking, problem solving, kubernetes, leadership, api, sql","Experienced backend developer with 0 years working with critical thinking, problem solving, kubernetes",backend_developer,1
+CAND_0714,8,associate,"programming, python, critical thinking, java, creativity, sql","Experienced developer with 8 years working with programming, python, critical thinking",developer,1
+CAND_0715,8,phd,"sass, angular, vue, critical thinking, javascript, css, html, webpack, php","Experienced web developer with 8 years working with sass, angular, vue",web_developer,1
+CAND_0716,3,associate,"communication, wireframing, sql, product management, time management, roadmap planning","Experienced product manager with 3 years working with communication, wireframing, sql",product_manager,1
+CAND_0717,8,associate,"vmware, bash, teamwork, leadership, creativity, powershell","Experienced system administrator with 8 years working with vmware, bash, teamwork",system_administrator,0
+CAND_0718,3,associate,"time management, communication, critical thinking","Experienced designer with 3 years working with time management, communication, critical thinking",designer,0
+CAND_0719,11,phd,"communication, python, java, c++, time management","Experienced software developer with 11 years working with communication, python, java",software_developer,0
+CAND_0720,4,high_school,"kubernetes, go, c#, adaptability","Experienced backend developer with 4 years working with kubernetes, go, c#",backend_developer,0
+CAND_0721,2,bachelor,"teamwork, communication","Experienced software developer with 2 years working with teamwork, communication",software_developer,0
+CAND_0722,5,bachelor,"kotlin, swift, leadership, react native","Experienced mobile developer with 5 years working with kotlin, swift, leadership",mobile_developer,0
+CAND_0723,2,phd,"time management, creativity, vue, adaptability","Experienced web developer with 2 years working with time management, creativity, vue",web_developer,0
+CAND_0724,5,high_school,"testing, python, javascript, creativity, sql, agile","Experienced developer with 5 years working with testing, python, javascript",developer,0
+CAND_0725,6,bachelor,"digital marketing, communication, creativity, sem, seo, time management, analytics","Experienced digital marketer with 6 years working with digital marketing, communication, creativity",digital_marketer,1
+CAND_0726,1,phd,"kotlin, adaptability, teamwork, swift, mobile, java","Experienced mobile developer with 1 years working with kotlin, adaptability, teamwork",mobile_developer,1
+CAND_0727,0,associate,"ui/ux, adaptability","Experienced designer with 0 years working with ui/ux, adaptability",designer,0
+CAND_0728,9,associate,"tableau, critical thinking, problem solving, sql, reporting","Experienced analyst with 9 years working with tableau, critical thinking, problem solving",analyst,0
+CAND_0729,3,master,"communication, programming, python, critical thinking, c++, c#","Experienced software developer with 3 years working with communication, programming, python",software_developer,1
+CAND_0730,1,high_school,"python, critical thinking, excel, reporting, data analysis","Experienced analyst with 1 years working with python, critical thinking, excel",analyst,1
+CAND_0731,3,associate,"python, process modeling, leadership, creativity, sql, excel, requirements analysis","Experienced business analyst with 3 years working with python, process modeling, leadership",business_analyst,1
+CAND_0732,6,phd,"design, teamwork, prototyping","Experienced designer with 6 years working with design, teamwork, prototyping",designer,1
+CAND_0733,2,associate,"communication, a/b testing, problem solving, sql, product management, agile","Experienced product manager with 2 years working with communication, a/b testing, problem solving",product_manager,1
+CAND_0734,6,bachelor,"communication, content writing, creativity, seo, copywriting","Experienced content creator with 6 years working with communication, content writing, creativity",content_creator,1
+CAND_0735,0,bachelor,"communication, sass, nodejs, adaptability, time management, typescript","Experienced web developer with 0 years working with communication, sass, nodejs",web_developer,0
+CAND_0736,9,associate,"content marketing, teamwork, facebook ads, sem","Experienced digital marketer with 9 years working with content marketing, teamwork, facebook ads",digital_marketer,0
+CAND_0737,5,high_school,"communication, photoshop, branding, indesign, leadership, design, adobe creative suite, print design, typography, time management","Experienced graphic designer with 5 years working with communication, photoshop, branding",graphic_designer,1
+CAND_0738,6,bachelor,"communication, time management, statistics, creativity","Experienced analyst with 6 years working with communication, time management, statistics",analyst,0
+CAND_0739,1,phd,"time management, creativity, c++, programming","Experienced software developer with 1 years working with time management, creativity, c++",software_developer,1
+CAND_0740,9,master,"r, critical thinking, creativity, time management, powerbi","Experienced analyst with 9 years working with r, critical thinking, creativity",analyst,0
+CAND_0741,1,phd,"communication, wordpress, adaptability, content strategy, video editing, seo, time management, copywriting","Experienced content creator with 1 years working with communication, wordpress, adaptability",content_creator,0
+CAND_0742,0,phd,"design, critical thinking, adobe creative suite, ui/ux","Experienced designer with 0 years working with design, critical thinking, adobe creative suite",designer,1
+CAND_0743,1,master,"communication, critical thinking, leadership, api, sql","Experienced backend developer with 1 years working with communication, critical thinking, leadership",backend_developer,1
+CAND_0744,9,bachelor,"teamwork, docker, problem solving, devops","Experienced fullstack developer with 9 years working with teamwork, docker, problem solving",fullstack_developer,0
+CAND_0745,6,associate,"communication, teamwork, critical thinking, content writing, seo, copywriting","Experienced content creator with 6 years working with communication, teamwork, critical thinking",content_creator,1
+CAND_0746,4,phd,"kotlin, google play, adaptability, swift, mobile, firebase, creativity, time management, flutter","Experienced mobile developer with 4 years working with kotlin, google play, adaptability",mobile_developer,1
+CAND_0747,10,master,"communication, adaptability, programming, javascript, time management","Experienced developer with 10 years working with communication, adaptability, programming",developer,1
+CAND_0748,7,phd,"content strategy, critical thinking, social media, leadership","Experienced content creator with 7 years working with content strategy, critical thinking, social media",content_creator,0
+CAND_0749,1,master,"communication, teamwork, creativity, product management, user research","Experienced product manager with 1 years working with communication, teamwork, creativity",product_manager,1
+CAND_0750,1,high_school,"automation testing, communication, manual testing, adaptability, bug tracking","Experienced qa engineer with 1 years working with automation testing, communication, manual testing",qa_engineer,0
+CAND_0751,1,phd,"wordpress, problem solving, creativity, social media, seo, copywriting","Experienced content creator with 1 years working with wordpress, problem solving, creativity",content_creator,0
+CAND_0752,7,associate,"communication, teamwork, design, adobe creative suite, creativity","Experienced graphic designer with 7 years working with communication, teamwork, design",graphic_designer,1
+CAND_0753,11,bachelor,"mongodb, communication, nodejs, python, aws, problem solving, javascript, sql, html, css","Experienced fullstack developer with 11 years working with mongodb, communication, nodejs",fullstack_developer,1
+CAND_0754,0,phd,"digital marketing, leadership, facebook ads, analytics, social media, google ads","Experienced digital marketer with 0 years working with digital marketing, leadership, facebook ads",digital_marketer,1
+CAND_0755,1,associate,"tableau, statistics, adaptability, teamwork, sql, excel","Experienced data analyst with 1 years working with tableau, statistics, adaptability",data_analyst,1
+CAND_0756,1,associate,"automation testing, testing, ci/cd, problem solving, quality assurance","Experienced qa engineer with 1 years working with automation testing, testing, ci/cd",qa_engineer,1
+CAND_0757,0,bachelor,"communication, security, linux, networking, powershell, windows","Experienced system administrator with 0 years working with communication, security, linux",system_administrator,1
+CAND_0758,6,associate,"leadership, time management, google play, flutter","Experienced mobile developer with 6 years working with leadership, time management, google play",mobile_developer,0
+CAND_0759,0,high_school,"communication, app store, swift, flutter","Experienced mobile developer with 0 years working with communication, app store, swift",mobile_developer,0
+CAND_0760,5,phd,"communication, critical thinking, project management, adaptability","Experienced project manager with 5 years working with communication, critical thinking, project management",project_manager,1
+CAND_0761,11,phd,"docker, linux, terraform, problem solving, aws, time management, ansible","Experienced devops engineer with 11 years working with docker, linux, terraform",devops_engineer,1
+CAND_0762,2,associate,"leadership, confluence, pmp, project management, time management, agile","Experienced project manager with 2 years working with leadership, confluence, pmp",project_manager,1
+CAND_0763,5,master,"business intelligence, powerbi, creativity, requirements analysis, agile","Experienced business analyst with 5 years working with business intelligence, powerbi, creativity",business_analyst,0
+CAND_0764,5,bachelor,"r, sql, problem solving, adaptability","Experienced analyst with 5 years working with r, sql, problem solving",analyst,0
+CAND_0765,8,master,"communication, adaptability, technical skills, a/b testing, product management, analytics, agile","Experienced product manager with 8 years working with communication, adaptability, technical skills",product_manager,1
+CAND_0766,6,master,"bash, networking, powershell, adaptability","Experienced system administrator with 6 years working with bash, networking, powershell",system_administrator,0
+CAND_0767,1,associate,"analytics, critical thinking, sem","Experienced digital marketer with 1 years working with analytics, critical thinking, sem",digital_marketer,0
+CAND_0768,4,bachelor,"tableau, time management, business intelligence","Experienced business analyst with 4 years working with tableau, time management, business intelligence",business_analyst,0
+CAND_0769,4,bachelor,"teamwork, user research, technical skills, agile","Experienced product manager with 4 years working with teamwork, user research, technical skills",product_manager,0
+CAND_0770,8,high_school,"vmware, active directory, critical thinking, networking, time management","Experienced system administrator with 8 years working with vmware, active directory, critical thinking",system_administrator,0
+CAND_0771,9,associate,"communication, technical skills, sql, user research, roadmap planning","Experienced product manager with 9 years working with communication, technical skills, sql",product_manager,0
+CAND_0772,9,bachelor,"color theory, branding, indesign, critical thinking, creativity, web design","Experienced graphic designer with 9 years working with color theory, branding, indesign",graphic_designer,0
+CAND_0773,0,bachelor,"communication, linux, networking, windows, monitoring","Experienced system administrator with 0 years working with communication, linux, networking",system_administrator,1
+CAND_0774,3,bachelor,"docker, linux, kubernetes, leadership, azure, problem solving, aws, monitoring","Experienced devops engineer with 3 years working with docker, linux, kubernetes",devops_engineer,1
+CAND_0775,2,bachelor,"communication, ci/cd, programming, teamwork, time management, agile","Experienced software developer with 2 years working with communication, ci/cd, programming",software_developer,1
+CAND_0776,0,associate,"statistics, python, critical thinking, leadership, excel, sql, time management, data analysis, powerbi","Experienced analyst with 0 years working with statistics, python, critical thinking",analyst,1
+CAND_0777,7,associate,"teamwork, critical thinking, manual testing, performance testing","Experienced qa engineer with 7 years working with teamwork, critical thinking, manual testing",qa_engineer,0
+CAND_0778,0,high_school,"communication, prototyping, problem solving, leadership, design, figma, adobe creative suite, css","Experienced designer with 0 years working with communication, prototyping, problem solving",designer,1
+CAND_0779,4,master,"analytics, google ads, leadership","Experienced digital marketer with 4 years working with analytics, google ads, leadership",digital_marketer,0
+CAND_0780,2,associate,"statistics, python, problem solving, leadership, sql, numpy, scipy","Experienced data scientist with 2 years working with statistics, python, problem solving",data_scientist,1
+CAND_0781,1,phd,"docker, nodejs, teamwork, java, creativity","Experienced backend developer with 1 years working with docker, nodejs, teamwork",backend_developer,0
+CAND_0782,6,master,"java, communication, mobile, react native","Experienced mobile developer with 6 years working with java, communication, mobile",mobile_developer,1
+CAND_0783,0,master,"angular, adaptability, vue, critical thinking, leadership, react, javascript, html, css","Experienced frontend developer with 0 years working with angular, adaptability, vue",frontend_developer,1
+CAND_0784,6,master,"communication, adaptability, python, sql, time management","Experienced data scientist with 6 years working with communication, adaptability, python",data_scientist,1
+CAND_0785,6,high_school,"communication, prototyping, figma, sketch, html","Experienced ui ux designer with 6 years working with communication, prototyping, figma",ui_ux_designer,0
+CAND_0786,7,high_school,"communication, critical thinking, wireframing, creativity, sql, product management, roadmap planning, user research, agile","Experienced product manager with 7 years working with communication, critical thinking, wireframing",product_manager,1
+CAND_0787,1,phd,"vmware, security, bash, teamwork, networking, time management","Experienced system administrator with 1 years working with vmware, security, bash",system_administrator,0
+CAND_0788,1,master,"adaptability, teamwork, critical thinking, content strategy, analytics, wordpress","Experienced content creator with 1 years working with adaptability, teamwork, critical thinking",content_creator,0
+CAND_0789,4,associate,"testing, programming, leadership, creativity, agile","Experienced software developer with 4 years working with testing, programming, leadership",software_developer,1
+CAND_0790,5,high_school,"communication, teamwork, graphic design, problem solving, content strategy, analytics","Experienced content creator with 5 years working with communication, teamwork, graphic design",content_creator,0
+CAND_0791,0,phd,"design, communication, css","Experienced designer with 0 years working with design, communication, css",designer,1
+CAND_0792,11,phd,"teamwork, python, agile","Experienced software developer with 11 years working with teamwork, python, agile",software_developer,0
+CAND_0793,3,bachelor,"hyper-v, adaptability, active directory, linux, teamwork, windows, time management","Experienced system administrator with 3 years working with hyper-v, adaptability, active directory",system_administrator,1
+CAND_0794,6,phd,"teamwork, design, figma, ui/ux","Experienced designer with 6 years working with teamwork, design, figma",designer,1
+CAND_0795,7,phd,"digital marketing, communication, email marketing, content marketing, critical thinking, facebook ads, sem, analytics","Experienced digital marketer with 7 years working with digital marketing, communication, email marketing",digital_marketer,1
+CAND_0796,11,master,"programming, teamwork, python, c++, time management","Experienced software developer with 11 years working with programming, teamwork, python",software_developer,1
+CAND_0797,5,associate,"pandas, tensorflow, creativity, deep learning, time management, scipy","Experienced data scientist with 5 years working with pandas, tensorflow, creativity",data_scientist,0
+CAND_0798,7,associate,"critical thinking, figma, time management, ui/ux","Experienced designer with 7 years working with critical thinking, figma, time management",designer,0
+CAND_0799,0,phd,"conversion optimization, communication, critical thinking, leadership","Experienced digital marketer with 0 years working with conversion optimization, communication, critical thinking",digital_marketer,0
+CAND_0800,0,master,"communication, teamwork, critical thinking, excel, data analysis","Experienced analyst with 0 years working with communication, teamwork, critical thinking",analyst,1
+CAND_0801,1,associate,"docker, problem solving, react, aws, time management","Experienced fullstack developer with 1 years working with docker, problem solving, react",fullstack_developer,0
+CAND_0802,10,associate,"automation testing, testing, manual testing, ci/cd, critical thinking, leadership, quality assurance, selenium","Experienced qa engineer with 10 years working with automation testing, testing, manual testing",qa_engineer,1
+CAND_0803,0,phd,"communication, statistics, teamwork, python, excel, data analysis, powerbi","Experienced analyst with 0 years working with communication, statistics, teamwork",analyst,1
+CAND_0804,8,high_school,"business intelligence, r, teamwork, python, requirements analysis, time management, powerbi","Experienced business analyst with 8 years working with business intelligence, r, teamwork",business_analyst,0
+CAND_0805,6,high_school,"grafana, adaptability, leadership, creativity, gitlab ci","Experienced devops engineer with 6 years working with grafana, adaptability, leadership",devops_engineer,0
+CAND_0806,5,bachelor,"critical thinking, problem solving, programming","Experienced software developer with 5 years working with critical thinking, problem solving, programming",software_developer,1
+CAND_0807,7,bachelor,"time management, reporting, statistics","Experienced analyst with 7 years working with time management, reporting, statistics",analyst,0
+CAND_0808,2,phd,"java, python, sql, communication","Experienced developer with 2 years working with java, python, sql",developer,0
+CAND_0809,3,master,"bash, teamwork, creativity, security","Experienced system administrator with 3 years working with bash, teamwork, creativity",system_administrator,0
+CAND_0810,3,bachelor,"adobe creative suite, time management, ui/ux","Experienced designer with 3 years working with adobe creative suite, time management, ui/ux",designer,0
+CAND_0811,3,high_school,"push notifications, problem solving, mobile, firebase, time management, flutter","Experienced mobile developer with 3 years working with push notifications, problem solving, mobile",mobile_developer,1
+CAND_0812,9,associate,"mongodb, docker, leadership, postgresql, aws","Experienced fullstack developer with 9 years working with mongodb, docker, leadership",fullstack_developer,0
+CAND_0813,3,associate,"creativity, communication, project management, agile","Experienced project manager with 3 years working with creativity, communication, project management",project_manager,1
+CAND_0814,1,master,"adaptability, ansible, terraform, gitlab ci","Experienced devops engineer with 1 years working with adaptability, ansible, terraform",devops_engineer,0
+CAND_0815,3,high_school,"nodejs, teamwork, critical thinking, javascript, sql, html, css","Experienced fullstack developer with 3 years working with nodejs, teamwork, critical thinking",fullstack_developer,1
+CAND_0816,7,phd,"tableau, adaptability, r, python, problem solving, requirements analysis, time management","Experienced business analyst with 7 years working with tableau, adaptability, r",business_analyst,0
+CAND_0817,10,phd,"requirements analysis, time management, powerbi","Experienced business analyst with 10 years working with requirements analysis, time management, powerbi",business_analyst,0
+CAND_0818,8,phd,"jenkins, docker, communication, linux, terraform, aws, monitoring, ansible","Experienced devops engineer with 8 years working with jenkins, docker, communication",devops_engineer,1
+CAND_0819,11,bachelor,"docker, communication, adaptability, linux, kubernetes, problem solving, ansible","Experienced devops engineer with 11 years working with docker, communication, adaptability",devops_engineer,1
+CAND_0820,9,associate,"communication, critical thinking, leadership, project management, agile","Experienced project manager with 9 years working with communication, critical thinking, leadership",project_manager,1
+CAND_0821,6,high_school,"mongodb, adaptability, javascript, postgresql, sql, html, css","Experienced fullstack developer with 6 years working with mongodb, adaptability, javascript",fullstack_developer,1
+CAND_0822,5,master,"video editing, teamwork","Experienced content creator with 5 years working with video editing, teamwork",content_creator,0
+CAND_0823,1,associate,"statistics, adaptability, teamwork, python, problem solving, sql, numpy","Experienced data scientist with 1 years working with statistics, adaptability, teamwork",data_scientist,1
+CAND_0824,9,high_school,"docker, go, java, api, sql, creativity, php","Experienced backend developer with 9 years working with docker, go, java",backend_developer,1
+CAND_0825,7,associate,"ui/ux, critical thinking, wireframing, design, figma, adobe creative suite, creativity","Experienced ui ux designer with 7 years working with ui/ux, critical thinking, wireframing",ui_ux_designer,1
+CAND_0826,2,high_school,"risk management, critical thinking, problem solving, creativity, pmp, project management","Experienced project manager with 2 years working with risk management, critical thinking, problem solving",project_manager,1
+CAND_0827,0,bachelor,"design, adobe creative suite, creativity, css, html","Experienced designer with 0 years working with design, adobe creative suite, creativity",designer,1
+CAND_0828,8,phd,"java, adaptability, python, programming","Experienced developer with 8 years working with java, adaptability, python",developer,1
+CAND_0829,6,phd,"communication, adaptability, a/b testing, creativity, product management, analytics, user research","Experienced product manager with 6 years working with communication, adaptability, a/b testing",product_manager,1
+CAND_0830,1,high_school,"communication, critical thinking, adaptability","Experienced graphic designer with 1 years working with communication, critical thinking, adaptability",graphic_designer,0
+CAND_0831,5,associate,"angular, teamwork, responsive design, javascript, html, css","Experienced frontend developer with 5 years working with angular, teamwork, responsive design",frontend_developer,1
+CAND_0832,5,bachelor,"communication, problem solving, wireframing, product management, analytics, user research, agile","Experienced product manager with 5 years working with communication, problem solving, wireframing",product_manager,1
+CAND_0833,8,master,"statistics, python, leadership, creativity, time management, powerbi","Experienced analyst with 8 years working with statistics, python, leadership",analyst,0
+CAND_0834,4,phd,"testing, communication, python, problem solving, git, sql, time management","Experienced developer with 4 years working with testing, communication, python",developer,0
+CAND_0835,2,phd,"mongodb, communication","Experienced fullstack developer with 2 years working with mongodb, communication",fullstack_developer,0
+CAND_0836,11,master,"teamwork, creativity, programming","Experienced software developer with 11 years working with teamwork, creativity, programming",software_developer,1
+CAND_0837,1,master,"pandas, critical thinking, problem solving, creativity, data visualization, sql, excel","Experienced data analyst with 1 years working with pandas, critical thinking, problem solving",data_analyst,1
+CAND_0838,4,bachelor,"teamwork, leadership, time management, css","Experienced ui ux designer with 4 years working with teamwork, leadership, time management",ui_ux_designer,0
+CAND_0839,2,associate,"angular, teamwork, problem solving, typescript, php","Experienced web developer with 2 years working with angular, teamwork, problem solving",web_developer,0
+CAND_0840,1,associate,"adaptability, responsive design, problem solving, vue, leadership, figma, webpack","Experienced frontend developer with 1 years working with adaptability, responsive design, problem solving",frontend_developer,0
+CAND_0841,10,associate,"communication, problem solving, adaptability","Experienced devops engineer with 10 years working with communication, problem solving, adaptability",devops_engineer,0
+CAND_0842,0,master,"figma, communication, ui/ux","Experienced designer with 0 years working with figma, communication, ui/ux",designer,0
+CAND_0843,2,master,"sass, typescript, problem solving","Experienced frontend developer with 2 years working with sass, typescript, problem solving",frontend_developer,0
+CAND_0844,0,master,"adaptability, teamwork, leadership, javascript, html, css","Experienced web developer with 0 years working with adaptability, teamwork, leadership",web_developer,1
+CAND_0845,7,master,"adaptability, critical thinking, problem solving, agile","Experienced business analyst with 7 years working with adaptability, critical thinking, problem solving",business_analyst,0
+CAND_0846,3,associate,"problem solving, leadership, javascript, sql, html, time management, css","Experienced fullstack developer with 3 years working with problem solving, leadership, javascript",fullstack_developer,1
+CAND_0847,7,bachelor,"communication, networking, vmware, monitoring","Experienced system administrator with 7 years working with communication, networking, vmware",system_administrator,0
+CAND_0848,2,high_school,"vmware, communication, linux, critical thinking, problem solving, windows, monitoring","Experienced system administrator with 2 years working with vmware, communication, linux",system_administrator,1
+CAND_0849,3,bachelor,"security, linux, critical thinking, leadership, networking, powershell, windows","Experienced system administrator with 3 years working with security, linux, critical thinking",system_administrator,1
+CAND_0850,0,master,"digital marketing, adaptability, email marketing, critical thinking, leadership, sem","Experienced digital marketer with 0 years working with digital marketing, adaptability, email marketing",digital_marketer,1
+CAND_0851,6,associate,"python, problem solving, azure, api, sql, creativity","Experienced backend developer with 6 years working with python, problem solving, azure",backend_developer,1
+CAND_0852,5,associate,"adaptability, creativity, excel, time management, data analysis, powerbi","Experienced analyst with 5 years working with adaptability, creativity, excel",analyst,1
+CAND_0853,1,phd,"docker, linux, problem solving, leadership, azure, creativity, monitoring, gitlab ci","Experienced devops engineer with 1 years working with docker, linux, problem solving",devops_engineer,1
+CAND_0854,1,high_school,"docker, adaptability, react, javascript, sql, microservices, html, time management, css","Experienced fullstack developer with 1 years working with docker, adaptability, react",fullstack_developer,1
+CAND_0855,5,bachelor,"javascript, critical thinking, python, sql","Experienced developer with 5 years working with javascript, critical thinking, python",developer,0
+CAND_0856,10,phd,"pandas, machine learning, teamwork, python, sql, numpy","Experienced data scientist with 10 years working with pandas, machine learning, teamwork",data_scientist,1
+CAND_0857,8,bachelor,"mongodb, docker, critical thinking, react, javascript, postgresql, creativity, sql, html, css","Experienced fullstack developer with 8 years working with mongodb, docker, critical thinking",fullstack_developer,1
+CAND_0858,6,phd,"photoshop, design, print design, adobe creative suite, creativity, web design","Experienced graphic designer with 6 years working with photoshop, design, print design",graphic_designer,1
+CAND_0859,5,phd,"pandas, tensorflow, leadership, hadoop, numpy","Experienced data scientist with 5 years working with pandas, tensorflow, leadership",data_scientist,0
+CAND_0860,0,phd,"docker, kubernetes, java, api, sql, creativity","Experienced backend developer with 0 years working with docker, kubernetes, java",backend_developer,1
+CAND_0861,7,associate,"statistics, critical thinking, problem solving, reporting, time management","Experienced analyst with 7 years working with statistics, critical thinking, problem solving",analyst,0
+CAND_0862,8,bachelor,"docker, teamwork, python, problem solving, leadership, java, api, sql, c#","Experienced backend developer with 8 years working with docker, teamwork, python",backend_developer,1
+CAND_0863,1,phd,"angular, teamwork, react, javascript, creativity, css, html, webpack, php","Experienced web developer with 1 years working with angular, teamwork, react",web_developer,1
+CAND_0864,0,phd,"tableau, business intelligence, adaptability, sql, excel, requirements analysis, agile","Experienced business analyst with 0 years working with tableau, business intelligence, adaptability",business_analyst,1
+CAND_0865,1,high_school,"adaptability, programming, leadership, javascript, git, sql","Experienced developer with 1 years working with adaptability, programming, leadership",developer,1
+CAND_0866,10,bachelor,"docker, python, react, javascript, sql, microservices, html, time management, css","Experienced fullstack developer with 10 years working with docker, python, react",fullstack_developer,1
+CAND_0867,0,associate,"communication, prototyping, adaptability, leadership, design, figma, html","Experienced designer with 0 years working with communication, prototyping, adaptability",designer,1
+CAND_0868,1,high_school,"pandas, machine learning, teamwork, sql, excel, time management","Experienced data analyst with 1 years working with pandas, machine learning, teamwork",data_analyst,1
+CAND_0869,1,high_school,"communication, leadership, time management, typescript, webpack","Experienced frontend developer with 1 years working with communication, leadership, time management",frontend_developer,0
+CAND_0870,1,high_school,"communication, copywriting, wordpress, teamwork, content writing, content strategy, creativity, video editing, time management, social media","Experienced content creator with 1 years working with communication, copywriting, wordpress",content_creator,1
+CAND_0871,1,bachelor,"leadership, critical thinking, ci/cd, performance testing","Experienced qa engineer with 1 years working with leadership, critical thinking, ci/cd",qa_engineer,0
+CAND_0872,10,associate,"teamwork, grafana, gitlab ci","Experienced devops engineer with 10 years working with teamwork, grafana, gitlab ci",devops_engineer,0
+CAND_0873,8,associate,"ui/ux, critical thinking, problem solving, design, adobe creative suite","Experienced designer with 8 years working with ui/ux, critical thinking, problem solving",designer,1
+CAND_0874,0,associate,"time management, leadership, adaptability","Experienced data scientist with 0 years working with time management, leadership, adaptability",data_scientist,0
+CAND_0875,3,bachelor,"automation testing, testing, ci/cd, critical thinking, creativity, api testing, quality assurance, selenium","Experienced qa engineer with 3 years working with automation testing, testing, ci/cd",qa_engineer,1
+CAND_0876,9,phd,"testing, security testing, ci/cd, adaptability, quality assurance","Experienced qa engineer with 9 years working with testing, security testing, ci/cd",qa_engineer,1
+CAND_0877,0,associate,"design, figma, adobe creative suite, creativity, html","Experienced designer with 0 years working with design, figma, adobe creative suite",designer,1
+CAND_0878,2,master,"communication, risk management, jira, critical thinking, pmp, project management, agile","Experienced project manager with 2 years working with communication, risk management, jira",project_manager,1
+CAND_0879,0,bachelor,"automation testing, teamwork, bug tracking, leadership, api testing, selenium","Experienced qa engineer with 0 years working with automation testing, teamwork, bug tracking",qa_engineer,0
+CAND_0880,6,master,"automation testing, testing, communication, ci/cd, adaptability, bug tracking, api testing, quality assurance","Experienced qa engineer with 6 years working with automation testing, testing, communication",qa_engineer,1
+CAND_0881,9,phd,"tableau, machine learning, adaptability, python, creativity","Experienced data analyst with 9 years working with tableau, machine learning, adaptability",data_analyst,0
+CAND_0882,0,master,"vmware, communication, bash, linux, networking, windows, monitoring","Experienced system administrator with 0 years working with vmware, communication, bash",system_administrator,1
+CAND_0883,5,bachelor,"communication, ui/ux, teamwork, leadership, javascript, html, webpack, css","Experienced frontend developer with 5 years working with communication, ui/ux, teamwork",frontend_developer,1
+CAND_0884,0,phd,"selenium, teamwork, manual testing, adaptability","Experienced qa engineer with 0 years working with selenium, teamwork, manual testing",qa_engineer,0
+CAND_0885,7,bachelor,"communication, teamwork, graphic design, content writing, seo","Experienced content creator with 7 years working with communication, teamwork, graphic design",content_creator,1
+CAND_0886,6,associate,"teamwork, git, creativity","Experienced developer with 6 years working with teamwork, git, creativity",developer,0
+CAND_0887,1,phd,"email marketing, content marketing, communication, sem","Experienced digital marketer with 1 years working with email marketing, content marketing, communication",digital_marketer,0
+CAND_0888,8,master,"teamwork, figma, communication, creativity","Experienced designer with 8 years working with teamwork, figma, communication",designer,0
+CAND_0889,9,master,"selenium, automation testing, teamwork, performance testing","Experienced qa engineer with 9 years working with selenium, automation testing, teamwork",qa_engineer,0
+CAND_0890,1,high_school,"java, adaptability","Experienced software developer with 1 years working with java, adaptability",software_developer,0
+CAND_0891,5,high_school,"kotlin, push notifications, teamwork, app store, problem solving, mobile, java","Experienced mobile developer with 5 years working with kotlin, push notifications, teamwork",mobile_developer,1
+CAND_0892,10,phd,"linux, docker, creativity","Experienced devops engineer with 10 years working with linux, docker, creativity",devops_engineer,1
+CAND_0893,4,associate,"color theory, adaptability, branding, design, adobe creative suite, typography, time management","Experienced graphic designer with 4 years working with color theory, adaptability, branding",graphic_designer,1
+CAND_0894,5,high_school,"prototyping, problem solving, design, adobe creative suite, time management, html","Experienced designer with 5 years working with prototyping, problem solving, design",designer,1
+CAND_0895,7,high_school,"communication, adaptability, jira, problem solving, leadership, confluence, agile","Experienced project manager with 7 years working with communication, adaptability, jira",project_manager,0
+CAND_0896,1,master,"communication, critical thinking, leadership, design, adobe creative suite","Experienced graphic designer with 1 years working with communication, critical thinking, leadership",graphic_designer,1
+CAND_0897,7,associate,"digital marketing, adaptability, email marketing, problem solving, creativity, social media","Experienced digital marketer with 7 years working with digital marketing, adaptability, email marketing",digital_marketer,1
+CAND_0898,10,high_school,"critical thinking, javascript, creativity, html, time management, typescript, css","Experienced web developer with 10 years working with critical thinking, javascript, creativity",web_developer,1
+CAND_0899,8,phd,"tableau, statistics, python, problem solving, sql","Experienced analyst with 8 years working with tableau, statistics, python",analyst,0
+CAND_0900,9,high_school,"teamwork, python, java, api, sql, aws","Experienced backend developer with 9 years working with teamwork, python, java",backend_developer,1
+CAND_0901,4,high_school,"time management, python, sql, programming","Experienced developer with 4 years working with time management, python, sql",developer,1
+CAND_0902,2,phd,"communication, docker, linux, critical thinking, kubernetes, time management","Experienced devops engineer with 2 years working with communication, docker, linux",devops_engineer,1
+CAND_0903,5,phd,"problem solving, leadership, design, adobe creative suite, time management","Experienced graphic designer with 5 years working with problem solving, leadership, design",graphic_designer,1
+CAND_0904,6,phd,"python, api, sql, microservices, aws, time management","Experienced backend developer with 6 years working with python, api, sql",backend_developer,1
+CAND_0905,6,associate,"communication, prototyping, teamwork, critical thinking, figma, sketch","Experienced ui ux designer with 6 years working with communication, prototyping, teamwork",ui_ux_designer,0
+CAND_0906,0,master,"testing, quality assurance, ci/cd, problem solving, performance testing","Experienced qa engineer with 0 years working with testing, quality assurance, ci/cd",qa_engineer,1
+CAND_0907,1,bachelor,"communication, leadership, content writing, content strategy, video editing, wordpress","Experienced content creator with 1 years working with communication, leadership, content writing",content_creator,1
+CAND_0908,8,master,"r, python, leadership, excel, time management, data analysis","Experienced analyst with 8 years working with r, python, leadership",analyst,1
+CAND_0909,5,high_school,"time management, css","Experienced ui ux designer with 5 years working with time management, css",ui_ux_designer,0
+CAND_0910,1,associate,"adaptability, r, problem solving, sql, excel, data analysis","Experienced analyst with 1 years working with adaptability, r, problem solving",analyst,1
+CAND_0911,10,associate,"communication, nodejs, adaptability, python, critical thinking, postgresql, devops","Experienced fullstack developer with 10 years working with communication, nodejs, adaptability",fullstack_developer,0
+CAND_0912,5,phd,"communication, copywriting, graphic design, creativity, seo, wordpress","Experienced content creator with 5 years working with communication, copywriting, graphic design",content_creator,0
+CAND_0913,10,phd,"sass, leadership","Experienced frontend developer with 10 years working with sass, leadership",frontend_developer,0
+CAND_0914,6,master,"nodejs, sass, problem solving, javascript, postgresql, css, html, php","Experienced web developer with 6 years working with nodejs, sass, problem solving",web_developer,1
+CAND_0915,0,high_school,"requirements analysis, sql, excel, leadership","Experienced business analyst with 0 years working with requirements analysis, sql, excel",business_analyst,1
+CAND_0916,7,bachelor,"teamwork, critical thinking, machine learning, data visualization","Experienced data analyst with 7 years working with teamwork, critical thinking, machine learning",data_analyst,0
+CAND_0917,4,master,"adaptability, python, excel, time management, data analysis","Experienced analyst with 4 years working with adaptability, python, excel",analyst,1
+CAND_0918,6,bachelor,"jira, communication, leadership","Experienced project manager with 6 years working with jira, communication, leadership",project_manager,0
+CAND_0919,6,bachelor,"digital marketing, teamwork, conversion optimization, sem, seo, time management, social media, google ads","Experienced digital marketer with 6 years working with digital marketing, teamwork, conversion optimization",digital_marketer,1
+CAND_0920,1,master,"testing, manual testing, critical thinking, problem solving, bug tracking, leadership, quality assurance, selenium","Experienced qa engineer with 1 years working with testing, manual testing, critical thinking",qa_engineer,1
+CAND_0921,1,associate,"programming, python, leadership, java, c++","Experienced software developer with 1 years working with programming, python, leadership",software_developer,1
+CAND_0922,8,phd,"docker, communication, python, critical thinking, java, api, sql, c#","Experienced backend developer with 8 years working with docker, communication, python",backend_developer,1
+CAND_0923,3,associate,"problem solving, content strategy, creativity, time management, wordpress","Experienced content creator with 3 years working with problem solving, content strategy, creativity",content_creator,0
+CAND_0924,2,master,"teamwork, indesign, problem solving, design, adobe creative suite, time management, illustrator","Experienced graphic designer with 2 years working with teamwork, indesign, problem solving",graphic_designer,1
+CAND_0925,1,associate,"r, python, critical thinking, creativity, sql, excel, time management","Experienced business analyst with 1 years working with r, python, critical thinking",business_analyst,1
+CAND_0926,4,master,"communication, teamwork, aws, react, javascript, sql, html, css","Experienced fullstack developer with 4 years working with communication, teamwork, aws",fullstack_developer,1
+CAND_0927,0,bachelor,"docker, programming, problem solving, javascript, agile","Experienced software developer with 0 years working with docker, programming, problem solving",software_developer,1
+CAND_0928,8,master,"time management, adaptability","Experienced devops engineer with 8 years working with time management, adaptability",devops_engineer,0
+CAND_0929,7,phd,"adaptability, react","Experienced frontend developer with 7 years working with adaptability, react",frontend_developer,0
+CAND_0930,9,master,leadership,Experienced content creator with 9 years working with leadership,content_creator,0
+CAND_0931,9,bachelor,"mongodb, aws, communication","Experienced fullstack developer with 9 years working with mongodb, aws, communication",fullstack_developer,0
+CAND_0932,2,high_school,"communication, critical thinking, problem solving","Experienced mobile developer with 2 years working with communication, critical thinking, problem solving",mobile_developer,0
+CAND_0933,0,bachelor,"jenkins, azure, aws, time management, terraform","Experienced devops engineer with 0 years working with jenkins, azure, aws",devops_engineer,0
+CAND_0934,3,bachelor,"mongodb, docker, nodejs, adaptability, critical thinking, problem solving, react, javascript, sql, html, css","Experienced fullstack developer with 3 years working with mongodb, docker, nodejs",fullstack_developer,1
+CAND_0935,9,master,"tableau, statistics, critical thinking, problem solving, excel, sql, data analysis, powerbi","Experienced analyst with 9 years working with tableau, statistics, critical thinking",analyst,1
+CAND_0936,10,associate,"r, creativity, problem solving, process modeling","Experienced business analyst with 10 years working with r, creativity, problem solving",business_analyst,0
+CAND_0937,6,associate,"communication, wordpress, content writing, content strategy, seo, time management, social media","Experienced content creator with 6 years working with communication, wordpress, content writing",content_creator,1
+CAND_0938,6,master,"api, sql, creativity, time management, php","Experienced backend developer with 6 years working with api, sql, creativity",backend_developer,1
+CAND_0939,9,associate,"testing, ci/cd, leadership, creativity, quality assurance, time management","Experienced qa engineer with 9 years working with testing, ci/cd, leadership",qa_engineer,1
+CAND_0940,0,phd,"adaptability, aws, terraform, azure","Experienced devops engineer with 0 years working with adaptability, aws, terraform",devops_engineer,0
+CAND_0941,4,associate,"communication, a/b testing, wireframing, product management, analytics, time management, user research","Experienced product manager with 4 years working with communication, a/b testing, wireframing",product_manager,1
+CAND_0942,2,master,"design, adobe creative suite, problem solving, color theory","Experienced graphic designer with 2 years working with design, adobe creative suite, problem solving",graphic_designer,1
+CAND_0943,0,associate,"adaptability, critical thinking, social media, video editing, copywriting","Experienced content creator with 0 years working with adaptability, critical thinking, social media",content_creator,0
+CAND_0944,0,high_school,"ui/ux, adaptability, problem solving, leadership, figma","Experienced designer with 0 years working with ui/ux, adaptability, problem solving",designer,0
+CAND_0945,1,master,"ui/ux, prototyping, adaptability, design, adobe creative suite, creativity, sketch","Experienced ui ux designer with 1 years working with ui/ux, prototyping, adaptability",ui_ux_designer,1
+CAND_0946,0,phd,"app store, critical thinking, problem solving, mobile, flutter","Experienced mobile developer with 0 years working with app store, critical thinking, problem solving",mobile_developer,1
+CAND_0947,5,phd,"content writing, communication, video editing, leadership","Experienced content creator with 5 years working with content writing, communication, video editing",content_creator,1
+CAND_0948,8,phd,"docker, teamwork, critical thinking, azure, c#, php","Experienced backend developer with 8 years working with docker, teamwork, critical thinking",backend_developer,0
+CAND_0949,5,high_school,"angular, vue, problem solving, react, javascript, figma, html, css","Experienced frontend developer with 5 years working with angular, vue, problem solving",frontend_developer,1
+CAND_0950,3,bachelor,"sass, teamwork, critical thinking, react, postgresql, time management, php","Experienced web developer with 3 years working with sass, teamwork, critical thinking",web_developer,0
+CAND_0951,9,phd,"ui/ux, angular, responsive design, vue, critical thinking, leadership, creativity","Experienced frontend developer with 9 years working with ui/ux, angular, responsive design",frontend_developer,0
+CAND_0952,6,master,"r, python, sql, excel, time management, powerbi","Experienced data analyst with 6 years working with r, python, sql",data_analyst,1
+CAND_0953,4,associate,"nodejs, adaptability, teamwork, problem solving, javascript, postgresql, html, typescript, css","Experienced web developer with 4 years working with nodejs, adaptability, teamwork",web_developer,1
+CAND_0954,1,phd,"grafana, critical thinking, kubernetes, time management, terraform","Experienced devops engineer with 1 years working with grafana, critical thinking, kubernetes",devops_engineer,0
+CAND_0955,2,associate,"tensorflow, critical thinking, python, sql","Experienced data scientist with 2 years working with tensorflow, critical thinking, python",data_scientist,1
+CAND_0956,10,master,"communication, digital marketing, content marketing, teamwork, critical thinking, sem, analytics","Experienced digital marketer with 10 years working with communication, digital marketing, content marketing",digital_marketer,1
+CAND_0957,3,associate,"critical thinking, problem solving, adobe creative suite, figma, sketch, user research","Experienced ui ux designer with 3 years working with critical thinking, problem solving, adobe creative suite",ui_ux_designer,0
+CAND_0958,6,master,"communication, adaptability, bash, networking, creativity, powershell","Experienced system administrator with 6 years working with communication, adaptability, bash",system_administrator,0
+CAND_0959,8,high_school,"adaptability, python, php, azure","Experienced backend developer with 8 years working with adaptability, python, php",backend_developer,0
+CAND_0960,2,phd,"adaptability, python, critical thinking, sql, deep learning, numpy","Experienced data scientist with 2 years working with adaptability, python, critical thinking",data_scientist,1
+CAND_0961,0,associate,"stakeholder management, communication, jira, critical thinking, project management","Experienced project manager with 0 years working with stakeholder management, communication, jira",project_manager,1
+CAND_0962,7,associate,"communication, teamwork, leadership, creativity, product management, analytics, user research, roadmap planning","Experienced product manager with 7 years working with communication, teamwork, leadership",product_manager,1
+CAND_0963,4,associate,"grafana, docker, prometheus, linux, problem solving, leadership","Experienced devops engineer with 4 years working with grafana, docker, prometheus",devops_engineer,1
+CAND_0964,1,bachelor,"kotlin, problem solving","Experienced mobile developer with 1 years working with kotlin, problem solving",mobile_developer,0
+CAND_0965,10,associate,"communication, adaptability, teamwork, graphic design, content writing, content strategy, creativity, wordpress","Experienced content creator with 10 years working with communication, adaptability, teamwork",content_creator,1
+CAND_0966,8,high_school,"communication, programming, python, critical thinking, agile","Experienced software developer with 8 years working with communication, programming, python",software_developer,1
+CAND_0967,3,phd,"communication, a/b testing, leadership, wireframing, product management, analytics, time management, user research, roadmap planning","Experienced product manager with 3 years working with communication, a/b testing, leadership",product_manager,1
+CAND_0968,10,phd,"tableau, powerbi, creativity, sql, excel, agile","Experienced business analyst with 10 years working with tableau, powerbi, creativity",business_analyst,1
+CAND_0969,1,phd,"nodejs, adaptability, go, critical thinking, leadership, azure, php","Experienced backend developer with 1 years working with nodejs, adaptability, go",backend_developer,0
+CAND_0970,7,phd,"communication, adaptability, problem solving, content writing, creativity, analytics, wordpress","Experienced content creator with 7 years working with communication, adaptability, problem solving",content_creator,1
+CAND_0971,2,phd,"communication, ui/ux, design, figma, adobe creative suite, sketch, time management, user research","Experienced ui ux designer with 2 years working with communication, ui/ux, design",ui_ux_designer,1
+CAND_0972,0,bachelor,"communication, problem solving, creativity, analytics, roadmap planning","Experienced product manager with 0 years working with communication, problem solving, creativity",product_manager,0
+CAND_0973,0,phd,"automation testing, testing, communication, security testing, adaptability, quality assurance","Experienced qa engineer with 0 years working with automation testing, testing, communication",qa_engineer,1
+CAND_0974,10,associate,"communication, project management, risk management","Experienced project manager with 10 years working with communication, project management, risk management",project_manager,1
+CAND_0975,7,master,"teamwork, critical thinking, process modeling, creativity, sql, excel","Experienced business analyst with 7 years working with teamwork, critical thinking, process modeling",business_analyst,1
+CAND_0976,1,associate,"ui/ux, prototyping, leadership, design, creativity, sketch, time management","Experienced ui ux designer with 1 years working with ui/ux, prototyping, leadership",ui_ux_designer,1
+CAND_0977,0,bachelor,"kotlin, communication, google play, react native, app store, problem solving, mobile, time management, flutter","Experienced mobile developer with 0 years working with kotlin, communication, google play",mobile_developer,1
+CAND_0978,6,phd,"communication, critical thinking, sketch","Experienced ui ux designer with 6 years working with communication, critical thinking, sketch",ui_ux_designer,0
+CAND_0979,7,master,"testing, creativity, programming","Experienced software developer with 7 years working with testing, creativity, programming",software_developer,1
+CAND_0980,3,high_school,"communication, jira, critical thinking, pmp, project management","Experienced project manager with 3 years working with communication, jira, critical thinking",project_manager,1
+CAND_0981,4,high_school,"adaptability, critical thinking, design, adobe creative suite, time management","Experienced graphic designer with 4 years working with adaptability, critical thinking, design",graphic_designer,1
+CAND_0982,7,phd,"docker, prometheus, linux, critical thinking, problem solving, creativity, ansible, terraform","Experienced devops engineer with 7 years working with docker, prometheus, linux",devops_engineer,1
+CAND_0983,1,phd,"ui/ux, angular, teamwork, critical thinking, figma, creativity","Experienced frontend developer with 1 years working with ui/ux, angular, teamwork",frontend_developer,0
+CAND_0984,0,bachelor,"critical thinking, programming","Experienced software developer with 0 years working with critical thinking, programming",software_developer,1
+CAND_0985,2,master,"business intelligence, r, critical thinking, process modeling, creativity, powerbi","Experienced business analyst with 2 years working with business intelligence, r, critical thinking",business_analyst,0
+CAND_0986,3,high_school,"java, javascript, leadership","Experienced software developer with 3 years working with java, javascript, leadership",software_developer,0
+CAND_0987,8,associate,"docker, prometheus, linux, kubernetes, problem solving, terraform","Experienced devops engineer with 8 years working with docker, prometheus, linux",devops_engineer,1
+CAND_0988,9,bachelor,"jenkins, docker, communication, adaptability, linux, kubernetes, problem solving, azure, terraform","Experienced devops engineer with 9 years working with jenkins, docker, communication",devops_engineer,1
+CAND_0989,3,associate,"communication, product management, leadership, wireframing","Experienced product manager with 3 years working with communication, product management, leadership",product_manager,1
+CAND_0990,11,bachelor,"adaptability, ansible, azure","Experienced devops engineer with 11 years working with adaptability, ansible, azure",devops_engineer,0
+CAND_0991,5,high_school,"communication, ui/ux, adaptability, react, javascript, creativity, html, css","Experienced frontend developer with 5 years working with communication, ui/ux, adaptability",frontend_developer,1
+CAND_0992,9,phd,"pandas, tensorflow, pytorch, python, critical thinking, problem solving, leadership, sql","Experienced data scientist with 9 years working with pandas, tensorflow, pytorch",data_scientist,1
+CAND_0993,8,phd,"docker, adaptability, linux, teamwork, problem solving","Experienced devops engineer with 8 years working with docker, adaptability, linux",devops_engineer,1
+CAND_0994,1,master,"communication, photoshop, adaptability, teamwork, indesign, design, adobe creative suite","Experienced graphic designer with 1 years working with communication, photoshop, adaptability",graphic_designer,1
+CAND_0995,3,phd,"docker, problem solving, leadership, api, sql, creativity, aws","Experienced backend developer with 3 years working with docker, problem solving, leadership",backend_developer,1
+CAND_0996,1,high_school,"communication, design, adobe creative suite, critical thinking","Experienced graphic designer with 1 years working with communication, design, adobe creative suite",graphic_designer,1
+CAND_0997,5,bachelor,"testing, time management, bug tracking, quality assurance","Experienced qa engineer with 5 years working with testing, time management, bug tracking",qa_engineer,1
+CAND_0998,10,bachelor,"sass, critical thinking, creativity, time management, webpack, php","Experienced web developer with 10 years working with sass, critical thinking, creativity",web_developer,0
+CAND_0999,10,phd,"grafana, docker, adaptability, linux, kubernetes, aws, ansible, gitlab ci","Experienced devops engineer with 10 years working with grafana, docker, adaptability",devops_engineer,1
+CAND_1000,10,master,"communication, teamwork, python, critical thinking, kubernetes, azure, java, api, sql","Experienced backend developer with 10 years working with communication, teamwork, python",backend_developer,1

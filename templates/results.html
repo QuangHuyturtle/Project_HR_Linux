@@ -1,0 +1,669 @@
+{% extends "base.html" %}
+
+{% block title %}{% if result_type == 'cv' %}Kết quả xử lý CV{% else %}Kế hoạch phát triển{% endif %} - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas {% if result_type == 'cv' %}fa-file-check{% else %}fa-chart-line{% endif %} me-3"></i>
+                {% if result_type == 'cv' %}Kết quả xử lý CV{% else %}Kế hoạch phát triển kỹ năng{% endif %}
+            </h1>
+            <p class="lead text-white-50">
+                {% if result_type == 'cv' %}
+                    Phân tích thông tin ứng viên và đánh giá độ phù hợp với vị trí
+                {% else %}
+                    Lộ trình học tập cá nhân hóa cho vị trí {{ candidate_data.position_applied.replace('_', ' ').title() }}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</div>
+
+{% if result_type == 'cv' %}
+<!-- CV Results Content -->
+<!-- Prediction Result Card -->
+<div class="row mb-4">
+    <div class="col-lg-8" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-user-check me-2"></i>Kết quả đánh giá
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="prediction-result">
+                            {{ prediction.prediction_vietnamese }}
+                            <span class="badge {{ 'bg-success' if prediction.prediction == 'Suitable' else 'bg-danger' }} ms-2">
+                                {{ "{:.1%}".format(prediction.confidence) }}
+                            </span>
+                        </h3>
+                        <p class="lead mb-3">{{ prediction.recommendation_vietnamese }}</p>
+
+                        <div class="candidate-summary">
+                            <h6>Thông tin ứng viên:</h6>
+                            <p class="mb-1"><strong>Mã:</strong> {{ candidate_data.candidate_id }}</p>
+                            <p class="mb-1"><strong>Kinh nghiệm:</strong> {{ candidate_data.years_experience }} năm</p>
+                            <p class="mb-1"><strong>Học vấn:</strong> {{ prediction.education_display }}</p>
+                            <p class="mb-1"><strong>Vị trí:</strong> {{ candidate_data.position_applied.replace('_', ' ').title() }}</p>
+                            <p class="mb-1"><strong>Số kỹ năng:</strong> {{ candidate_data.skills.count(',') + 1 }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="prediction-icon">
+                            {% if prediction.prediction == 'Suitable' %}
+                                <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                            {% else %}
+                                <i class="fas fa-times-circle text-danger" style="font-size: 4rem;"></i>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4" data-aos="fade-left">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-chart-pie me-2"></i>Điểm đánh giá
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                <div class="score-display">
+                    <div class="score-circle">
+                        <div class="score-value">{{ "{:.0%}".format(prediction.confidence) }}</div>
+                    </div>
+                    <p class="text-center mt-3">Độ tin cậy</p>
+                </div>
+
+                {% if prediction.ml_confidence %}
+                <div class="mt-4">
+                    <h6>Chi tiết:</h6>
+                    <div class="progress-item mb-2">
+                        <span>ML Model:</span>
+                        <span>{{ "{:.1%}".format(prediction.ml_confidence) }}</span>
+                    </div>
+                    <div class="progress-item mb-2">
+                        <span>Logic:</span>
+                        <span>{{ "{:.1%}".format(prediction.logic_confidence) }}</span>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Extracted Information -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Thông tin trích xuất từ CV
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <!-- Contact Info -->
+                    <div class="col-md-6 mb-4">
+                        <h6><i class="fas fa-address-card me-2"></i>Thông tin liên hệ</h6>
+                        <table class="table table-sm table-dark">
+                            {% if cv_data.email %}
+                            <tr>
+                                <td><i class="fas fa-envelope me-2"></i>Email</td>
+                                <td>{{ cv_data.email }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if cv_data.phone %}
+                            <tr>
+                                <td><i class="fas fa-phone me-2"></i>Phone</td>
+                                <td>{{ cv_data.phone }}</td>
+                            </tr>
+                            {% endif %}
+                            {% if cv_data.linkedin %}
+                            <tr>
+                                <td><i class="fab fa-linkedin me-2"></i>LinkedIn</td>
+                                <td><a href="{{ cv_data.linkedin }}" target="_blank">{{ cv_data.linkedin }}</a></td>
+                            </tr>
+                            {% endif %}
+                            {% if cv_data.github %}
+                            <tr>
+                                <td><i class="fab fa-github me-2"></i>GitHub</td>
+                                <td><a href="{{ cv_data.github }}" target="_blank">{{ cv_data.github }}</a></td>
+                            </tr>
+                            {% endif %}
+                        </table>
+                    </div>
+
+                    <!-- Experience & Education -->
+                    <div class="col-md-6 mb-4">
+                        <h6><i class="fas fa-briefcase me-2"></i>Kinh nghiệm & Học vấn</h6>
+                        <table class="table table-sm table-dark">
+                            <tr>
+                                <td><i class="fas fa-clock me-2"></i>Số năm kinh nghiệm</td>
+                                <td>{{ cv_data.total_years }} năm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-building me-2"></i>Công ty</td>
+                                <td>{{ cv_data.companies|length }} công ty</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-graduation-cap me-2"></i>Học vấn cao nhất</td>
+                                <td>{{ cv_data.highest_degree|title or 'Chưa xác định' }}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-language me-2"></i>Ngoại ngữ</td>
+                                <td>{{ cv_data.languages|length }} ngôn ngữ</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h6><i class="fas fa-tools me-2"></i>Kỹ năng ({{ cv_data.skills_count }} kỹ năng)</h6>
+                        <div class="skills-container">
+                            {% if cv_data.all_skills %}
+                                {% for skill in cv_data.all_skills %}
+                                    <span class="skill-badge">{{ skill|title }}</span>
+                                {% endfor %}
+                            {% else %}
+                                <p class="text-muted">Không tìm thấy kỹ năng nào</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                {% if cv_data.projects %}
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h6><i class="fas fa-project-diagram me-2"></i>Dự án đã thực hiện ({{ cv_data.project_count }})</h6>
+                        <div class="projects-list">
+                            {% for project in cv_data.projects %}
+                                <div class="project-item">
+                                    <i class="fas fa-chevron-right me-2"></i>{{ project }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Certifications -->
+                {% if cv_data.certifications %}
+                <div class="row">
+                    <div class="col-12">
+                        <h6><i class="fas fa-certificate me-2"></i>Chứng chỉ ({{ cv_data.certification_count }})</h6>
+                        <div class="certs-list">
+                            {% for cert in cv_data.certifications %}
+                                <div class="cert-item">
+                                    <i class="fas fa-award me-2"></i>{{ cert }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recommendations (if not suitable) -->
+{% if recommendations %}
+<div class="row" data-aos="fade-up">
+    <div class="col-12">
+        <div class="card custom-card border-warning">
+            <div class="card-header-custom bg-warning">
+                <h5 class="mb-0">
+                    <i class="fas fa-lightbulb me-2"></i>Gợi ý phát triển kỹ năng
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h6>Kỹ năng cần bổ sung:</h6>
+                        {% if recommendations.skill_gap_analysis.missing_required_skills %}
+                            <div class="alert alert-danger">
+                                <strong>Kỹ năng bắt buộc:</strong>
+                                {{ recommendations.skill_gap_analysis.missing_required_skills|join(', ') }}
+                            </div>
+                        {% endif %}
+                        {% if recommendations.skill_gap_analysis.missing_advanced_skills %}
+                            <div class="alert alert-warning">
+                                <strong>Kỹ năng nâng cao:</strong>
+                                {{ recommendations.skill_gap_analysis.missing_advanced_skills|join(', ') }}
+                            </div>
+                        {% endif %}
+
+                        <div class="mt-4">
+                            <a href="{{ url_for('improvement_plan') }}" class="btn btn-warning btn-lg">
+                                <i class="fas fa-chart-line me-2"></i>Tạo kế hoạch phát triển chi tiết
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center">
+                            <h6>Độ sẵn sàng:</h6>
+                            <div class="readiness-score">
+                                {{ recommendations.skill_gap_analysis.overall_score.overall_score|round(1) }}%
+                            </div>
+                            <p class="text-muted">{{ recommendations.skill_gap_analysis.overall_score.readiness_level }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% else %}
+<!-- Improvement Plan Results Content -->
+<!-- Overview Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card custom-card border-0 bg-gradient-primary">
+            <div class="card-body text-center">
+                <i class="fas fa-user fa-3x text-white mb-3"></i>
+                <h4 class="text-white fw-bold">{{ candidate_data.candidate_id }}</h4>
+                <p class="text-white-50">Ứng viên</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card custom-card border-0 bg-gradient-success">
+            <div class="card-body text-center">
+                <i class="fas fa-bullseye fa-3x text-white mb-3"></i>
+                <h4 class="text-white fw-bold">{{ improvement_plan.skill_gap_analysis.overall_score.overall_score|round(1) }}%</h4>
+                <p class="text-white-50">Độ sẵn sàng</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card custom-card border-0 bg-gradient-info">
+            <div class="card-body text-center">
+                <i class="fas fa-tools fa-3x text-white mb-3"></i>
+                <h4 class="text-white fw-bold">{{ improvement_plan.skill_gap_analysis.skill_gap_analysis.missing_required_skills|length + improvement_plan.skill_gap_analysis.skill_gap_analysis.missing_advanced_skills|length }}</h4>
+                <p class="text-white-50">Kỹ năng cần học</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="card custom-card border-0 bg-gradient-warning">
+            <div class="card-body text-center">
+                <i class="fas fa-clock fa-3x text-white mb-3"></i>
+                <h4 class="text-white fw-bold">{{ improvement_plan.skill_gap_analysis.skill_gap_analysis.overall_score.estimated_time_to_readiness }}</h4>
+                <p class="text-white-50">Thời gian dự kiến</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skill Gap Analysis -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-search me-2"></i>Phân tích Gap Kỹ năng
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h6>Hoàn thành kỹ năng:</h6>
+
+                        {% set analysis = improvement_plan.skill_gap_analysis.skill_gap_analysis %}
+                        <div class="skill-progress mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Kỹ năng bắt buộc</span>
+                                <span>{{ analysis.completion_percentages.required }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar {{ 'bg-success' if analysis.completion_percentages.required >= 80 else 'bg-warning' if analysis.completion_percentages.required >= 50 else 'bg-danger' }}"
+                                     style="width: {{ analysis.completion_percentages.required }}%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-progress mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Kỹ năng nâng cao</span>
+                                <span>{{ analysis.completion_percentages.advanced }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar {{ 'bg-success' if analysis.completion_percentages.advanced >= 80 else 'bg-warning' if analysis.completion_percentages.advanced >= 50 else 'bg-danger' }}"
+                                     style="width: {{ analysis.completion_percentages.advanced }}%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-progress">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Công cụ & Technology</span>
+                                <span>{{ analysis.completion_percentages.tools }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar {{ 'bg-success' if analysis.completion_percentages.tools >= 80 else 'bg-warning' if analysis.completion_percentages.tools >= 50 else 'bg-danger' }}"
+                                     style="width: {{ analysis.completion_percentages.tools }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="readiness-level">
+                                <i class="fas fa-trophy fa-3x mb-3"></i>
+                                <h5>{{ improvement_plan.skill_gap_analysis.overall_score.readiness_level }}</h5>
+                                <p class="text-muted">Cần cải thiện thêm {{ improvement_plan.skill_gap_analysis.overall_score.improvement_potential|round(1) }}%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Missing Skills -->
+                {% if analysis.missing_required_skills or analysis.missing_advanced_skills %}
+                <div class="row mt-4">
+                    {% if analysis.missing_required_skills %}
+                    <div class="col-md-6">
+                        <h6 class="text-danger">Kỹ năng bắt buộc còn thiếu:</h6>
+                        <ul class="list-group list-group-flush">
+                            {% for skill in analysis.missing_required_skills %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ skill|title }}
+                                    <span class="badge bg-danger">Critical</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    {% if analysis.missing_advanced_skills %}
+                    <div class="col-md-6">
+                        <h6 class="text-warning">Kỹ năng nâng cao còn thiếu:</h6>
+                        <ul class="list-group list-group-flush">
+                            {% for skill in analysis.missing_advanced_skills %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ skill|title }}
+                                    <span class="badge bg-warning">Important</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Next Steps -->
+<div class="row mb-4">
+    <div class="col-lg-8" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-road me-2"></i>Các bước tiếp theo
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                {% for step in improvement_plan.next_steps %}
+                <div class="next-step-item mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="step-priority">
+                            {% if step.priority == 'High' %}
+                                <i class="fas fa-exclamation-circle text-danger"></i>
+                            {% else %}
+                                <i class="fas fa-flag text-warning"></i>
+                            {% endif %}
+                        </div>
+                        <div class="step-content flex-grow-1">
+                            <h6>{{ step.action }}</h6>
+                            <small class="text-muted">
+                                {{ step.priority }} Priority • {{ step.estimated_time }} • {{ step.type }}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="mt-4">
+                    <a href="{{ url_for('improvement_plan') }}" class="btn btn-primary">
+                        <i class="fas fa-edit me-2"></i>Chỉnh sửa kế hoạch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4" data-aos="fade-left">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-dollar-sign me-2"></i>Chi phí ước tính
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                {% set costs = improvement_plan.estimated_cost %}
+                <div class="cost-breakdown">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>📚 Courses:</span>
+                        <strong>${{ costs.courses }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>🏆 Certifications:</span>
+                        <strong>${{ costs.certifications }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>📖 Books:</span>
+                        <strong>${{ costs.books }}</strong>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <h5>Tổng cộng:</h5>
+                        <h5 class="text-primary">${{ costs.total_estimated }}</h5>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-3">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Chi phí này chỉ là ước tính và có thể thay đổi tùy thuộc vào nhà cung cấp.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Metrics -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-trophy me-2"></i>Metrics đo lường thành công
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    {% for metric in improvement_plan.success_metrics %}
+                    <div class="col-md-6 mb-3">
+                        <div class="metric-item">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-3"></i>
+                                <span>{{ metric }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Action Buttons -->
+<div class="row mt-4">
+    <div class="col-12 text-center" data-aos="fade-up">
+        {% if result_type == 'cv' %}
+        <a href="{{ url_for('upload_cv') }}" class="btn btn-primary btn-lg me-3">
+            <i class="fas fa-upload me-2"></i>Upload CV khác
+        </a>
+        {% else %}
+        <a href="{{ url_for('predict') }}" class="btn btn-success btn-lg me-3">
+            <i class="fas fa-user-check me-2"></i>Đánh giá lại
+        </a>
+        <a href="{{ url_for('upload_cv') }}" class="btn btn-warning btn-lg me-3">
+            <i class="fas fa-upload me-2"></i>Upload CV khác
+        </a>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-home me-2"></i>Về trang chủ
+        </a>
+    </div>
+</div>
+
+<style>
+/* CV Results Styles */
+.prediction-result {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.prediction-icon {
+    opacity: 0.8;
+}
+
+.score-display {
+    text-align: center;
+}
+
+.score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 4px solid rgba(255,255,255,0.2);
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-item span:first-child {
+    color: rgba(255,255,255,0.8);
+}
+
+.progress-item span:last-child {
+    font-weight: 600;
+    color: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-badge {
+    background: linear-gradient(135deg, var(--info-color), #0891b2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.projects-list, .certs-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.project-item, .cert-item {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.readiness-score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--warning-color);
+    line-height: 1;
+}
+
+/* Improvement Plan Styles */
+.skill-progress .progress {
+    height: 8px;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.readiness-level {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+}
+
+.next-step-item {
+    padding: 15px;
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.next-step-item:hover {
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateX(5px);
+}
+
+.step-priority {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 30px;
+}
+
+.step-content h6 {
+    margin-bottom: 2px;
+    color: white;
+}
+
+.cost-breakdown {
+    font-size: 0.95rem;
+}
+
+.metric-item {
+    padding: 12px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid var(--success-color);
+}
+</style>
+{% endblock %}

@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+
+{% block title %}Upload CV - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas fa-file-pdf me-3"></i>Xử lý CV thông minh
+            </h1>
+            <p class="lead text-white-50">
+                Upload CV (PDF/Image) và hệ thống sẽ tự động trích xuất thông tin và đánh giá độ phù hợp
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Upload Section -->
+    <div class="col-lg-6" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-upload me-2"></i>Upload CV
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <form method="POST" enctype="multipart/form-data" id="cvUploadForm">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-file-upload me-2"></i>Chọn file CV
+                            </label>
+                            <input type="file" class="form-control" name="cv_file"
+                                   accept=".pdf,.jpg,.jpeg,.png,.bmp,.tiff" required
+                                   id="cvFileInput">
+                            <div class="form-text">
+                                Hỗ trợ: PDF, JPG, PNG, BMP, TIFF (Tối đa 16MB)
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-briefcase me-2"></i>Vị trí ứng tuyển (tùy chọn)
+                            </label>
+                            <select class="form-control" name="position_applied" id="positionSelect">
+                                <option value="">-- Tự động nhận diện --</option>
+                                <option value="data_scientist">Data Scientist</option>
+                                <option value="web_developer">Web Developer</option>
+                                <option value="backend_developer">Backend Developer</option>
+                                <option value="frontend_developer">Frontend Developer</option>
+                                <option value="fullstack_developer">Full Stack Developer</option>
+                                <option value="mobile_developer">Mobile Developer</option>
+                                <option value="devops_engineer">DevOps Engineer</option>
+                                <option value="ui_ux_designer">UI/UX Designer</option>
+                                <option value="data_analyst">Data Analyst</option>
+                                <option value="project_manager">Project Manager</option>
+                                <option value="software_developer">Software Developer</option>
+                                <option value="qa_engineer">QA Engineer</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-warning-custom" id="uploadBtn">
+                                    <i class="fas fa-rocket me-2"></i>
+                                    <span id="btnText">Xử lý CV</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Upload Progress -->
+                <div id="uploadProgress" class="mt-3" style="display: none;">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                             role="progressbar" style="width: 100%">
+                            Đang xử lý CV...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="col-lg-6" data-aos="fade-left">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-star me-2"></i>Tính năng xử lý CV
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="feature-list">
+                    <div class="feature-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon-small me-3">
+                                <i class="fas fa-file-text"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Trích xuất văn bản (OCR)</h6>
+                                <p class="text-muted mb-0">Đọc và trích xuất nội dung từ PDF, ảnh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon-small me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Nhận diện thông tin cá nhân</h6>
+                                <p class="text-muted mb-0">Email, phone, LinkedIn, GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon-small me-3">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Phân tích kỹ năng</h6>
+                                <p class="text-muted mb-0">Phân loại kỹ năng theo domain (Dev, Data, Design...)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon-small me-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Đánh giá kinh nghiệm</h6>
+                                <p class="text-muted mb-0">Tính số năm kinh nghiệm, danh sách công ty</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon-small me-3">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Xác định học vấn</h6>
+                                <p class="text-muted mb-0">Trình độ học vấn, chứng chỉ, dự án</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon-small me-3">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">AI-powered Analysis</h6>
+                                <p class="text-muted mb-0">Đánh giá độ phù hợp với ML model</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Instructions -->
+<div class="row mt-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Hướng dẫn sử dụng
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="instruction-step text-center">
+                            <div class="step-number">1</div>
+                            <h6>Chọn file CV</h6>
+                            <p class="text-muted">Upload file PDF hoặc ảnh chứa CV</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="instruction-step text-center">
+                            <div class="step-number">2</div>
+                            <h6>Xử lý tự động</h6>
+                            <p class="text-muted">Hệ thống sẽ trích xuất và phân tích thông tin</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="instruction-step text-center">
+                            <div class="step-number">3</div>
+                            <h6>Nhận kết quả</h6>
+                            <p class="text-muted">Xem đánh giá và gợi ý phát triển</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.feature-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.feature-item {
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(99, 102, 241, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateX(5px);
+}
+
+.feature-icon-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.instruction-step {
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 15px;
+}
+
+.instruction-step h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.instruction-step p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* File input styling */
+.form-control[type="file"] {
+    padding: 10px;
+    border: 2px dashed var(--primary-color);
+    background: rgba(99, 102, 241, 0.05);
+    cursor: pointer;
+}
+
+.form-control[type="file"]:hover {
+    background: rgba(99, 102, 241, 0.1);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('cvUploadForm');
+    const uploadBtn = document.getElementById('uploadBtn');
+    const btnText = document.getElementById('btnText');
+    const uploadProgress = document.getElementById('uploadProgress');
+    const fileInput = document.getElementById('cvFileInput');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Validate file
+        if (!fileInput.files[0]) {
+            alert('Vui lòng chọn file CV');
+            return;
+        }
+
+        // Show loading state
+        uploadBtn.disabled = true;
+        btnText.textContent = 'Đang xử lý...';
+        uploadProgress.style.display = 'block';
+
+        // Submit form
+        setTimeout(() => {
+            form.submit();
+        }, 500);
+    });
+
+    // File validation
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            // Check file size (16MB limit)
+            if (file.size > 16 * 1024 * 1024) {
+                alert('File quá lớn. Vui lòng chọn file nhỏ hơn 16MB');
+                e.target.value = '';
+                return;
+            }
+
+            // Check file type
+            const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/bmp', 'image/tiff'];
+            if (!allowedTypes.includes(file.type) && !file.name.toLowerCase().match(/\.(pdf|jpg|jpeg|png|bmp|tiff)$/)) {
+                alert('Định dạng file không được hỗ trợ');
+                e.target.value = '';
+                return;
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error_code }} - {{ error_title }} | HR Intelligence System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-6 text-center" data-aos="fade-up">
+        <div class="error-container">
+            <div class="error-code">{{ error_code }}</div>
+            <h1 class="error-title">{{ error_title }}</h1>
+            <p class="error-description">
+                {{ error_description }}
+            </p>
+
+            {% if error_code == '500' %}
+            <div class="error-suggestions">
+                <h5>Có thể thử:</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url_for('index') }}">🏠 Tải lại trang chủ</a></li>
+                    <li><a href="{{ url_for('train') }}">🧠 Huấn luyện mô hình</a></li>
+                    <li><a href="{{ url_for('predict') }}">🎯 Dự đoán ứng viên</a></li>
+                    <li><a href="{{ url_for('upload_cv') }}">📄 Upload CV</a></li>
+                    <li><a href="{{ url_for('improvement_plan') }}">📈 Kế hoạch phát triển</a></li>
+                </ul>
+
+                <div class="alert alert-info mt-4">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Nếu lỗi tiếp tục xảy ra, vui lòng liên hệ quản trị viên hoặc kiểm tra logs hệ thống.
+                </div>
+            </div>
+            {% endif %}
+
+            {% if error_code == '404' %}
+            <div class="error-actions">
+                <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home me-2"></i>Về trang chủ
+                </a>
+                <a href="javascript:history.back()" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-arrow-left me-2"></i>Quay lại
+                </a>
+            </div>
+
+            <div class="error-suggestions">
+                <h5>Bạn có thể thử:</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url_for('index') }}">🏠 Trang chủ</a></li>
+                    <li><a href="{{ url_for('train') }}">🧠 Huấn luyện mô hình</a></li>
+                    <li><a href="{{ url_for('predict') }}">🎯 Dự đoán ứng viên</a></li>
+                    <li><a href="{{ url_for('upload_cv') }}">📄 Upload CV</a></li>
+                    <li><a href="{{ url_for('improvement_plan') }}">📈 Kế hoạch phát triển</a></li>
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if error_code == '500' %}
+            <div class="error-actions">
+                <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home me-2"></i>Về trang chủ
+                </a>
+                <button onclick="location.reload()" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-sync me-2"></i>Thử lại
+                </button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+.error-container {
+    padding: 60px 20px;
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    color: {{ 'var(--primary-color)' if error_code == '404' else 'var(--danger-color)' }};
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.error-description {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 40px;
+}
+
+.error-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.error-suggestions {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.error-suggestions h5 {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+    {% if error_code == '500' %}
+    text-align: center;
+    {% endif %}
+}
+
+.error-suggestions ul li {
+    margin-bottom: 10px;
+}
+
+.error-suggestions a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.error-suggestions a:hover {
+    color: var(--primary-light);
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 5rem;
+    }
+
+    .error-title {
+        font-size: 1.8rem;
+    }
+
+    .error-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error-actions .btn {
+        width: 250px;
+    }
+}
+</style>
+{% endblock %}

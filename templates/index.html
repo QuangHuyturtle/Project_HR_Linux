@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+
+{% block title %}HR Intelligence System - Bảng điều khiển{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="row mb-5">
+    <div class="col-12 text-center" data-aos="fade-up">
+        <div class="hero-section mb-5">
+            <h1 class="display-4 fw-bold text-white mb-4">
+                HR Intelligence System v4.0
+            </h1>
+            <p class="lead text-white-50 mb-4" style="font-size: 1.3rem;">
+                Hệ thống thông minh hỗ trợ ra quyết định tuyển dụng với AI, CV Processing & Skill Recommendations
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="/train" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket me-2"></i>Bắt đầu ngay
+                </a>
+                <a href="/api/status" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-info-circle me-2"></i>Tìm hiểu thêm
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Grid -->
+<div class="row g-4 mb-5">
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card custom-card h-100">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="feature-title">Huấn luyện mô hình AI</h3>
+                <p class="feature-description">
+                    Xây dựng và huấn luyện mô hình Machine Learning với dữ liệu tuyển dụng thực tế
+                </p>
+                <a href="/train" class="btn btn-primary-custom w-100">
+                    <i class="fas fa-play me-2"></i>Huấn luyện ngay
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card custom-card h-100">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3 class="feature-title">Dự đoán ứng viên</h3>
+                <p class="feature-description">
+                    Phân tích và đánh giá độ phù hợp của ứng viên với vị trí tuyển dụng
+                </p>
+                <a href="/predict" class="btn btn-success-custom w-100">
+                    <i class="fas fa-search me-2"></i>Dự đoán ngay
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card custom-card h-100">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Dự đoán hàng loạt</h3>
+                <p class="feature-description">
+                    Xử lý và đánh giá hàng trăm ứng viên cùng lúc từ file CSV
+                </p>
+                <a href="/batch" class="btn btn-info-custom w-100">
+                    <i class="fas fa-upload me-2"></i>Upload CSV
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Features Grid -->
+<div class="row g-4 mb-5">
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card custom-card h-100">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3 class="feature-title">Xử lý CV thông minh</h3>
+                <p class="feature-description">
+                    Upload CV PDF/Image và tự động trích xuất thông tin ứng viên bằng OCR
+                </p>
+                <a href="/upload-cv" class="btn btn-warning-custom w-100">
+                    <i class="fas fa-file-upload me-2"></i>Upload CV
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card custom-card h-100">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="feature-title">Kế hoạch phát triển</h3>
+                <p class="feature-description">
+                    Tạo lộ trình học tập và phát triển kỹ năng cá nhân hóa cho ứng viên
+                </p>
+                <a href="/improvement-plan" class="btn btn-danger-custom w-100">
+                    <i class="fas fa-graduation-cap me-2"></i>Tạo kế hoạch
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card custom-card h-100">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="feature-title">Gợi ý kỹ năng</h3>
+                <p class="feature-description">
+                    Phân tích gap kỹ năng và đưa ra khuyến nghị học tập cụ thể
+                </p>
+                <a href="/improvement-plan" class="btn btn-secondary-custom w-100">
+                    <i class="fas fa-magic me-2"></i>Xem gợi ý
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Statistics Cards -->
+<div class="row g-4 mb-5">
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card custom-card border-0 bg-gradient-primary">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-3x text-white mb-3"></i>
+                <h3 class="text-white fw-bold">10,000+</h3>
+                <p class="text-white-50">Ứng viên đã đánh giá</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card custom-card border-0 bg-gradient-success">
+            <div class="card-body text-center">
+                <i class="fas fa-percentage fa-3x text-white mb-3"></i>
+                <h3 class="text-white fw-bold">95%</h3>
+                <p class="text-white-50">Độ chính xác dự đoán</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card custom-card border-0 bg-gradient-info">
+            <div class="card-body text-center">
+                <i class="fas fa-clock fa-3x text-white mb-3"></i>
+                <h3 class="text-white fw-bold">24/7</h3>
+                <p class="text-white-50">Hỗ trợ liên tục</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="card custom-card border-0 bg-gradient-warning">
+            <div class="card-body text-center">
+                <i class="fas fa-bolt fa-3x text-white mb-3"></i>
+                <h3 class="text-white fw-bold">0.5s</h3>
+                <p class="text-white-50">Thời gian dự đoán</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How it works -->
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card custom-card" data-aos="fade-up">
+            <div class="card-header-custom">
+                <h4 class="mb-0">
+                    <i class="fas fa-question-circle me-2"></i>
+                    Cách hoạt động
+                </h4>
+            </div>
+            <div class="card-body-custom">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="step-icon mb-3">
+                            <div class="feature-icon mx-auto" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                        </div>
+                        <h5>Bước 1: Chuẩn bị dữ liệu</h5>
+                        <p class="text-muted">
+                            Thu thập và chuẩn hóa dữ liệu ứng viên để huấn luyện mô hình
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="step-icon mb-3">
+                            <div class="feature-icon mx-auto" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <h5>Bước 2: Huấn luyện AI</h5>
+                        <p class="text-muted">
+                            Mô hình học hỏi từ dữ liệu và xác định các quy tắc tuyển dụng
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="step-icon mb-3">
+                            <div class="feature-icon mx-auto" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <h5>Bước 3: Dự đoán & Phân tích</h5>
+                        <p class="text-muted">
+                            Đánh giá ứng viên mới và đưa ra khuyến nghị tuyển dụng
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card custom-card" data-aos="fade-up">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h4 class="mb-2">
+                            <i class="fas fa-rocket me-2 text-primary"></i>
+                            Bắt đầu sử dụng ngay
+                        </h4>
+                        <p class="text-muted mb-0">
+                            Hệ thống đã sẵn sàng để giúp bạn đưa ra quyết định tuyển dụng hiệu quả hơn
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <a href="/predict" class="btn btn-primary me-2">
+                            <i class="fas fa-user-check me-2"></i>Thử ngay
+                        </a>
+                        <a href="/api/sample-data" class="btn btn-outline-primary">
+                            <i class="fas fa-download me-2"></i>Tải mẫu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hero-section {
+    padding: 3rem 0;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, var(--success-color), #059669) !important;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, var(--info-color), #0891b2) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, var(--warning-color), #d97706) !important;
+}
+
+.step-icon {
+    position: relative;
+}
+
+.step-icon::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: translateX(50%);
+}
+
+.step-icon:last-child::after {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .step-icon::after {
+        display: none;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+</style>
+{% endblock %}

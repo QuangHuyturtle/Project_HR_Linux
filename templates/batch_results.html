@@ -1,0 +1,453 @@
+{% extends "base.html" %}
+
+{% block title %}Kết quả Dự đoán Hàng loạt - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas fa-chart-line me-3"></i>Kết quả Dự đoán Hàng loạt
+            </h1>
+            <p class="lead text-white-50">
+                Báo cáo phân tích và đánh giá {{ report.total_candidates }} ứng viên
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card custom-card border-0 bg-gradient-primary">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-3x text-white mb-3"></i>
+                <h2 class="text-white fw-bold">{{ report.total_candidates }}</h2>
+                <p class="text-white-50 mb-0">Tổng ứng viên</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card custom-card border-0 bg-gradient-success">
+            <div class="card-body text-center">
+                <i class="fas fa-user-check fa-3x text-white mb-3"></i>
+                <h2 class="text-white fw-bold">{{ report.suitable_candidates }}</h2>
+                <p class="text-white-50 mb-0">Ứng viên phù hợp</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card custom-card border-0 bg-gradient-info">
+            <div class="card-body text-center">
+                <i class="fas fa-percentage fa-3x text-white mb-3"></i>
+                <h2 class="text-white fw-bold">{{ "%.1f"|format(report.suitable_percentage) }}%</h2>
+                <p class="text-white-50 mb-0">Tỷ lệ phù hợp</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="card custom-card border-0 bg-gradient-warning">
+            <div class="card-body text-center">
+                <i class="fas fa-star fa-3x text-white mb-3"></i>
+                <h2 class="text-white fw-bold">{{ report.high_confidence_suitable }}</h2>
+                <p class="text-white-50 mb-0">Độ tin cậy cao</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quality Analysis -->
+<div class="row g-4 mb-4">
+    <div class="col-lg-8" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-analytics me-2"></i>Phân tích Chất lượng
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="text-center p-3 bg-light rounded">
+                            <h4 class="text-primary mb-1">{{ report.high_confidence_count }}</h4>
+                            <small class="text-muted">Độ tin cậy cao (>80%)</small>
+                            <div class="progress progress-custom mt-2" style="height: 4px;">
+                                <div class="progress-bar bg-primary" style="width: {{ (report.high_confidence_count / report.total_candidates * 100) }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-3 bg-light rounded">
+                            <h4 class="text-success mb-1">{{ report.medium_confidence_count }}</h4>
+                            <small class="text-muted">Độ tin cậy trung bình (60-80%)</small>
+                            <div class="progress progress-custom mt-2" style="height: 4px;">
+                                <div class="progress-bar bg-success" style="width: {{ (report.medium_confidence_count / report.total_candidates * 100) }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-3 bg-light rounded">
+                            <h4 class="text-warning mb-1">{{ report.low_confidence_count }}</h4>
+                            <small class="text-muted">Độ tin cậy thấp (<60%)</small>
+                            <div class="progress progress-custom mt-2" style="height: 4px;">
+                                <div class="progress-bar bg-warning" style="width: {{ (report.low_confidence_count / report.total_candidates * 100) }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info-custom mt-3">
+                    <h6><i class="fas fa-lightbulb me-2"></i>Khuyến nghị</h6>
+                    <p class="mb-0">{{ report.quality_analysis.recommendation }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4" data-aos="fade-left">
+        <div class="card custom-card mb-4">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Thông tin Báo cáo
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                <div class="small mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Thời gian tạo:</span>
+                        <strong>{{ report.timestamp }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Phiên bản:</span>
+                        <strong>{{ report.system_version }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Tổng kết:</span>
+                        <strong>{{ report.summary }}</strong>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button onclick="window.print()" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-print me-2"></i>In báo cáo
+                    </button>
+                    <button onclick="shareResults()" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-share-alt me-2"></i>Chia sẻ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Results Table -->
+<div class="row">
+    <div class="col-12" data-aos="fade-up">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="fas fa-table me-2"></i>Chi tiết Kết quả
+                    </h5>
+                    <div>
+                        <button onclick="exportDetailedResults()" class="btn btn-sm btn-outline-success me-2">
+                            <i class="fas fa-file-csv me-2"></i>CSV
+                        </button>
+                        <button onclick="exportToExcel()" class="btn btn-sm btn-outline-primary me-2">
+                            <i class="fas fa-file-excel me-2"></i>Excel
+                        </button>
+                        <button onclick="filterResults('suitable')" class="btn btn-sm btn-outline-success">
+                            <i class="fas fa-filter me-2"></i>Chỉ phù hợp
+                        </button>
+                        <button onclick="filterResults('all')" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-list me-2"></i>Tất cả
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body-custom">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="resultsTable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="selectAll" onchange="toggleSelectAll()">
+                                </th>
+                                <th>Mã ứng viên</th>
+                                <th>Kết quả</th>
+                                <th>Độ tin cậy</th>
+                                <th>Khuyến nghị</th>
+                                <th>Phân tích kỹ năng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for result in results.to_dict('records') %}
+                            <tr class="{% if result.prediction == 'Suitable' %}table-success{% else %}table-warning{% endif %}" data-status="{{ result.prediction }}">
+                                <td>
+                                    <input type="checkbox" class="candidate-checkbox" value="{{ result.candidate_id }}">
+                                </td>
+                                <td>
+                                    <strong>{{ result.candidate_id }}</strong>
+                                </td>
+                                <td>
+                                    {% if result.prediction == 'Suitable' %}
+                                        <span class="badge bg-success confidence-high">
+                                            <i class="fas fa-check me-1"></i>Phù hợp
+                                        </span>
+                                    {% else %}
+                                        <span class="badge bg-danger">
+                                            <i class="fas fa-times me-1"></i>Chưa phù hợp
+                                        </span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="confidence-meter">
+                                        <div class="d-flex align-items-center">
+                                            <span class="confidence-badge {{
+                                                'confidence-high' if result.confidence > 0.8
+                                                else 'confidence-medium' if result.confidence > 0.6
+                                                else 'confidence-low'
+                                            }}">
+                                                {{ "%.1f"|format(result.confidence * 100) }}%
+                                            </span>
+                                        </div>
+                                        <div class="progress progress-custom mt-1" style="height: 4px;">
+                                            <div class="progress-bar {{
+                                                'bg-success' if result.confidence > 0.8
+                                                else 'bg-warning' if result.confidence > 0.6
+                                                else 'bg-danger'
+                                            }}" style="width: {{ (result.confidence * 100) }}%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <small class="text-break">
+                                        {{ result.get('recommendation_vietnamese', result.recommendation) }}
+                                    </small>
+                                </td>
+                                <td>
+                                    {% if result.get('skill_analysis') %}
+                                    <div class="small">
+                                        {% if result.skill_analysis.get('has_required_skills') %}
+                                            <span class="text-success">
+                                                <i class="fas fa-check-circle me-1"></i>Đủ kỹ năng
+                                            </span>
+                                        {% else %}
+                                            <span class="text-danger">
+                                                <i class="fas fa-times-circle me-1"></i>Thiếu kỹ năng
+                                            </span>
+                                        {% endif %}
+                                    </div>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button onclick="viewCandidateDetails('{{ result.candidate_id }}')" class="btn btn-outline-primary" title="Xem chi tiết">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button onclick="exportSingle('{{ result.candidate_id }}')" class="btn btn-outline-success" title="Xuất kết quả">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Actions Bar -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        <span class="text-muted small">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Đã chọn <span id="selectedCount">0</span> ứng viên
+                        </span>
+                    </div>
+                    <div class="btn-group">
+                        <button onclick="exportSelected()" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-download me-2"></i>Xuất đã chọn
+                        </button>
+                        <button onclick="generateInterviewSchedule()" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-calendar me-2"></i>Lên lịch phỏng vấn
+                        </button>
+                        <a href="/batch" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-arrow-left me-2"></i>Quay lại
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, var(--success-color), #059669) !important;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, var(--info-color), #0891b2) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, var(--warning-color), #d97706) !important;
+}
+
+.confidence-meter {
+    min-width: 100px;
+}
+
+.table-success {
+    --bs-table-striped-bg: rgba(16, 185, 129, 0.05);
+}
+
+.table-warning {
+    --bs-table-striped-bg: rgba(245, 158, 11, 0.05);
+}
+
+[data-aos] {
+    transition-delay: 0s;
+}
+</style>
+
+<script>
+let selectedCandidates = new Set();
+
+// Select all functionality
+function toggleSelectAll() {
+    const selectAll = document.getElementById('selectAll');
+    const checkboxes = document.querySelectorAll('.candidate-checkbox');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = selectAll.checked;
+        const candidateId = checkbox.value;
+        if (selectAll.checked) {
+            selectedCandidates.add(candidateId);
+        } else {
+            selectedCandidates.delete(candidateId);
+        }
+    });
+
+    updateSelectedCount();
+}
+
+// Update selected count
+document.querySelectorAll('.candidate-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const candidateId = this.value;
+        if (this.checked) {
+            selectedCandidates.add(candidateId);
+        } else {
+            selectedCandidates.delete(candidateId);
+        }
+        updateSelectedCount();
+    });
+});
+
+function updateSelectedCount() {
+    document.getElementById('selectedCount').textContent = selectedCandidates.size;
+}
+
+// Filter results
+function filterResults(type) {
+    const rows = document.querySelectorAll('#resultsTable tbody tr');
+
+    rows.forEach(row => {
+        if (type === 'suitable') {
+            row.style.display = row.dataset.status === 'Suitable' ? '' : 'none';
+        } else {
+            row.style.display = '';
+        }
+    });
+}
+
+// Export functions
+function exportDetailedResults() {
+    exportResults('detailed');
+}
+
+function exportToExcel() {
+    exportResults('excel');
+}
+
+function exportResults(format = 'detailed') {
+    const results = {{ results.to_json()|safe }};
+    let csvContent = '';
+
+    if (format === 'detailed') {
+        csvContent = 'Mã ứng viên,Kết quả,Độ tin cậy,Độ tin cậy (%),Khuyến nghị\n';
+        results.forEach(result => {
+            csvContent += `${result.candidate_id},${result.prediction},${result.confidence},${(result.confidence * 100).toFixed(1)}%,"${result.recommendation}"\n`;
+        });
+    }
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `ket_qua_du_doan_${new Date().toISOString().slice(0,10)}.csv`;
+    link.click();
+}
+
+function exportSelected() {
+    if (selectedCandidates.size === 0) {
+        alert('Vui lòng chọn ít nhất một ứng viên để xuất kết quả');
+        return;
+    }
+
+    // Implementation for exporting selected candidates
+    console.log('Exporting selected candidates:', Array.from(selectedCandidates));
+}
+
+function viewCandidateDetails(candidateId) {
+    // Implementation for viewing candidate details
+    console.log('Viewing details for:', candidateId);
+}
+
+function exportSingle(candidateId) {
+    // Implementation for exporting single candidate
+    console.log('Exporting single candidate:', candidateId);
+}
+
+function generateInterviewSchedule() {
+    if (selectedCandidates.size === 0) {
+        alert('Vui lòng chọn ứng viên phù hợp để lên lịch phỏng vấn');
+        return;
+    }
+
+    // Implementation for generating interview schedule
+    console.log('Generating interview schedule for:', Array.from(selectedCandidates));
+}
+
+function shareResults() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Kết quả dự đoán HR',
+            text: `Đã phân tích {{ report.total_candidates }} ứng viên, {{ report.suitable_candidates }} ứng viên phù hợp`,
+            url: window.location.href
+        });
+    } else {
+        // Fallback for browsers that don't support Web Share API
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            alert('Link kết quả đã được sao chép vào clipboard!');
+        });
+    }
+}
+
+// Auto-initialize AOS animations
+AOS.init({
+    duration: 800,
+    once: true
+});
+</script>
+{% endblock %}

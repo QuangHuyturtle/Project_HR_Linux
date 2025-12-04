@@ -1,0 +1,183 @@
+2025-09-19 15:13:27,739 - INFO - 📂 Đang tải mô hình cải thiện từ file...
+2025-09-19 15:13:27,743 - INFO - ✅ Tải mô hình cải thiện thành công!
+2025-09-19 15:13:27,743 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-09-19 15:13:27,771 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-19 15:13:27,771 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-19 15:13:27,772 - INFO -  * Restarting with stat
+2025-09-19 15:13:29,006 - INFO - 📂 Đang tải mô hình cải thiện từ file...
+2025-09-19 15:13:29,009 - INFO - ✅ Tải mô hình cải thiện thành công!
+2025-09-19 15:13:29,009 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-09-19 15:13:29,028 - WARNING -  * Debugger is active!
+2025-09-19 15:13:29,046 - INFO -  * Debugger PIN: 596-183-172
+2025-09-19 15:13:33,642 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:33] "GET / HTTP/1.1" 200 -
+2025-09-19 15:13:33,821 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:33] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:13:34,881 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:34] "GET /train HTTP/1.1" 200 -
+2025-09-19 15:13:34,943 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:13:35,673 - INFO - 🧠 Bắt đầu huấn luyện mô hình với logic kỹ năng nâng cao...
+2025-09-19 15:13:35,673 - INFO - 📦 Tạo dữ liệu mẫu với logic nâng cao...
+2025-09-19 15:13:35,674 - INFO - 🎲 Tạo dữ liệu mẫu với 1000 mẫu (logic kỹ năng nâng cao)...
+2025-09-19 15:13:35,795 - INFO - ✓ Dữ liệu mẫu nâng cao đã lưu tại data/sample_candidates_enhanced.csv
+2025-09-19 15:13:35,795 - INFO - 🔧 Trích xuất đặc trưng từ dữ liệu...
+2025-09-19 15:13:35,795 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-09-19 15:13:36,475 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-09-19 15:13:36,475 - INFO - 📝 Xử lý đặc trưng văn bản...
+2025-09-19 15:13:36,493 - INFO - 📏 Chuẩn hóa đặc trưng số...
+2025-09-19 15:13:36,498 - INFO - 📊 Tổng số mẫu: 1000
+2025-09-19 15:13:36,498 - INFO - 🎯 Số đặc trưng: 178
+2025-09-19 15:13:36,498 - INFO - ⚖️ Phân phối nhãn - Phù hợp: 597, Chưa phù hợp: 403
+2025-09-19 15:13:36,500 - INFO - 🔨 Dữ liệu huấn luyện: 800 mẫu
+2025-09-19 15:13:36,501 - INFO - 🔍 Dữ liệu kiểm thử: 200 mẫu
+2025-09-19 15:13:36,501 - INFO - 🌲 Bắt đầu huấn luyện mô hình Random Forest...
+2025-09-19 15:13:36,644 - INFO - 📈 Đánh giá hiệu suất mô hình...
+2025-09-19 15:13:36,651 - INFO - 🎉 Huấn luyện mô hình hoàn tất!
+2025-09-19 15:13:36,651 - INFO - 🏆 Độ chính xác: 1.000
+2025-09-19 15:13:36,656 - INFO - 📋 Báo cáo phân loại:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        81
+           1       1.00      1.00      1.00       119
+
+    accuracy                           1.00       200
+   macro avg       1.00      1.00      1.00       200
+weighted avg       1.00      1.00      1.00       200
+
+2025-09-19 15:13:36,656 - INFO - 💾 Lưu mô hình...
+2025-09-19 15:13:36,662 - INFO - ✅ Mô hình nâng cao đã lưu thành công
+2025-09-19 15:13:36,663 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:36] "POST /train HTTP/1.1" 200 -
+2025-09-19 15:13:40,399 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:40] "GET / HTTP/1.1" 200 -
+2025-09-19 15:13:40,450 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:13:42,578 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:42] "GET /predict HTTP/1.1" 200 -
+2025-09-19 15:13:42,628 - INFO - 127.0.0.1 - - [19/Sep/2025 15:13:42] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:08,634 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-09-19 15:14:08,640 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-09-19 15:14:08,660 - INFO - 🎯 Dự đoán kết hợp cho GiaHuy: Chưa phù hợp (tin cậy cuối: 0.400)
+2025-09-19 15:14:08,661 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:08] "POST /predict HTTP/1.1" 200 -
+2025-09-19 15:14:08,703 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:17,665 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:17] "GET / HTTP/1.1" 200 -
+2025-09-19 15:14:17,788 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:17] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:19,012 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:19] "GET /predict HTTP/1.1" 200 -
+2025-09-19 15:14:19,067 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:19] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:20,047 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:20,948 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:20] "GET /api/status HTTP/1.1" 200 -
+2025-09-19 15:14:20,983 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:21,964 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:21] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:22,762 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:22] "GET /predict HTTP/1.1" 200 -
+2025-09-19 15:14:22,813 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:22] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:14:58,118 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-09-19 15:14:58,123 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-09-19 15:14:58,145 - INFO - 🎯 Dự đoán kết hợp cho GiaHuy: Chưa phù hợp (tin cậy cuối: 0.400)
+2025-09-19 15:14:58,146 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:58] "POST /predict HTTP/1.1" 200 -
+2025-09-19 15:14:58,194 - INFO - 127.0.0.1 - - [19/Sep/2025 15:14:58] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:15:57,718 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-09-19 15:15:57,727 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-09-19 15:15:57,750 - INFO - 🎯 Dự đoán kết hợp cho GiaHuy: Phù hợp (tin cậy cuối: 0.946)
+2025-09-19 15:15:57,751 - INFO - 127.0.0.1 - - [19/Sep/2025 15:15:57] "POST /predict HTTP/1.1" 200 -
+2025-09-19 15:15:57,825 - INFO - 127.0.0.1 - - [19/Sep/2025 15:15:57] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-09-19 15:16:04,765 - INFO -  * Detected change in '/Users/qytheturtle/Documents/HK1_Nam4/Các hệ hỗ trợ ra quyết định/HR/testHR/hr_dss_main.py', reloading
+2025-09-19 15:16:04,950 - INFO -  * Restarting with stat
+2025-09-19 15:16:06,432 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-09-19 15:16:06,436 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-09-19 15:16:06,436 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-09-19 15:16:06,455 - WARNING -  * Debugger is active!
+2025-09-19 15:16:06,465 - INFO -  * Debugger PIN: 596-183-172
+2025-11-12 12:35:27,327 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-11-12 12:35:27,337 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-11-12 12:35:27,337 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-11-12 12:35:27,396 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-12 12:35:27,401 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-12 12:35:27,403 - INFO -  * Restarting with stat
+2025-11-12 12:35:29,343 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-11-12 12:35:29,348 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-11-12 12:35:29,349 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-11-12 12:35:29,359 - WARNING -  * Debugger is active!
+2025-11-12 12:35:29,363 - INFO -  * Debugger PIN: 861-934-554
+2025-11-12 12:35:32,816 - INFO - 127.0.0.1 - - [12/Nov/2025 12:35:32] "GET / HTTP/1.1" 200 -
+2025-11-12 12:35:33,369 - INFO - 127.0.0.1 - - [12/Nov/2025 12:35:33] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-12 12:38:01,100 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:01] "GET /batch HTTP/1.1" 200 -
+2025-11-12 12:38:01,240 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:01] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-12 12:38:09,678 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:09] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-12 12:38:10,947 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:10] "GET /train HTTP/1.1" 200 -
+2025-11-12 12:38:11,001 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-12 12:38:13,178 - INFO - 🧠 Bắt đầu huấn luyện mô hình với logic kỹ năng nâng cao...
+2025-11-12 12:38:13,178 - INFO - 📦 Tạo dữ liệu mẫu với logic nâng cao...
+2025-11-12 12:38:13,179 - INFO - 🎲 Tạo dữ liệu mẫu với 1000 mẫu (logic kỹ năng nâng cao)...
+2025-11-12 12:38:13,397 - INFO - ✓ Dữ liệu mẫu nâng cao đã lưu tại data\sample_candidates_enhanced.csv
+2025-11-12 12:38:13,397 - INFO - 🔧 Trích xuất đặc trưng từ dữ liệu...
+2025-11-12 12:38:13,397 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-11-12 12:38:15,279 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-11-12 12:38:15,279 - INFO - 📝 Xử lý đặc trưng văn bản...
+2025-11-12 12:38:15,306 - INFO - 📏 Chuẩn hóa đặc trưng số...
+2025-11-12 12:38:15,315 - INFO - 📊 Tổng số mẫu: 1000
+2025-11-12 12:38:15,315 - INFO - 🎯 Số đặc trưng: 178
+2025-11-12 12:38:15,315 - INFO - ⚖️ Phân phối nhãn - Phù hợp: 597, Chưa phù hợp: 403
+2025-11-12 12:38:15,321 - INFO - 🔨 Dữ liệu huấn luyện: 800 mẫu
+2025-11-12 12:38:15,322 - INFO - 🔍 Dữ liệu kiểm thử: 200 mẫu
+2025-11-12 12:38:15,322 - INFO - 🌲 Bắt đầu huấn luyện mô hình Random Forest...
+2025-11-12 12:38:15,530 - INFO - 📈 Đánh giá hiệu suất mô hình...
+2025-11-12 12:38:15,540 - INFO - 🎉 Huấn luyện mô hình hoàn tất!
+2025-11-12 12:38:15,541 - INFO - 🏆 Độ chính xác: 1.000
+2025-11-12 12:38:15,550 - INFO - 📋 Báo cáo phân loại:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        81
+           1       1.00      1.00      1.00       119
+
+    accuracy                           1.00       200
+   macro avg       1.00      1.00      1.00       200
+weighted avg       1.00      1.00      1.00       200
+
+2025-11-12 12:38:15,551 - INFO - 💾 Lưu mô hình...
+2025-11-12 12:38:15,560 - INFO - ✅ Mô hình nâng cao đã lưu thành công
+2025-11-12 12:38:15,562 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:15] "POST /train HTTP/1.1" 200 -
+2025-11-12 12:38:18,834 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:18] "GET /predict HTTP/1.1" 200 -
+2025-11-12 12:38:18,904 - INFO - 127.0.0.1 - - [12/Nov/2025 12:38:18] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-12 12:39:49,540 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-11-12 12:39:49,550 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-11-12 12:39:49,565 - INFO - 🎯 Dự đoán kết hợp cho Huy: Phù hợp (tin cậy cuối: 0.901)
+2025-11-12 12:39:49,566 - INFO - 127.0.0.1 - - [12/Nov/2025 12:39:49] "POST /predict HTTP/1.1" 200 -
+2025-11-12 12:39:49,617 - INFO - 127.0.0.1 - - [12/Nov/2025 12:39:49] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-11-17 09:58:17,039 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-11-17 09:58:17,100 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-11-17 09:58:17,100 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-11-17 09:58:17,171 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-17 09:58:17,171 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-17 09:58:17,174 - INFO -  * Restarting with stat
+2025-11-17 09:58:19,982 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-11-17 09:58:19,993 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-11-17 09:58:19,995 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-11-17 09:58:20,032 - WARNING -  * Debugger is active!
+2025-11-17 09:58:20,045 - INFO -  * Debugger PIN: 260-519-466
+2025-11-17 09:58:26,532 - INFO - 127.0.0.1 - - [17/Nov/2025 09:58:26] "GET / HTTP/1.1" 200 -
+2025-11-17 09:58:27,083 - INFO - 127.0.0.1 - - [17/Nov/2025 09:58:27] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:44:07,919 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-12-03 08:44:07,969 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-12-03 08:44:07,969 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-12-03 08:44:08,044 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-03 08:44:08,045 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-03 08:44:08,052 - INFO -  * Restarting with stat
+2025-12-03 08:44:10,975 - INFO - 📂 Đang tải mô hình nâng cao từ file...
+2025-12-03 08:44:10,980 - INFO - ✅ Tải mô hình nâng cao thành công!
+2025-12-03 08:44:10,980 - INFO - 🚀 Hệ thống Hỗ trợ Ra quyết định Tuyển dụng (Enhanced) đã được khởi tạo
+2025-12-03 08:44:11,007 - WARNING -  * Debugger is active!
+2025-12-03 08:44:11,011 - INFO -  * Debugger PIN: 144-271-178
+2025-12-03 08:44:28,464 - INFO - 127.0.0.1 - - [03/Dec/2025 08:44:28] "GET / HTTP/1.1" 200 -
+2025-12-03 08:44:30,758 - INFO - 127.0.0.1 - - [03/Dec/2025 08:44:30] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:44:31,008 - INFO - 127.0.0.1 - - [03/Dec/2025 08:44:31] "GET /batch HTTP/1.1" 200 -
+2025-12-03 08:44:31,081 - INFO - 127.0.0.1 - - [03/Dec/2025 08:44:31] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:50:59,112 - INFO - 127.0.0.1 - - [03/Dec/2025 08:50:59] "GET / HTTP/1.1" 200 -
+2025-12-03 08:50:59,439 - INFO - 127.0.0.1 - - [03/Dec/2025 08:50:59] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:51:01,397 - INFO - 127.0.0.1 - - [03/Dec/2025 08:51:01] "GET /batch HTTP/1.1" 200 -
+2025-12-03 08:51:01,467 - INFO - 127.0.0.1 - - [03/Dec/2025 08:51:01] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:51:10,728 - INFO - 127.0.0.1 - - [03/Dec/2025 08:51:10] "GET /predict HTTP/1.1" 200 -
+2025-12-03 08:51:10,782 - INFO - 127.0.0.1 - - [03/Dec/2025 08:51:10] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:52:13,558 - INFO - 📊 Đang trích xuất đặc trưng từ dữ liệu ứng viên...
+2025-12-03 08:52:13,572 - INFO - ✓ Trích xuất đặc trưng hoàn tất
+2025-12-03 08:52:13,607 - INFO - 🎯 Dự đoán kết hợp cho DS_001: Phù hợp (tin cậy cuối: 0.903)
+2025-12-03 08:52:13,608 - INFO - 127.0.0.1 - - [03/Dec/2025 08:52:13] "POST /predict HTTP/1.1" 200 -
+2025-12-03 08:52:13,694 - INFO - 127.0.0.1 - - [03/Dec/2025 08:52:13] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-03 08:58:18,109 - INFO -  * Detected change in 'D:\\HR_Linux\\hr_dss_main.py', reloading
+2025-12-03 08:58:18,507 - INFO -  * Restarting with stat

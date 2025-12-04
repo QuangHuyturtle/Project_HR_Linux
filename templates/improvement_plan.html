@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+
+{% block title %}Kế hoạch phát triển - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas fa-chart-line me-3"></i>Kế hoạch phát triển kỹ năng
+            </h1>
+            <p class="lead text-white-50">
+                Tạo lộ trình học tập và phát triển kỹ năng cá nhân hóa cho ứng viên
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Form Section -->
+    <div class="col-lg-8" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-user-edit me-2"></i>Thông tin ứng viên
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <form method="POST" id="improvementForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                <i class="fas fa-id-badge me-2"></i>Mã ứng viên
+                            </label>
+                            <input type="text" class="form-control" name="candidate_id"
+                                   placeholder="Ví dụ: UV_001" required
+                                   value="{{ candidate.candidate_id if candidate else '' }}">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                <i class="fas fa-calendar-check me-2"></i>Số năm kinh nghiệm
+                            </label>
+                            <input type="number" class="form-control" name="years_experience"
+                                   min="0" max="50" placeholder="Ví dụ: 3" required
+                                   value="{{ candidate.years_experience if candidate else '' }}">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                <i class="fas fa-graduation-cap me-2"></i>Trình độ học vấn
+                            </label>
+                            <select class="form-control" name="education_level" required>
+                                <option value="">-- Chọn trình độ --</option>
+                                <option value="high_school" {{ 'selected' if candidate.education_level == 'high_school' else '' }}>
+                                    Tốt nghiệp THPT
+                                </option>
+                                <option value="associate" {{ 'selected' if candidate.education_level == 'associate' else '' }}>
+                                    Cao đẳng
+                                </option>
+                                <option value="bachelor" {{ 'selected' if candidate.education_level == 'bachelor' else '' }}>
+                                    Cử nhân
+                                </option>
+                                <option value="master" {{ 'selected' if candidate.education_level == 'master' else '' }}>
+                                    Thạc sĩ
+                                </option>
+                                <option value="phd" {{ 'selected' if candidate.education_level == 'phd' else '' }}>
+                                    Tiến sĩ
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                <i class="fas fa-briefcase me-2"></i>Vị trí mục tiêu
+                            </label>
+                            <select class="form-control" name="target_position" required>
+                                <option value="">-- Chọn vị trí --</option>
+                                <option value="data_science" {{ 'selected' if candidate.position_applied == 'data_science' else '' }}>
+                                    Data Scientist
+                                </option>
+                                <option value="web_development" {{ 'selected' if candidate.position_applied == 'web_development' else '' }}>
+                                    Web Developer
+                                </option>
+                                <option value="devops" {{ 'selected' if candidate.position_applied == 'devops' else '' }}>
+                                    DevOps Engineer
+                                </option>
+                                <option value="mobile_development" {{ 'selected' if candidate.position_applied == 'mobile_development' else '' }}>
+                                    Mobile Developer
+                                </option>
+                                <option value="ui_ux_design" {{ 'selected' if candidate.position_applied == 'ui_ux_design' else '' }}>
+                                    UI/UX Designer
+                                </option>
+                                <option value="data_analyst" {{ 'selected' if candidate.position_applied == 'data_analyst' else '' }}>
+                                    Data Analyst
+                                </option>
+                                <option value="project_manager" {{ 'selected' if candidate.position_applied == 'project_manager' else '' }}>
+                                    Project Manager
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-tools me-2"></i>Kỹ năng hiện tại
+                            </label>
+                            <textarea class="form-control" name="skills" rows="3" required
+                                      placeholder="Ví dụ: python, sql, machine learning, communication, teamwork">{{ candidate.skills if candidate else '' }}</textarea>
+                            <div class="form-text">
+                                Phân cách kỹ năng bằng dấu phẩy (,)
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-project-diagram me-2"></i>Dự án đã thực hiện (tùy chọn)
+                            </label>
+                            <textarea class="form-control" name="projects" rows="3"
+                                      placeholder="Mỗi dòng một dự án&#10;Ví dụ:&#10;E-commerce website using React&#10;Data analysis dashboard&#10;Mobile app development">{{ candidate.projects|join('\n') if candidate else '' }}</textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-certificate me-2"></i>Chứng chỉ (tùy chọn)
+                            </label>
+                            <textarea class="form-control" name="certifications" rows="2"
+                                      placeholder="Mỗi dòng một chứng chỉ&#10;Ví dụ:&#10;AWS Certified Developer&#10;Google Data Analytics">{{ candidate.certifications|join('\n') if candidate else '' }}</textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-danger-custom">
+                                    <i class="fas fa-chart-line me-2"></i>Tạo kế hoạch phát triển
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="col-lg-4" data-aos="fade-left">
+        <div class="card custom-card mb-4">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Kế hoạch phát triển bao gồm
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                <div class="feature-list small">
+                    <div class="feature-item mb-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-search text-warning me-2"></i>
+                            <span>Phân tích gap kỹ năng</span>
+                        </div>
+                    </div>
+                    <div class="feature-item mb-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-road text-warning me-2"></i>
+                            <span>Lộ trình học tập cá nhân hóa</span>
+                        </div>
+                    </div>
+                    <div class="feature-item mb-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-book text-warning me-2"></i>
+                            <span>Tài nguyên học tập (courses, books)</span>
+                        </div>
+                    </div>
+                    <div class="feature-item mb-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-clock text-warning me-2"></i>
+                            <span>Timeline chi tiết</span>
+                        </div>
+                    </div>
+                    <div class="feature-item mb-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-dollar-sign text-warning me-2"></i>
+                            <span>Ước tính chi phí</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-trophy text-warning me-2"></i>
+                            <span>Metrics đo lường thành công</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-lightbulb me-2"></i>Benefits
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span>Xác định chính xác kỹ năng cần bổ sung</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span>Tiết kiệm thời gian học tập</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span>Tăng tỷ lệ thành công khi phỏng vấn</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span>Lộ trình phát triển sự nghiệp rõ ràng</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.feature-list.small .feature-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(220, 38, 38, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-list.small .feature-item:hover {
+    background: rgba(220, 38, 38, 0.1);
+    transform: translateX(3px);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('improvementForm');
+
+    form.addEventListener('submit', function(e) {
+        const skillsInput = form.querySelector('textarea[name="skills"]');
+        const skills = skillsInput.value.trim();
+
+        // Validate skills
+        if (!skills) {
+            alert('Vui lòng nhập kỹ năng hiện tại');
+            e.preventDefault();
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Đang tạo kế hoạch...';
+
+        // Re-enable after 3 seconds (fallback)
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }, 3000);
+    });
+
+    // Auto-format skills input
+    const skillsInput = form.querySelector('textarea[name="skills"]');
+    skillsInput.addEventListener('blur', function() {
+        let skills = this.value.trim();
+        // Remove extra spaces and ensure comma separation
+        skills = skills.replace(/\s*,\s*/g, ',');
+        skills = skills.replace(/\s+/g, ' ');
+        this.value = skills;
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,795 @@
+{% extends "base.html" %}
+
+{% block title %}Dự đoán Ứng viên - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas fa-user-check me-3"></i>Dự đoán Ứng viên
+            </h1>
+            <p class="lead text-white-50">
+                Phân tích và đánh giá độ phù hợp của ứng viên với vị trí tuyển dụng bằng AI
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Input Method Selection -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="card custom-card">
+            <div class="card-body-custom text-center">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary active" id="manualInputBtn">
+                        <i class="fas fa-keyboard me-2"></i>Nhập thủ công
+                    </button>
+                    <button type="button" class="btn btn-warning" id="cvUploadBtn">
+                        <i class="fas fa-file-upload me-2"></i>Upload CV
+                    </button>
+                </div>
+                <p class="text-muted mt-2 mb-0">
+                    <span id="inputDescription">Nhập thông tin ứng viên thủ công để đánh giá độ phù hợp</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- CV Upload Section (Hidden by default) -->
+    <div class="col-lg-6" id="cvUploadSection" data-aos="fade-right" style="display: none;">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-file-upload me-2"></i>Upload CV để Dự đoán
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <form id="cvPredictionForm" enctype="multipart/form-data">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-file-pdf me-2"></i>Chọn file CV
+                            </label>
+                            <div class="file-upload-area" id="cvFileUploadArea">
+                                <input type="file" class="form-control" id="cvFileInput" name="cv_file"
+                                       accept=".pdf,.jpg,.jpeg,.png,.bmp,.tiff" style="display: none;">
+                                <div class="file-upload-content">
+                                    <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
+                                    <h5>Kéo và thả file CV vào đây</h5>
+                                    <p class="text-muted">hoặc click để chọn file</p>
+                                    <p class="text-muted small">Hỗ trợ: PDF, JPG, PNG, BMP, TIFF (Tối đa 16MB)</p>
+                                    <button type="button" class="btn btn-outline-primary" id="cvSelectBtn">
+                                        <i class="fas fa-folder-open me-2"></i>Chọn file
+                                    </button>
+                                </div>
+                                <div class="file-preview" style="display: none;">
+                                    <div class="file-info">
+                                        <i class="fas fa-file-pdf text-danger fa-2x"></i>
+                                        <div class="file-details">
+                                            <strong id="fileName"></strong>
+                                            <small class="text-muted" id="fileSize"></small>
+                                        </div>
+                                        <button type="button" class="btn btn-sm btn-outline-danger" id="removeFileBtn">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-briefcase me-2"></i>Vị trí ứng tuyển (tùy chọn)
+                            </label>
+                            <select class="form-control" name="position_applied">
+                                <option value="">-- Tự động nhận diện --</option>
+                                <option value="data_scientist">Data Scientist</option>
+                                <option value="web_developer">Web Developer</option>
+                                <option value="backend_developer">Backend Developer</option>
+                                <option value="frontend_developer">Frontend Developer</option>
+                                <option value="fullstack_developer">Full Stack Developer</option>
+                                <option value="mobile_developer">Mobile Developer</option>
+                                <option value="devops_engineer">DevOps Engineer</option>
+                                <option value="ui_ux_designer">UI/UX Designer</option>
+                                <option value="data_analyst">Data Analyst</option>
+                                <option value="project_manager">Project Manager</option>
+                                <option value="software_developer">Software Developer</option>
+                                <option value="qa_engineer">QA Engineer</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-warning-custom btn-lg w-100" id="cvPredictBtn" disabled>
+                                <i class="fas fa-search me-2"></i>
+                                <span class="btn-text">Dự đoán từ CV</span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manual Input Section -->
+    <div class="col-lg-6" id="manualInputSection" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-user-plus me-2"></i>Thông tin Ứng viên
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <form method="POST" id="predictionForm">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-id-badge me-2"></i>Mã Ứng viên
+                            </label>
+                            <input type="text" class="form-control" name="candidate_id"
+                                   placeholder="Ví dụ: UV_001" required
+                                   value="{{ candidate.candidate_id if candidate else '' }}">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                <i class="fas fa-calendar-check me-2"></i>Số năm Kinh nghiệm
+                            </label>
+                            <input type="number" class="form-control" name="years_experience"
+                                   min="0" max="50" placeholder="Ví dụ: 5" required
+                                   value="{{ candidate.years_experience if candidate else '' }}">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-custom">
+                                <i class="fas fa-graduation-cap me-2"></i>Trình độ Học vấn
+                            </label>
+                            <select class="form-select" name="education_level" required>
+                                <option value="">Chọn trình độ</option>
+                                <option value="high_school" {% if candidate and candidate.education_level == 'high_school' %}selected{% endif %}>Tốt nghiệp THPT</option>
+                                <option value="associate" {% if candidate and candidate.education_level == 'associate' %}selected{% endif %}>Cao đẳng</option>
+                                <option value="bachelor" {% if candidate and candidate.education_level == 'bachelor' %}selected{% endif %}>Cử nhân</option>
+                                <option value="master" {% if candidate and candidate.education_level == 'master' %}selected{% endif %}>Thạc sĩ</option>
+                                <option value="phd" {% if candidate and candidate.education_level == 'phd' %}selected{% endif %}>Tiến sĩ</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-code me-2"></i>Kỹ năng
+                            </label>
+                            <textarea class="form-control" name="skills" rows="3"
+                                      placeholder="Ví dụ: python, machine learning, sql, teamwork, leadership" required>{{ candidate.skills if candidate else '' }}</textarea>
+                            <small class="text-muted">Phân cách các kỹ năng bằng dấu phẩy</small>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-briefcase me-2"></i>Mô tả Kinh nghiệm
+                            </label>
+                            <textarea class="form-control" name="experience_description" rows="4"
+                                      placeholder="Mô tả chi tiết về kinh nghiệm làm việc của ứng viên..." required>{{ candidate.experience_description if candidate else '' }}</textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label-custom">
+                                <i class="fas fa-user-tie me-2"></i>Vị trí Ứng tuyển
+                            </label>
+                            <input type="text" class="form-control" name="position_applied"
+                                   placeholder="Ví dụ: Data Analyst, Software Developer" required
+                                   value="{{ candidate.position_applied if candidate else '' }}">
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success-custom btn-lg w-100">
+                                <i class="fas fa-search me-2"></i>
+                                <span class="btn-text">Thực hiện Dự đoán</span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tips Card -->
+        <div class="card custom-card mt-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-lightbulb text-warning me-2"></i>
+                    Mẹo để có kết quả tốt nhất
+                </h6>
+                <ul class="small text-muted mb-0">
+                    <li>Cung cấp thông tin chính xác và đầy đủ</li>
+                    <li>Liệt kê các kỹ năng liên quan đến vị trí ứng tuyển</li>
+                    <li>Mô tả chi tiết kinh nghiệm làm việc</li>
+                    <li>Sử dụng tiếng Anh cho tên kỹ năng quốc tế</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="col-lg-6" data-aos="fade-left">
+        {% if result %}
+        <!-- Result Card -->
+        <div class="result-card {{ 'result-suitable' if result.prediction == 'Suitable' else 'result-unsuitable' }}" data-aos="zoom-in">
+            <div class="d-flex align-items-center mb-4">
+                <div class="result-icon me-3">
+                    {% if result.prediction == 'Suitable' %}
+                        <i class="fas fa-check-circle fa-3x text-success"></i>
+                    {% else %}
+                        <i class="fas fa-times-circle fa-3x text-danger"></i>
+                    {% endif %}
+                </div>
+                <div>
+                    <h4 class="mb-1">
+                        {{ result.get('prediction_vietnamese', result.prediction) }}
+                    </h4>
+                    <p class="text-muted mb-0">Kết quả dự đoán AI</p>
+                </div>
+            </div>
+
+            <!-- Confidence Meter -->
+            <div class="mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-semibold">Độ tin cậy</span>
+                    <span class="confidence-badge {{
+                        'confidence-high' if result.confidence > 0.8
+                        else 'confidence-medium' if result.confidence > 0.6
+                        else 'confidence-low'
+                    }}">
+                        {{ (result.confidence * 100)|round(1) }}%
+                    </span>
+                </div>
+                <div class="progress progress-custom">
+                    <div class="progress-bar progress-bar-custom"
+                         style="width: {{ (result.confidence * 100) }}%"
+                         role="progressbar"></div>
+                </div>
+            </div>
+
+            <!-- Recommendation -->
+            <div class="alert alert-{{
+                'success' if result.prediction == 'Suitable' and result.confidence > 0.7
+                else 'warning' if result.prediction == 'Suitable'
+                else 'danger'
+            }} mb-4">
+                <h6 class="alert-heading">
+                    <i class="fas fa-lightbulb me-2"></i>Khuyến nghị
+                </h6>
+                <p class="mb-0">{{ result.get('recommendation_vietnamese', result.recommendation) }}</p>
+            </div>
+
+            <!-- Candidate Summary -->
+            <div class="bg-light rounded p-3">
+                <h6 class="mb-3">
+                    <i class="fas fa-user me-2"></i>Thông tin ứng viên
+                </h6>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <small class="text-muted">Mã ứng viên</small>
+                        <p class="mb-0 fw-semibold">{{ result.candidate_id }}</p>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-muted">Kinh nghiệm</small>
+                        <p class="mb-0 fw-semibold">{{ candidate.years_experience }} năm</p>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-muted">Học vấn</small>
+                        <p class="mb-0 fw-semibold">{{ result.get('education_display', candidate.education_level) }}</p>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-muted">Vị trí</small>
+                        <p class="mb-0 fw-semibold">{{ candidate.position_applied }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Feedback -->
+            {% if result.get('detailed_feedback') %}
+            <div class="mt-3">
+                <h6>
+                    <i class="fas fa-info-circle me-2"></i>Phân tích chi tiết
+                </h6>
+                {% for feedback in result.detailed_feedback %}
+                <p class="small mb-1">
+                    <i class="fas fa-chevron-right text-primary me-1"></i>
+                    {{ feedback }}
+                </p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="card custom-card mt-3" data-aos="fade-up">
+            <div class="card-body">
+                <div class="d-grid gap-2 d-md-flex">
+                    <button onclick="window.print()" class="btn btn-outline-primary">
+                        <i class="fas fa-print me-2"></i>In kết quả
+                    </button>
+                    <button onclick="resetForm()" class="btn btn-outline-secondary">
+                        <i class="fas fa-redo me-2"></i>Dự đoán khác
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+        <!-- Default State -->
+        <div class="card custom-card" data-aos="zoom-in">
+            <div class="text-center py-5">
+                <div class="feature-icon mx-auto mb-4" style="width: 100px; height: 100px;">
+                    <i class="fas fa-robot fa-3x"></i>
+                </div>
+                <h4 class="mb-3">Sẵn sàng dự đoán</h4>
+                <p class="text-muted mb-4">
+                    Điền thông tin ứng viên vào form bên trái để hệ thống AI phân tích và đưa ra dự đoán
+                </p>
+
+                <div class="text-start">
+                    <h6 class="mb-3">
+                        <i class="fas fa-info-circle text-primary me-2"></i>
+                        Các yếu tố được phân tích:
+                    </h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Kỹ năng bắt buộc</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Kinh nghiệm phù hợp</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Trình độ học vấn</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Kỹ năng ưu tiên</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sample Data -->
+        <div class="card custom-card mt-3" data-aos="fade-up">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-database text-info me-2"></i>
+                    Thử với dữ liệu mẫu
+                </h6>
+                <p class="small text-muted mb-3">
+                    Sử dụng các mẫu dữ liệu dưới đây để nhanh chóng xem cách hệ thống hoạt động
+                </p>
+                <div class="d-grid gap-2">
+                    <button onclick="loadSampleData('data_scientist')" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-flask me-2"></i>Data Scientist
+                    </button>
+                    <button onclick="loadSampleData('web_developer')" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-code me-2"></i>Web Developer
+                    </button>
+                    <button onclick="loadSampleData('project_manager')" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-project-diagram me-2"></i>Project Manager
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+function loadSampleData(position) {
+    const samples = {
+        'data_scientist': {
+            candidate_id: 'DS_001',
+            years_experience: 3,
+            education_level: 'master',
+            skills: 'python, sql, machine learning, statistics, data analysis, pandas, numpy',
+            experience_description: '3 năm kinh nghiệm phân tích dữ liệu và xây dựng mô hình machine learning cho các dự án thương mại điện tử',
+            position_applied: 'Data Scientist'
+        },
+        'web_developer': {
+            candidate_id: 'WD_001',
+            years_experience: 4,
+            education_level: 'bachelor',
+            skills: 'javascript, react, nodejs, html, css, mongodb, git, agile',
+            experience_description: '4 năm phát triển web full-stack với React và Node.js, đã tham gia 5+ dự án hoàn thành',
+            position_applied: 'Web Developer'
+        },
+        'project_manager': {
+            candidate_id: 'PM_001',
+            years_experience: 6,
+            education_level: 'bachelor',
+            skills: 'project management, agile, scrum, leadership, communication, risk management',
+            experience_description: '6 năm quản lý dự án IT, chứng chỉ PMP, kinh nghiệm dẫn dắt team 10+ nhân viên',
+            position_applied: 'Project Manager'
+        }
+    };
+
+    const data = samples[position];
+    if (data) {
+        document.querySelector('[name="candidate_id"]').value = data.candidate_id;
+        document.querySelector('[name="years_experience"]').value = data.years_experience;
+        document.querySelector('[name="education_level"]').value = data.education_level;
+        document.querySelector('[name="skills"]').value = data.skills;
+        document.querySelector('[name="experience_description"]').value = data.experience_description;
+        document.querySelector('[name="position_applied"]').value = data.position_applied;
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function resetForm() {
+    document.getElementById('predictionForm').reset();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Form submission loading state
+document.getElementById('predictionForm').addEventListener('submit', function() {
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const spinner = submitBtn.querySelector('.loading-spinner');
+
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline-block';
+    submitBtn.disabled = true;
+});
+
+// CV Upload functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const manualBtn = document.getElementById('manualInputBtn');
+    const cvBtn = document.getElementById('cvUploadBtn');
+    const manualSection = document.getElementById('manualInputSection');
+    const cvSection = document.getElementById('cvUploadSection');
+    const inputDescription = document.getElementById('inputDescription');
+
+    const cvFileInput = document.getElementById('cvFileInput');
+    const cvSelectBtn = document.getElementById('cvSelectBtn');
+    const cvFileUploadArea = document.getElementById('cvFileUploadArea');
+    const removeFileBtn = document.getElementById('removeFileBtn');
+    const cvPredictBtn = document.getElementById('cvPredictBtn');
+
+    // Toggle between input methods
+    manualBtn.addEventListener('click', function() {
+        manualBtn.classList.add('active', 'btn-primary');
+        manualBtn.classList.remove('btn-outline-primary');
+        cvBtn.classList.remove('active', 'btn-warning');
+        cvBtn.classList.add('btn-outline-warning');
+
+        manualSection.style.display = 'block';
+        cvSection.style.display = 'none';
+
+        inputDescription.textContent = 'Nhập thông tin ứng viên thủ công để đánh giá độ phù hợp';
+    });
+
+    cvBtn.addEventListener('click', function() {
+        cvBtn.classList.add('active', 'btn-warning');
+        cvBtn.classList.remove('btn-outline-warning');
+        manualBtn.classList.remove('active', 'btn-primary');
+        manualBtn.classList.add('btn-outline-primary');
+
+        cvSection.style.display = 'block';
+        manualSection.style.display = 'none';
+
+        inputDescription.textContent = 'Upload CV (PDF/Image) để hệ thống tự động trích xuất và đánh giá';
+    });
+
+    // File upload handlers
+    cvSelectBtn.addEventListener('click', function() {
+        cvFileInput.click();
+    });
+
+    cvFileUploadArea.addEventListener('click', function(e) {
+        if (e.target.id !== 'removeFileBtn' && !e.target.closest('#removeFileBtn')) {
+            cvFileInput.click();
+        }
+    });
+
+    // Drag and drop functionality
+    cvFileUploadArea.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        this.classList.add('drag-over');
+    });
+
+    cvFileUploadArea.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        this.classList.remove('drag-over');
+    });
+
+    cvFileUploadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        this.classList.remove('drag-over');
+
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            handleFileSelect(files[0]);
+        }
+    });
+
+    cvFileInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
+            handleFileSelect(e.target.files[0]);
+        }
+    });
+
+    removeFileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        clearFileSelection();
+    });
+
+    function handleFileSelect(file) {
+        // Validate file type
+        const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png', 'image/bmp', 'image/tiff'];
+        const allowedExtensions = ['.pdf', '.jpg', '.jpeg', '.png', '.bmp', '.tiff'];
+
+        if (!allowedTypes.includes(file.type) && !allowedExtensions.some(ext => file.name.toLowerCase().endsWith(ext))) {
+            alert('Định dạng file không được hỗ trợ. Vui lòng chọn PDF, JPG, PNG, BMP hoặc TIFF.');
+            return;
+        }
+
+        // Validate file size (16MB)
+        if (file.size > 16 * 1024 * 1024) {
+            alert('File quá lớn. Vui lòng chọn file nhỏ hơn 16MB.');
+            return;
+        }
+
+        // Show file preview
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const uploadContent = cvFileUploadArea.querySelector('.file-upload-content');
+        const filePreview = cvFileUploadArea.querySelector('.file-preview');
+
+        fileName.textContent = file.name;
+        fileSize.textContent = formatFileSize(file.size);
+
+        // Update icon based on file type
+        const fileIcon = filePreview.querySelector('i');
+        if (file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf')) {
+            fileIcon.className = 'fas fa-file-pdf text-danger fa-2x';
+        } else {
+            fileIcon.className = 'fas fa-file-image text-info fa-2x';
+        }
+
+        uploadContent.style.display = 'none';
+        filePreview.style.display = 'block';
+        cvPredictBtn.disabled = false;
+    }
+
+    function clearFileSelection() {
+        cvFileInput.value = '';
+        const uploadContent = cvFileUploadArea.querySelector('.file-upload-content');
+        const filePreview = cvFileUploadArea.querySelector('.file-preview');
+
+        uploadContent.style.display = 'block';
+        filePreview.style.display = 'none';
+        cvPredictBtn.disabled = true;
+    }
+
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // CV form submission
+    document.getElementById('cvPredictionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById('cvPredictBtn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const spinner = submitBtn.querySelector('.loading-spinner');
+        const formData = new FormData(this);
+
+        // Show loading state
+        btnText.style.display = 'none';
+        spinner.style.display = 'inline-block';
+        submitBtn.disabled = true;
+
+        // Submit form with CV file
+        fetch('/upload-cv', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Redirect to results page
+                window.location.href = data.redirect;
+            } else {
+                // Show error
+                alert('Lỗi: ' + data.error);
+
+                // Reset loading state
+                btnText.style.display = 'inline';
+                spinner.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+
+            // Fallback: treat as HTML response
+            return fetch('/upload-cv', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            }).then(response => response.text())
+            .then(html => {
+                // Replace page content with response
+                document.documentElement.innerHTML = html;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })
+        .catch(error => {
+            console.error('Final error:', error);
+            alert('Có lỗi xảy ra khi xử lý CV. Vui lòng thử lại.');
+
+            // Reset loading state
+            btnText.style.display = 'inline';
+            spinner.style.display = 'none';
+            submitBtn.disabled = false;
+        });
+    });
+});
+</script>
+
+<style>
+/* CV Upload Styles */
+.file-upload-area {
+    border: 2px dashed var(--primary-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(99, 102, 241, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-upload-area:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: var(--primary-dark);
+}
+
+.file-upload-area.drag-over {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.file-upload-content {
+    transition: all 0.3s ease;
+}
+
+.file-preview {
+    width: 100%;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.file-details {
+    flex-grow: 1;
+}
+
+.file-details strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Button group styles */
+.btn-group .btn {
+    min-width: 150px;
+}
+
+/* Form transitions */
+#manualInputSection, #cvUploadSection {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom file input styling */
+#cvFileInput {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .file-upload-area {
+        padding: 20px;
+        min-height: 150px;
+    }
+
+    .file-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-group .btn {
+        min-width: auto;
+    }
+}
+
+/* Enhanced form styling */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+}
+
+/* Animation for cards */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Progress bar custom styling */
+.progress-bar-custom {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width 1s ease-in-out;
+}
+</style>
+{% endblock %}

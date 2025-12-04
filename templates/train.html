@@ -1,0 +1,425 @@
+{% extends "base.html" %}
+
+{% block title %}Huấn luyện Mô hình - HR Intelligence System{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col-12" data-aos="fade-up">
+        <div class="text-center">
+            <h1 class="display-5 fw-bold text-white mb-3">
+                <i class="fas fa-brain me-3"></i>Huấn luyện Mô hình AI
+            </h1>
+            <p class="lead text-white-50">
+                Xây dựng và huấn luyện mô hình Machine Learning với dữ liệu tuyển dụng thực tế
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Main Training Card -->
+    <div class="col-lg-8" data-aos="fade-right">
+        <div class="card custom-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">
+                    <i class="fas fa-cogs me-2"></i>Trung tâm Huấn luyện
+                </h5>
+            </div>
+            <div class="card-body-custom">
+                <!-- Training Form -->
+                <form method="POST" id="trainForm">
+                    <div class="alert alert-info-custom mb-4">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-info-circle fa-2x me-3"></i>
+                            <div>
+                                <h6 class="alert-heading mb-1">Thông tin huấn luyện</h6>
+                                <p class="mb-0">Hệ thống sẽ tự động tạo dữ liệu mẫu và huấn luyện mô hình Random Forest với kỹ năng nâng cao. Quá trình có thể mất 2-5 phút.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <div class="bg-light rounded p-3 text-center">
+                                <i class="fas fa-database fa-2x text-primary mb-2"></i>
+                                <h6 class="mb-1">Dữ liệu huấn luyện</h6>
+                                <p class="mb-0 small text-muted">1000+ mẫu ứng viên</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light rounded p-3 text-center">
+                                <i class="fas fa-robot fa-2x text-success mb-2"></i>
+                                <h6 class="mb-1">Thuật toán</h6>
+                                <p class="mb-0 small text-muted">Random Forest Enhanced</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-custom btn-lg w-100" id="trainBtn">
+                        <i class="fas fa-rocket me-2"></i>
+                        <span class="btn-text">Bắt đầu Huấn luyện</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+
+                <!-- Progress Section -->
+                <div id="training-progress" style="display: none;">
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h6 class="mb-0">Đang huấn luyện mô hình...</h6>
+                            <span id="progress-percent">0%</span>
+                        </div>
+                        <div class="progress progress-custom mb-3">
+                            <div class="progress-bar progress-bar-custom progress-bar-striped progress-bar-animated"
+                                 id="progress-bar" style="width: 0%"></div>
+                        </div>
+
+                        <!-- Training Steps -->
+                        <div class="row g-2" id="training-steps">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center p-2 bg-light rounded">
+                                    <div class="step-icon me-3">
+                                        <i class="fas fa-spinner fa-spin text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">Đang tạo dữ liệu mẫu...</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model Information -->
+        <div class="card custom-card mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-chart-bar me-2"></i>Các bước huấn luyện
+                </h6>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="step-indicator me-3">
+                                <span class="badge bg-primary rounded-circle" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">1</span>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Tạo dữ liệu</h6>
+                                <small class="text-muted">Tạo dữ liệu mẫu realistic</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="step-indicator me-3">
+                                <span class="badge bg-primary rounded-circle" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">2</span>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Xử lý đặc trưng</h6>
+                                <small class="text-muted">TF-IDF & kỹ năng analysis</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="step-indicator me-3">
+                                <span class="badge bg-primary rounded-circle" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">3</span>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Huấn luyện mô hình</h6>
+                                <small class="text-muted">Random Forest algorithm</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="step-indicator me-3">
+                                <span class="badge bg-primary rounded-circle" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">4</span>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Đánh giá</h6>
+                                <small class="text-muted">Cross-validation testing</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-lg-4" data-aos="fade-left">
+        <!-- Model Info Card -->
+        <div class="card custom-card mb-4">
+            <div class="card-header-custom">
+                <h6 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Thông tin Mô hình
+                </h6>
+            </div>
+            <div class="card-body-custom">
+                <div class="mb-3">
+                    <h6 class="text-primary">Random Forest Enhanced</h6>
+                    <p class="small text-muted mb-0">Phiên bản cải tiến với logic kỹ năng bắt buộc</p>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="text-center p-2 bg-light rounded">
+                            <i class="fas fa-layer-group text-primary mb-1"></i>
+                            <small class="d-block">100 Trees</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-2 bg-light rounded">
+                            <i class="fas fa-project-diagram text-success mb-1"></i>
+                            <small class="d-block">Max Depth 12</small>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="feature-list">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span class="small">TF-IDF Vectorization</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span class="small">Skill Matching Logic</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span class="small">Position Requirements</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span class="small">Enhanced Features</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="card custom-card mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-tachometer-alt me-2"></i>Hiệu suất kỳ vọng
+                </h6>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small>Độ chính xác</small>
+                        <small class="text-primary fw-bold">94-96%</small>
+                    </div>
+                    <div class="progress progress-custom" style="height: 6px;">
+                        <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small>F1-Score</small>
+                        <small class="text-success fw-bold">0.93</small>
+                    </div>
+                    <div class="progress progress-custom" style="height: 6px;">
+                        <div class="progress-bar bg-success" style="width: 93%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small>Precision</small>
+                        <small class="text-info fw-bold">0.95</small>
+                    </div>
+                    <div class="progress progress-custom" style="height: 6px;">
+                        <div class="progress-bar bg-info" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small>Recall</small>
+                        <small class="text-warning fw-bold">0.92</small>
+                    </div>
+                    <div class="progress progress-custom" style="height: 6px;">
+                        <div class="progress-bar bg-warning" style="width: 92%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="card custom-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-body">
+                <h6 class="mb-3">
+                    <i class="fas fa-star me-2"></i>Tính năng nổi bật
+                </h6>
+                <ul class="small mb-0">
+                    <li class="mb-2">
+                        <i class="fas fa-brain text-primary me-2"></i>
+                        <strong>Logic kỹ năng bắt buộc</strong>
+                        <br><span class="text-muted">Kiểm tra kỹ năng cần thiết theo vị trí</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-balance-scale text-success me-2"></i>
+                        <strong>Đánh giá đa chiều</strong>
+                        <br><span class="text-muted">Kinh nghiệm, học vấn, kỹ năng</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt text-info me-2"></i>
+                        <strong>Cập nhật tự động</strong>
+                        <br><span class="text-muted">Lưu và tải lại mô hình đã train</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <div class="w-100 text-center">
+                    <div class="feature-icon mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-check fa-3x"></i>
+                    </div>
+                    <h5 class="modal-title">Huấn luyện thành công!</h5>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-1">Mô hình đã được huấn luyện thành công với độ chính xác:</p>
+                <h3 class="text-primary mb-3" id="accuracy-display">95.2%</h3>
+                <p class="text-muted">Mô hình đã sẵn sàng để sử dụng cho dự đoán ứng viên.</p>
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+                <button type="button" class="btn btn-success-custom" onclick="goToPredict()">
+                    <i class="fas fa-user-check me-2"></i>Thử dự đoán ngay
+                </button>
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let progressInterval;
+let currentProgress = 0;
+
+document.getElementById('trainForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const trainBtn = document.getElementById('trainBtn');
+    const progressDiv = document.getElementById('training-progress');
+    const btnText = trainBtn.querySelector('.btn-text');
+    const spinner = trainBtn.querySelector('.loading-spinner');
+
+    // Show loading state
+    trainBtn.disabled = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline-block';
+    progressDiv.style.display = 'block';
+
+    // Start progress animation
+    startProgressAnimation();
+
+    // Submit form
+    fetch('/train', {method: 'POST'})
+    .then(response => response.json())
+    .then(data => {
+        clearInterval(progressInterval);
+
+        // Complete progress
+        updateProgress(100, 'Hoàn thành!');
+
+        if (data.success) {
+            // Update accuracy display
+            const accuracy = (data.accuracy * 100).toFixed(1);
+            document.getElementById('accuracy-display').textContent = accuracy + '%';
+
+            // Show success modal
+            setTimeout(() => {
+                const modal = new bootstrap.Modal(document.getElementById('successModal'));
+                modal.show();
+            }, 500);
+        } else {
+            alert('Huấn luyện thất bại: ' + data.error);
+        }
+    })
+    .catch(error => {
+        clearInterval(progressInterval);
+        alert('Lỗi: ' + error.message);
+    })
+    .finally(() => {
+        // Reset button state
+        trainBtn.disabled = false;
+        btnText.style.display = 'inline-block';
+        spinner.style.display = 'none';
+    });
+});
+
+function startProgressAnimation() {
+    currentProgress = 0;
+    const steps = [
+        'Đang tạo dữ liệu mẫu...',
+        'Đang xử lý đặc trưng văn bản...',
+        'Đang trích xuất kỹ năng...',
+        'Đang chuẩn hóa dữ liệu...',
+        'Đang huấn luyện mô hình...',
+        'Đang đánh giá hiệu suất...',
+        'Đang lưu mô hình...'
+    ];
+
+    let stepIndex = 0;
+
+    progressInterval = setInterval(() => {
+        if (currentProgress < 90) {
+            currentProgress += Math.random() * 10;
+            if (currentProgress > 90) currentProgress = 90;
+
+            const stepIndex = Math.floor((currentProgress / 90) * steps.length);
+            updateProgress(currentProgress, steps[Math.min(stepIndex, steps.length - 1)]);
+        } else {
+            clearInterval(progressInterval);
+        }
+    }, 500);
+}
+
+function updateProgress(percent, message) {
+    const progressBar = document.getElementById('progress-bar');
+    const percentText = document.getElementById('progress-percent');
+    const stepsContainer = document.getElementById('training-steps');
+
+    progressBar.style.width = percent + '%';
+    percentText.textContent = Math.round(percent) + '%';
+
+    // Update step indicator
+    if (message) {
+        stepsContainer.innerHTML = `
+            <div class="col-12">
+                <div class="d-flex align-items-center p-2 bg-light rounded">
+                    <div class="step-icon me-3">
+                        ${percent < 100 ?
+                            '<i class="fas fa-spinner fa-spin text-primary"></i>' :
+                            '<i class="fas fa-check-circle text-success"></i>'}
+                    </div>
+                    <div>
+                        <small class="text-muted">${message}</small>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+function goToPredict() {
+    window.location.href = '/predict';
+}
+</script>
+{% endblock %}
